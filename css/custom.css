@@ -1,0 +1,17 @@
+section {
+    padding: 70px 0;
+    overflow: hidden;
+}
+
+.text-green,
+.btn.text-green {
+    color: #089995;
+}
+
+.datenquelle {
+    font-weight: 400;
+}
+
+.list-style-5 li {
+    border-bottom: 0px;
+}

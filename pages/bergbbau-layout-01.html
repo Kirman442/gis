@@ -1,0 +1,511 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <!-- title -->
+    <title>GIS-Projekt - Risikomanagement oberflächennaher Strukturen</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+    <meta name="author" content="GIS-Projekte">
+    <!-- description -->
+    <meta name="description" content="GIS-Projekte">
+    <!-- keywords -->
+    <meta name="keywords" content="gis, qgis, arcgis, development, Programmierung, Datenbearbeitung, Python">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/favicon_32.png">
+    <link rel="apple-touch-icon" href="../images/favicon_57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/favicon_72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/favicon_114.png">
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" type="text/css" href="../css/bootsnav.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/theme-vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="../css/prism.css" />
+    <link rel="stylesheet" type="text/css" href="../css/custom.css" />
+</head>
+
+<body>
+    <!-- start header -->
+    <header>
+        <!-- start navigation -->
+        <nav
+            class="navbar navbar-default bootsnav navbar-top header-light background-transparent nav-box-width white-link navbar-expand-lg">
+            <div class="container-fluid nav-header-container">
+                <!-- start logo -->
+                <!-- end logo -->
+                <div class="col accordion-menu pe-0 pe-md-3">
+                    <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#navbar-collapse-toggle-1">
+                        <span class="sr-only">toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-collapse collapse justify-content-end" id="navbar-collapse-toggle-1">
+                        <ul id="accordion" class="nav navbar-nav no-margin alt-font text-normal"
+                            data-in="animate__fadeIn" data-out="animate__fadeOut">
+                            <!-- start menu item -->
+                            <li class="dropdown">
+                                <a href="../index.html">Home</a><i class="fa-solid fa-angle-down dropdown-toggle"
+                                    data-bs-toggle="dropdown" aria-hidden="true"></i>
+                            </li>
+                            <!-- end menu item -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- end navigation -->
+    </header>
+
+    <!-- start page title section -->
+    <section class="parallax" data-parallax-background-ratio="0.5"
+        style="background-image:url('../images/risikogebiet/risiko_main.jpg'); max-height: 650px;">
+        <div class="opacity-light bg-extra-dark-gray"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div
+                    class="col-12 d-flex flex-column justify-content-center text-center one-second-screen page-title-large">
+                    <!-- start page title -->
+                    <!-- end page title -->
+                    <!-- start sub title -->
+                    <!-- end sub title -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end page title section -->
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center md-margin-10px-bottom sm-margin-30px-bottom">
+                    <h4 class="font-weight-300 text-extra-dark-gray margin-15px-bottom">Risikomanagement
+                        oberflächennaher Strukturen</h4>
+                    <p class="text-medium line-height-28 sm-line-height-26">GIS-technische Umsetzung eines vorgegebenen
+                        Workflows zur Erstellung von 3D-Bergbaustrukturen.
+                    </p>
+                    <span class="text-dark-gray opacity6 alt-font mb-0 text-uppercase text-small">25
+                        August 2022&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                        Kirill
+                        Lisochenko & Martin Burzynski&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Programmierung,
+                        Datenbearbeitung, 3D-Modellierung</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wow animate__fadeIn">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h5 class="alt-font text-green">Projektziel</h5>
+                    <p class="text-medium line-height-28 sm-line-height-26">Die Ruhrkohle-Aktiengesellschaft (RAG)
+                        befasst sich neben den sogenannten „Ewigkeitsarbeiten“ in der ehemaligen
+                        Steinkohleregion an der Ruhr auch mit dem Risikomanagement des oberflächennahen Bergbaus. Die
+                        hinterblieben Hohlräume
+                        sind durch Umwelteinflüsse Einsturz gefährdet und können in den oberen Schichten zum Einsacken
+                        der Erdoberflächen
+                        führen. Um Unfälle zu vermeiden, weißt die RAG sogenannte Gefährdungsflächen aus, die aus
+                        historischen Risswerken
+                        ermittelt wurden. Diese stellen jedoch nicht die exakte Position der bergbaulichen Strukturen da
+                        und können nur durch
+                        weitere Berechnungen verortet werden. Mittels GIS ist es möglich dreidimensionale Körper zu
+                        visualisieren. Ein Problem
+                        stellt dabei die Größe der Datenmenge dar. Bei einem Datensatz von ca. 16 000 Strecken, Abbauen
+                        und anderen
+                        bergbaulichen Objekten, ist die manuelle Bearbeitung nur mit einem extrem hohen Zeitaufwand
+                        realisierbar.</p>
+                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                        Das Ziel dieser Projektarbeit ist es ein Verfahren zu entwickeln, das bergbauliche Strukturen
+                        auf Grundlage
+                        ausgewiesener Gefährdungsflächen und anderen historischen Risswerkinformationen automatisiert
+                        darstellt. Das Projekt
+                        soll sich dabei auf Strecken und Abbauen beschränken.</p>
+                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                        Zur Realisierung des Projektziels werden die Programme ArcGIS Pro, Code Editoren wie Spyder oder
+                        VScode und verschiedene
+                        Python bibliotheken verwendet. Mit deren hilfe soll ein Skript entworfen werden, dass Strecken
+                        und Abbaue als 3D Feature
+                        Classes in einer Geodatabase automatisiert hinterlegen kann. Das Skript soll bei der Übergabe
+                        als benutzerfreundliches
+                        tool in ArcGIS Pro anwendbar sein. Die Eingabe in der GUI (Graphical User interface soll aus
+                        folgenden Dateien bestehen:</p>
+
+                    <ul class="p-md-0 list-style-2">
+                        <li class="text-medium line-height-28">shape-file der Gefährdungsflächen der Strecken und Abbaue
+                        </li>
+                        <li class="text-medium line-height-28">shape-file der zugehörigen Floezausbisslinien</li>
+                        <li class="text-medium line-height-28">Excel-Tabelle mit weiteren Risswerkinformationen</li>
+                        <li class="text-medium line-height-28">DGM-file der zu betrachtenden Fläche.</li>
+                    </ul>
+                    <h5 class="alt-font text-green">Hauptteil</h5>
+                    <h6 class="alt-font text-green">Vorüberlegung</h6>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <img class="alignright col-lg-6" src="../images/risikogebiet/stollenbau.jpg" alt
+                                data-no-retina>
+
+                            <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">Beim Schreiben eines
+                                Python-Skripts müssen Strecken und Abbaue einzeln betrachtet werden. Strecken dienten
+                                damals als
+                                unterirdischen Tunner, die zur Erschließung und Aufteilung der Abbaufelder ausgebaut
+                                wurden. Sie fungierten als
+                                Verbindungsstücke zu den Schächten und wurden für den Abtransport der Mineralien
+                                genutzt. Sie befinden sich nahezu
+                                waagerecht im Raum und wurden bei der Bearbeitung der 3D-Körper ohne Rotation erstellt.
+                                Abbaue hingegen orientieren sich
+                                entlang der Floeze, welche in einem gewissen Floezeinfallswinkel vorliegen. Die Abbaue
+                                liegen somit rotiert im Raum und
+                                müssen getrennt in der Skriptbearbeitung behandelt werden.</p>
+                        </div>
+                    </div>
+                    <h6 class="alt-font text-green">Aufbereitung der Strecken Feature Class</h6>
+                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">Zu Beginn des Skriptentwurf
+                        müssen die sidepackages arcpy und math importiert werden. Erst dann können ArcGIS Funktionen
+                        und Methoden und mathematischen Formel genutzt werden. Zur Darstellung von Höheneigenschaften
+                        können in ArcGIS Pro
+                        verschiedene Höhenmodelle genutzt werden. Für die extrudebetween Funktion müssen jedoch
+                        sogenannte TINs (Triangulated
+                        Irregular Networks) vorliegen.
+                    </p>
+                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                        Da Strecken weitgehend waagerecht verlaufen und die Sohlenhöhen als gleichbleibend angenommen
+                        werden, wird den TINs
+                        jeweils nur eine Höhe zugeteilt. Die Höheninformation liegen weder in den Attributen der
+                        shp-files noch in der
+                        Excel-Tabelle vor und müssen aus der Teufenhöhe und einem digitalem Geländemodell (DGM)
+                        berechnet werden. Dabei wird mit
+                        der arcpy-Funktion featureClasstoFeatureClass zur weiteren Bearbeitung eine Kopie aus den
+                        Gefährdungsflächen erstellt.
+                        Diese liegt nun in Form einer Feature Class (FC) vor, welche fortan als Strecken FC betrachtet
+                        wird. Im nächsten Schritt
+                        soll die FC um ausgewählte Spalteninformationen der Excel-Tabelle erweitert werden. Dafür wurden
+                        mit der Funktion
+                        arcpy.management.AddFields die Spalten mit den Namen 'floezeinfallen', 'maechtigkeit',
+                        'teufe_festgestein',
+                        'teufe_karbon', 'teufe_grubenbau' erweitert, die aus der exceltabelle in gleicher Reihenfolge
+                        entnommen wurden. Mit der
+                        gleichen Ausführung werden die Spalten 'Z_Wert_Boden' und 'Z_Wert_Decke' erstellt, die später
+                        die berechneten Z-Werte
+                        der Strecken als Eintrag erhalten.</p>
+                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                        Im nächsten Schritt werden die Informationen der Excel-Tabelle in die neuen Spalten der Strecken
+                        FC überführt. Hierfür
+                        wird der UpdateCursor genutzt und für die Zuordnung der Spalten- Informationen zwei
+                        If-Bedingungen gesetzt. Dabei werden
+                        beim iterieren nur den Objektreihen Informationen zugewiesen bei denen die Namen und
+                        Gefahrenarten der Strecken
+                        identisch mit denen der Excel-Tabelle sind (sinngemäße Übertragung:-> „NAME“ == „Bezeichnung“
+                        AND „GEF_ART“ ==
+                        „Grubenbauart“).</p>
+                    <h5 class="alt-font text-green">Umsetzung</h5>
+                    <h6 class="alt-font text-green">Berechnung der Sohlen- und Firstenhöhen</h6>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <img class="alignright col-lg-6" src="../images/risikogebiet/StreckeUndAbbauFrage.jpg" alt
+                                data-no-retina>
+
+                            <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">Um die Sohlenhöhen
+                                der Strecken Features berechnen zu können, wird die Höheninformation im Bereich der
+                                einzelnen
+                                Features aus einem Pixel der DGM (absolute Höhe) entnommen und um die Teufe reduziert.
+                                Die Firsthöhen ergeben sich aus
+                                den Sohlenhöhen und der Mächtigkeit. Beide Informationen sind durch die
+                                Spaltenerweiterung verfügbar. Da Oberflächen
+                                unregelmäßige Strukturen aufweisen, soll die abgegriffene Höhe aus der DGM immer von
+                                einem der Anfangspunkte der
+                                Strecken gewählt werden. Dieser wird mit der distanceto-Methode ermittelt, da der
+                                Stützpunkt mit der größten Distanz zur
+                                Abbaue gleichzeitig den Anfang der Strecken markiert.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <img class="alignright col-lg-6" src="../images/risikogebiet/StreckeUndAbbau_punkte.jpg" alt
+                                data-no-retina>
+
+                            <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">Über den searchcursor
+                                werden die Punkte der Features ausgelesen und die Distanzen zur Abbaue- Geometrie
+                                verglichen. Ist
+                                die Entfernung größer gelangen die Koordinaten des Punktes in eine neue Liste. Die
+                                XY-Koordinaten mit der kleineren
+                                Entfernung wir aus der Liste ersetzt, sodass am Ende nur ein Punkt übrig bleibt. Diese
+                                Methode wird durch alle
+                                Stützpunkte iteriert bis der Punkt mit der größten Entfernung feststeht. Die Startpunkte
+                                bzw. Abgreifpunkte zur
+                                Höhenermittlung werden in einer dictionary festgelhalten. Als keys werden die
+                                Streckennamen und Koordinaten als values
+                                definiert.</p>
+                        </div>
+                    </div>
+                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                        Da das DGM im UTM-Format vorliegt, müssen die Koordinaten der Abgreifpunkte aus dem
+                        Gauss-Krüger-System (DHDN 3- Degree
+                        Gauss Zone 2) ins UTM-System (ETRS 1989 UTM Zone 32N) umgewandelt werden. Dies wird mit der
+                        Funktion
+                        Transformer.from_crs und transformer.transform durchgeführt. Die Höhenwerte werden anschließend
+                        aus den umgewandelten
+                        Variablen mit der getcellvalue methode aus der DGM ausgelesen und in eine neue Liste mit
+                        Zuordnung der Strecken
+                        gespeichert.</p>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <img class="alignright col-lg-6" src="../images/risikogebiet/tins_skizze.jpg" alt
+                                data-no-retina>
+
+                            <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">Für die
+                                3D-Visualisierung wurde hier die Funktion extrudebetween gewählt. Dabei werden
+                                prinzipiell drei digitale Objekte
+                                benötigt. Zum einen b ein Oberflächenmodell, dass die Sohlenhöhe der Strecken begrenzt,
+                                also die absolute Höhe des
+                                Streckenbodens darstellt. Zum anderen ein zweites Höhenmodell mit der absoluten Höhe der
+                                Firste, die der Streckendecke.</p>
+                        </div>
+                    </div>
+                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                        Das dritte Objekt ist eine Liste mit den X- und Y- Koordinaten des zu erstellenden 3D-Körpers.
+                        Diese sind bereits
+                        bekannt, da die Strecken exakt unter der Gefährdungsflächen liegen und somit die Koordinaten der
+                        zugehörigen
+                        Gefährdungsfläche kopiert bzw. abgegriffen werden können. Die extrudebetween Methode erstellt
+                        mit ihrer Ausführung
+                        innerhalb der zugewiesenen Oberflächenmodellen und im Bereich der XY-Koordinaten einen neuen 3D
+                        Körper und speichert
+                        diese in eine neue FeatureClass ab. Im folgenden Abschnitt soll noch einmal detaillierter auf
+                        die Methode zum Abgreifen
+                        der XY Koordinaten und der Erstellung der Oberflächenmodelle eingegangen werden.</p>
+
+
+
+                    <h5 class="alt-font text-green">TINs Entwurf und Erstellen der 3D Feature Class mit den
+                        Streckenkörpern</h5>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="alignright col-lg-6"> Die meisten Oberflächenanalysen in GIS werden von Raster-
+                                oder
+                                TIN-Daten ausgeführt</p>
+                            <img class="alignright col-lg-6" src="../images/risikogebiet/tins_new.jpg" alt
+                                data-no-retina>
+
+                            <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">Zur automatisierten
+                                Feature Class Erstellung der dreidimensionalen Strecken werden nur noch zwei Funktionen
+                                benötigt.
+                                Wie bereits zu Beginn des Hauptteils erwähnt, bedarf es neben den XYGeometrien der
+                                Strecken, die jeweiligen TINs aus den
+                                Firsthöhen und Sohlenböden um die extrudebetween-Funktion durchführen zu können. Diese
+                                können nun für jedes Feature
+                                erstellt werden. Bei den in_features muss dabei vor der Ausführung der Parameter sf_type
+                                mit „Soft Clip“ angegeben werden. Mit dieser Einstellung wird die Rolle des
+                                Eingabe-Features definiert, die so die
+                                TIN-Oberflächenerstellung auf die
+                                Flächen der einzelnen Features begrenzt. Jedes Feature erhält dadurch jeweils zwei
+                                individuelle
+                                TINs. Wie auch die
+                                Feature Classes werden TINs in eine file Gedatabase abgespeichert und können in ArcGIS
+                                Pro
+                                visualisiert werden.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="alignright col-lg-6"> Modellierung und Erstellung eines dreidimensionalen Objekts
+                                auf der Grundlage der Daten</p>
+                            <img class="alignright col-lg-6" src="../images/risikogebiet/3DStrecke2.jpg" alt
+                                data-no-retina>
+
+                            <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">Im letzten Schritt
+                                kann nun die extrudebetween-Funktion angewandt werden. Dabei müssen keine weiteren
+                                Parametereinstellungen beachtet werden. Die TINs und Strecken-Polygone sind exakt so
+                                beschnitten, dass nur noch die
+                                Eingabe-Werte, der Speicherort und der 3D Feature Class Name eingegeben werden muss. Die
+                                erstellten TINs werden
+                                anschließend mit der management.Delete- Funktion zur Reduktion überflüssiger Daten
+                                gelöscht. Die Strecken-Körper können
+                                jetzt in ArcGIS Pro visualisiert werden (Abb. rechts). In ArcGIS Pro muss dafür die
+                                Anzeige unter dem Reiter Ansicht von
+                                2D Karte in eine globale Szene umgewandelt werden. Um das Sichtfeld unter der Oberfläche
+                                zu aktivieren muss das
+                                Navigieren unter der Oberfläche aktiviert sein.</p>
+                        </div>
+                    </div>
+
+                    <h5 class="alt-font text-green">Ergebnis und Fazit</h5>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="alignright col-lg-6">Am Ende der Berechnungen und Transformationen haben wir ein
+                                fertiges 3D-Modell</p>
+                            <img class="alignright col-lg-6" src="../images/risikogebiet/3DStrecke3.jpg" alt
+                                data-no-retina>
+
+                            <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">Aus dem bis hierhin
+                                beschriebenen Skripts wurde mit der tool-box und einer GUI in ArcGIS pro eine
+                                benutzerfreundliches
+                                tool entworfen. Dabei wurde die GUI so erstellt dass man die Pfade der Eingabe-Dateien
+                                einträgt, wie bereits im Teil
+                                Lösungsansatz beschrieben, eine Geodatabase als output-path und den neuen 3D Feature
+                                Class Namen.
+                                In Eigenleistung wurde ein Programm geschrieben, das 3D Objekte von bergbaulichen
+                                Strecken automatisiert ausgibt und
+                                eine 2D Feature Class der Abbau-Flächen erstellt.<br />Den Projektpartnern Herrn Schnell
+                                und Herrn Wiland von der RAG wurden nach Abschluss der
+                                Projektzzeit das Python-Skript
+                                als py-Datei, das fertige tool als tbx-Datei und dieser Projektbericht digital
+                                übergeben.</p>
+                        </div>
+                    </div>
+
+                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                        Unten können Sie ein kurzes Video sehen, das 2D-Polygone zeigt, die aus den Originaldaten
+                        gewonnen wurden, sowie
+                        3D-Objekte, die mit den oben genannten Visualisierungsmethoden gewonnen wurden.
+                    </p>
+
+                    <div class="col fit-videos text-center sm-margin-30px-bottom">
+                        <!-- start vimeo video -->
+                        <div class="fluid-width-video-wrapper" style="padding-top: 53.25%;"><iframe
+                                src="../images/risikogebiet/Scene640_480_191123.mp4"></iframe></div>
+                        <!-- end vimeo video -->
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div
+                            class="col-12 text-center margin-30px-top margin-10px-bottom md-margin-50px-bottom sm-margin-30px-bottom">
+                            <h6 class="font-weight-300 margin-15px-bottom">Datenquellen und Anwendungen:</h6>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="p-0 list-style-5">
+                                <li class="margin-5px-bottom"><label class="datenquelle w-60 d-inline-block">A Python
+                                        library to read/write Excel 2010</label><a class="text-decoration-underline"
+                                        href="https://osmnx.readthedocs.io/en/stable/index.html"
+                                        target="_blank">openpyxl</a>
+                                </li>
+                                <li class="margin-5px-bottom"><label class="datenquelle w-60 d-inline-block">A
+                                        Cartographic projections and coordinate transformations library</label><a
+                                        class="text-decoration-underline" href="https://pypi.org/project/pyproj/"
+                                        target="_blank">pyproj</a>
+
+                                </li>
+                                <li class="margin-5px-bottom"><label class="datenquelle w-60 d-inline-block">A
+                                        Python site package used with ArcGIS Pro</label><a
+                                        class="text-decoration-underline"
+                                        href="https://pro.arcgis.com/en/pro-app/latest/arcpy/get-started/what-is-arcpy-.htm"
+                                        target="_blank">ArcPy</a>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="wow animate__fadeIn border-top border-color-medium-gray no-padding"
+        style="visibility: visible; animation-name: fadeIn;">
+        <div class="container-fluid p-0">
+            <div class="row justify-content-between align-items-center g-0 padding-30px-lr md-padding-15px-lr">
+                <div class="w-45 text-start">
+                    <div class="blog-nav-link blog-nav-link-prev text-extra-dark-gray">
+                        <span class="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Previous
+                            Project</span>
+                        <a href="ubahn-layout-03.html">
+                            <i class="ti-arrow-left blog-nav-icon"></i>
+                            Berliner U-Bahn Geschichte.
+                        </a>
+                    </div>
+                </div>
+                <div class="w-10 text-center">
+                    <div class="text-extra-dark-gray">
+                        <span class="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Home</span>
+                        <a href="../index.html" class="blog-nav-home"><i class="ti-layout-grid2-alt"></i></a>
+                    </div>
+                </div>
+                <div class="w-45 text-end">
+                    <div class="blog-nav-link blog-nav-link-next text-extra-dark-gray">
+                        <span class="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Next
+                            Project</span>
+                        <a href="clustering-layout-03.html">
+                            <i class="ti-arrow-right blog-nav-icon"></i>
+                            Clustering
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- start footer -->
+    <footer class="footer-clean-dark bg-extra-dark-gray padding-two-tb sm-padding-30px-tb">
+        <div class="footer-widget-area padding-30px-bottom">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <!-- start contact information -->
+                    <div class="col-lg-4 col-md-4 col-sm-6 widget sm-margin-30px-bottom">
+                        <div
+                            class="widget-title alt-font text-extra-small text-uppercase text-white-2 margin-15px-bottom font-weight-600">
+                            contact information</div>
+                        <div class="text-small line-height-24 text-medium-gray">e-mail: <a
+                                href="mailto:k.lisochenko@web.de" class="text-medium-gray">k.lisochenko@web.de</a></div>
+                    </div>
+                    <!-- end contact information -->
+                    <!-- start quick links -->
+                    <div class="col-lg-4 col-md-4 col-sm-6 widget sm-margin-30px-bottom">
+                        <div
+                            class="widget-title alt-font text-extra-small text-white-2 text-uppercase margin-15px-bottom font-weight-600">
+                            quick links</div>
+                        <ul class="list-unstyled">
+                            <li class="w-50 float-start"><a href="kunstkarten-layout-01.html"
+                                    class="text-medium-gray text-small">Kunstkarten</a></li>
+                            <li class="w-50 float-start"><a href="flussystem-layout-03.html"
+                                    class="text-medium-gray text-small">Flusssystem</a>
+                            </li>
+                            <li class="w-50 float-start"><a href="ubahn-layout-03.html"
+                                    class="text-medium-gray text-small">Berliner U-Bahn</a>
+                            </li>
+                            <li class="w-50 float-start"><a href="bergbbau-layout-01.html"
+                                    class="text-medium-gray text-small">Risikomanagement</a></li>
+                            <li class="w-50 float-start"><a href="clustering-layout-03.html"
+                                    class="text-medium-gray text-small">Clustering</a>
+                            </li>
+                            <li class="w-50 float-start"><a href="dresden-layout-03.html"
+                                    class="text-medium-gray text-small">Dresden</a></li>
+                        </ul>
+
+                    </div>
+                    <!-- end quick links -->
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="border-color-medium-dark-gray border-top padding-30px-top">
+                <div class="row">
+                    <!-- start copyright -->
+                    <div class="col-12 text-small text-center text-medium-gray">© 2024 Alle Rechte vorbehalten<br />
+                        Kirill Lisochenko</div>
+                    <!-- end copyright -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!-- start scroll to top -->
+    <a class="scroll-top-arrow" href="javascript:void(0);" style="display: inline;"><i class="ti-arrow-up"></i></a>
+    <!-- end scroll to top  -->
+    <!-- javascript -->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bootsnav.js"></script>
+    <script type="text/javascript" src="../js/jquery.nav.js"></script>
+    <script type="text/javascript" src="../js/hamburger-menu.js"></script>
+    <script type="text/javascript" src="../js/theme-vendors.min.js"></script>
+    <!-- setting -->
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script src="../js/prism.js"></script>
+</body>
+
+</html>

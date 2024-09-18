@@ -1,0 +1,638 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <!-- title -->
+    <title>GIS-Projekt - Infrastruktur um Dresden</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+    <meta name="author" content="GIS-Projekt">
+    <!-- description -->
+    <meta name="description" content="GIS-Projekt">
+    <!-- keywords -->
+    <meta name="keywords" content="gis, qgis, arcgis, development, Programmierung, Datenbearbeitung, Python">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/favicon_32.png">
+    <link rel="apple-touch-icon" href="../images/favicon_57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/favicon_72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/favicon_114.png">
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" type="text/css" href="../css/bootsnav.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/theme-vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="../css/prism.css" />
+    <link rel="stylesheet" type="text/css" href="../css/custom.css" />
+</head>
+
+<body>
+    <!-- start header -->
+    <header>
+        <!-- start navigation -->
+        <nav
+            class="navbar navbar-default bootsnav navbar-top header-light background-transparent nav-box-width navbar-expand-lg">
+            <div class="container-fluid nav-header-container">
+                <!-- start logo -->
+                <!-- end logo -->
+                <div class="col accordion-menu pe-0 pe-md-3">
+                    <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#navbar-collapse-toggle-1">
+                        <span class="sr-only">toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-collapse collapse justify-content-end" id="navbar-collapse-toggle-1">
+                        <ul id="accordion" class="nav navbar-nav no-margin alt-font text-normal"
+                            data-in="animate__fadeIn" data-out="animate__fadeOut">
+                            <!-- start menu item -->
+                            <li class="dropdown">
+                                <a href="../index.html">Home</a><i class="fa-solid fa-angle-down dropdown-toggle"
+                                    data-bs-toggle="dropdown" aria-hidden="true"></i>
+                            </li>
+                            <!-- end menu item -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- end navigation -->
+    </header>
+
+    <!-- start about product section -->
+    <section class="p-0 bg-extra-dark-gray top-space">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-8 col-lg-7 p-0 cover-background md-h-500px sm-h-300px"
+                    style="background:url('../images/dresden/geodata_around_dresden.jpg')"></div>
+                <div class="col-xl-4 col-lg-5 p-0">
+                    <div
+                        class="padding-seventeen-lr padding-twenty-tb lg-padding-40px-lr md-padding-50px-tb sm-padding-30px-all">
+                        <h3 class="alt-font text-extra-light-gray font-weight-600 mb-0">Infrastruktur um Dresden</h3>
+                        <div class="bg-deep-pink separator-line-horrizontal-full d-inline-block margin-25px-tb"></div>
+                        <p class="w-90 w-100 margin-35px-bottom text-medium line-height-28">Projekt zur Digitalisierung
+                            der Verkehrs-, Elektro-, Kataster- und Landschaftsinfrastruktur rund um Dresden.</p>
+                        <span class="text-dark-gray opacity6 alt-font mb-0 text-uppercase text-small">25
+                            September 2023&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                            Kirill
+                            Lisochenko&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Programmierung,
+                            Datenbearbeitung, Web-App erstellen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end about product section -->
+
+    <!-- start about product section -->
+    <section class="wow animate__fadeIn">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h5 class="alt-font text-green">Projekthintergrund und Ziele</h5>
+                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                        Die fortschreitende Digitalisierung bietet die Möglichkeit, die Effizienz und Nachhaltigkeit
+                        städtischer Infrastrukturen
+                        erheblich zu verbessern. Im Raum Dresden soll ein umfassendes Projekt zur Digitalisierung der
+                        Verkehrs-, Elektro-,
+                        Kataster- und Landschaftsinfrastruktur initiiert werden, um die Lebensqualität der Bürger zu
+                        steigern und die
+                        Entwicklung der Region voranzutreiben.</p>
+                    <!-- start features box section -->
+                    <div class="row row-cols-lg-2">
+                        <!-- start features box item -->
+                        <div class="col margin-six-bottom md-margin-50px-bottom sm-margin-40px-bottom  last-paragraph-no-margin"
+                            style="visibility: visible;">
+                            <div class="feature-box-1 position-relative">
+                                <div class="feature-content">
+                                    <div class="text-green text-large margin-10px-bottom alt-font font-weight-600">
+                                        Verkehrsinfrastruktur
+                                    </div>
+                                    <ul class="p-md-0 list-style-2">
+                                        <li class="text-medium line-height-28">Planung und Umsetzung neuer
+                                            Straßenprojekte, um die
+                                            Verkehrsinfrastruktur im Raum Dresden zu erweitern und Engpässe zu
+                                            reduzieren.
+                                        </li>
+                                        <li class="text-medium line-height-28">Gezielte Optimierung bestehender
+                                            Straßenabschnitte zur
+                                            Verbesserung des Verkehrsflusses und der Zugänglichkeit.</li>
+                                        <li class="text-medium line-height-28">Integration von Radwegen und
+                                            Fußgängerzonen für eine
+                                            nachhaltige und umweltfreundliche Mobilität.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                        <!-- start features box item -->
+                        <div class="col margin-six-bottom md-margin-50px-bottom sm-margin-40px-bottom  last-paragraph-no-margin"
+                            style="visibility: visible;">
+                            <div class="feature-box-1 position-relative">
+                                <div class="feature-content">
+                                    <div class="text-green text-large margin-10px-bottom alt-font font-weight-600">
+                                        Elektroinfrastruktur
+                                    </div>
+                                    <ul class="p-md-0 list-style-2">
+                                        <li class="text-medium line-height-28">Aufbau eines flächendeckenden Netzwerks
+                                            von Ladestationen für Elektrofahrzeuge.
+
+                                        </li>
+                                        <li class="text-medium line-height-28">Integration von Smart-Grid-Technologien
+                                            zur effizienten Energieverteilung.
+                                        </li>
+                                        <li class="text-medium line-height-28">Förderung der Elektromobilität als
+                                            umweltfreundliche Alternative.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                        <!-- start features box item -->
+                        <div class="col margin-six-bottom md-margin-50px-bottom sm-margin-40px-bottom  last-paragraph-no-margin"
+                            style="visibility: visible;">
+                            <div class="feature-box-1 position-relative">
+                                <div class="feature-content">
+                                    <div class="text-green text-large margin-10px-bottom alt-font font-weight-600">
+                                        Katasterinfrastruktur
+                                    </div>
+                                    <ul class="p-md-0 list-style-2">
+                                        <li class="text-medium line-height-28">Digitalisierung und Aktualisierung des
+                                            Katasterwesens für eine präzise Grundstücksverwaltung.
+                                        </li>
+                                        <li class="text-medium line-height-28">Einführung von digitalen Lösungen für die
+                                            Verwaltung von Grundbuchdaten.
+                                        </li>
+                                        <li class="text-medium line-height-28">Verbesserung der Effizienz in Prozessen
+                                            rund um Grundstücksvermessung und -registrierung.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                        <!-- start features box item -->
+                        <div class="col margin-six-bottom md-margin-50px-bottom sm-margin-40px-bottom  last-paragraph-no-margin"
+                            style="visibility: visible;">
+                            <div class="feature-box-1 position-relative">
+                                <div class="feature-content">
+                                    <div class="text-green text-large margin-10px-bottom alt-font font-weight-600">
+                                        Landschaftsinfrastruktur
+                                    </div>
+                                    <ul class="p-md-0 list-style-2">
+                                        <li class="text-medium line-height-28">Aufbau einer digitalen Plattform für die
+                                            Verwaltung von Grünflächen und Naturschutzgebieten.
+
+                                        </li>
+                                        <li class="text-medium line-height-28">Integration von Umweltdaten für eine
+                                            nachhaltige Planung von Landschaftsprojekten.
+                                        </li>
+                                        <li class="text-medium line-height-28">Förderung von Maßnahmen zur Erhaltung
+                                            und Entwicklung der Umweltqualität.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                    </div>
+                    <!-- end features box Section -->
+
+                    <h5 class="alt-font text-green">Vorbereitung für die Projektumsetzung</h5>
+
+
+
+                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">Eines der Ziele des Projekts
+                        ist es, eine Webanwendung zu erstellen, über die Mitarbeiter der betreffenden
+                        Organisationen oder Mitarbeiter der Organisation, die für die Digitalisierung der Infrastruktur
+                        verantwortlich sein
+                        wird, zeitnah mit Geodaten arbeiten können: Änderungen vornehmen, Georeferenzierung, Speichern
+                        der Änderungen in einer
+                        gemeinsamen Datenbank, usw.
+                    </p>
+                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                        Für die Umsetzung des Projekts wurde die Infrastruktur von ESRI gewählt - ArcGIS Pro, Online,
+                        Javascript SDK und React
+                        JS von Meta für die Visualisierung. Die Daten für die Anwendung werden dem OpenDataPortal der
+                        Landeshauptstadt Dresden
+                        entnommen, ggf. in das Shapefile-Format konvertiert und in die ArcGIS Javascript SDK Cloud
+                        Entwicklungsumgebung
+                        hochgeladen, um damit weiter zu arbeiten.</p>
+
+                    <h6 class="alt-font text-green">Die in diesem Projekt präsentierten Daten bestehen aus:</h6>
+
+                    <!-- start features box section -->
+                    <div class="row row-cols-lg-2">
+                        <!-- start features box item -->
+                        <div class="col margin-six-bottom md-margin-50px-bottom sm-margin-40px-bottom  last-paragraph-no-margin"
+                            style="visibility: visible;">
+                            <div class="feature-box-1 position-relative">
+                                <div class="feature-content">
+                                    <div class="text-green text-large margin-10px-bottom alt-font font-weight-600">
+                                        Katasterdaten:
+                                    </div>
+                                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                                        Bauwerke, grundstücke und ihre Zweckbestimmung (Bauernhof, Parkanlage,
+                                        Industriegebiet usw.)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                        <!-- start features box item -->
+                        <div class="col margin-six-bottom md-margin-50px-bottom sm-margin-40px-bottom  last-paragraph-no-margin"
+                            style="visibility: visible;">
+                            <div class="feature-box-1 position-relative">
+                                <div class="feature-content">
+                                    <div class="text-green text-large margin-10px-bottom alt-font font-weight-600">
+                                        Verkehrsdaten:
+                                    </div>
+                                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                                        Autobahnen, Verkehrsknotenpunkte, Straßen von regionaler Bedeutung, Radwege,
+                                        Haltestellen öffentlicher Verkehrsmittel</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                        <!-- start features box item -->
+                        <div class="col margin-six-bottom md-margin-50px-bottom sm-margin-40px-bottom  last-paragraph-no-margin"
+                            style="visibility: visible;">
+                            <div class="feature-box-1 position-relative">
+                                <div class="feature-content">
+                                    <div class="text-green text-large margin-10px-bottom alt-font font-weight-600">
+                                        Landschaftliche Daten:
+                                    </div>
+                                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                                        Vegetation und Wasserinfrastruktur (Teiche, Seen, Flüsse)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                        <!-- start features box item -->
+                        <div class="col margin-six-bottom md-margin-50px-bottom sm-margin-40px-bottom  last-paragraph-no-margin"
+                            style="visibility: visible;">
+                            <div class="feature-box-1 position-relative">
+                                <div class="feature-content">
+                                    <div class="text-green text-large margin-10px-bottom alt-font font-weight-600">
+                                        Stromtechnische Daten:
+                                    </div>
+                                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                                        Daten über Stromnetze, deren Eigentümer, Strommasten, Transformatoren,
+                                        Umspannwerke usw.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                    </div>
+                    <!-- end features box Section -->
+
+
+
+
+                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                        Wir laden alle unsere Daten auf den Server, gruppieren sie nach Typen (Katasterdaten,
+                        Verkehrsdaten usw.) und fügen sie
+                        der Karte hinzu. Aber alle Daten sind nicht so beschriftet, dass wir sie verstehen können, d. h.
+                        ohne Visualisierung von
+                        Grundstücken, Stromleitungen, Verkehr. Wir müssen all dies richtig anzeigen, damit die
+                        Interaktion mit den Daten und die
+                        Verwaltung der Karte und damit unserer Anwendung bequem wird.</p>
+
+                    <!-- start features box section -->
+                    <div class="row row-cols-lg-3">
+                        <!-- start features box item -->
+                        <div class="col margin-six-bottom md-margin-50px-bottom sm-margin-40px-bottom  last-paragraph-no-margin"
+                            style="visibility: visible;">
+                            <div class="feature-box-1 position-relative">
+                                <div class="feature-content">
+                                    <div class="text-green text-large margin-10px-bottom alt-font font-weight-600">
+                                        Datenbearbeitung:
+                                    </div>
+                                    <ul class="p-md-0 list-style-2">
+                                        <li class="text-medium line-height-28">Implementierung der Möglichkeit, Daten zu
+                                            bearbeiten - bestehende Werte zu ändern, das Objekt zu visualisieren und
+                                            Änderungen in die Datenbank zu speichern.
+                                        </li>
+                                        <li class="text-medium line-height-28">Realisieren der Möglichkeit, Dateien
+                                            (pdf, jpg, mp4) zu einzelnen Werten hinzuzufügen. Beispielsweise kann man
+                                            einen
+                                            Katasterdaten pdf Datei hinzufügen oder die Spezifikationen eines
+                                            Strommastes aktualisieren.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                        <!-- start features box item -->
+                        <div class="col margin-six-bottom md-margin-50px-bottom sm-margin-40px-bottom  last-paragraph-no-margin"
+                            style="visibility: visible;">
+                            <div class="feature-box-1 position-relative">
+                                <div class="feature-content">
+                                    <div class="text-green text-large margin-10px-bottom alt-font font-weight-600">
+                                        Mit Ebenen arbeiten:
+                                    </div>
+                                    <ul class="p-md-0 list-style-2">
+                                        <li class="text-medium line-height-28">Transparenzeinstellungen vornehmen und
+                                            nicht benötigte Ebenen deaktivieren;
+                                        </li>
+                                        <li class="text-medium line-height-28">Visualisierung von Ebenen in Abhängigkeit
+                                            von Objekteigenschaften;
+                                        </li>
+                                        <li class="text-medium line-height-28">Implementieren einer automatischen
+                                            Aktualisierung der Objekteigenschaften nach der Bearbeitung.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                        <!-- start features box item -->
+                        <div class="col margin-six-bottom md-margin-50px-bottom sm-margin-40px-bottom  last-paragraph-no-margin"
+                            style="visibility: visible;">
+                            <div class="feature-box-1 position-relative">
+                                <div class="feature-content">
+                                    <div class="text-green text-large margin-10px-bottom alt-font font-weight-600">
+                                        Kartenbearbeitung:
+                                    </div>
+                                    <ul class="p-md-0 list-style-2">
+                                        <li class="text-medium line-height-28">Die Möglichkeit vorsehen, die Basiskarte
+                                            zu ändern;
+                                        </li>
+                                        <li class="text-medium line-height-28">Funktionsweise der Anwendung im 2D- und
+                                            3D-Ansichten;
+                                        </li>
+                                        <li class="text-medium line-height-28">Umschalten zwischen 2D- und 3D-Ansichten
+                                            ohne Aktualisierung der Karte und der Anwendung;
+                                        </li>
+                                        <li class="text-medium line-height-28">Kartennavigation in beiden Zuständen;
+                                        </li>
+                                        <li class="text-medium line-height-28">Im 3D-Ansicht, implementieren die
+                                            Möglichkeit, den Blickwinkel der Karte manuell und programmiert zu ändern.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                    </div>
+                    <!-- end features box Section -->
+
+
+                    <p class="text-medium text-dark-gray line-height-28 sm-line-height-26 margin-35px-top">
+                        Web-App in einem <a href="https://kirman442.github.io/dresden/" target="_blank"><strong
+                                class="text-decoration-underline">neuen Fenster öffnen.</strong></a>.
+                    </p>
+                </div>
+
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <iframe class="w-100 h-700px" src="https://kirman442.github.io/dresden/"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+
+                    <h5 class="alt-font text-green">Erwartete Ergebnisse</h5>
+
+                    <!-- start features box section -->
+                    <div class="row row-cols-lg-2">
+                        <!-- start features box item -->
+                        <div class="col margin-six-bottom md-margin-50px-bottom sm-margin-40px-bottom  last-paragraph-no-margin"
+                            style="visibility: visible;">
+                            <div class="feature-box-1 position-relative">
+                                <div class="feature-content">
+                                    <div class="text-green text-large margin-10px-bottom alt-font font-weight-600">
+                                        Effizienterer Verkehr
+                                    </div>
+                                    <ul class="p-md-0 list-style-2">
+                                        <li class="text-medium line-height-28">Reduzierung von Staus und
+                                            Verkehrsbehinderungen.
+                                        </li>
+                                        <li class="text-medium line-height-28">Förderung nachhaltiger Verkehrsmittel.
+                                        </li>
+                                        <li class="text-medium line-height-28">Identifikation und Umsetzung von
+                                            Maßnahmen
+                                            zur Verbesserung lokaler Straßenverbindungen.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                        <!-- start features box item -->
+                        <div class="col margin-six-bottom md-margin-50px-bottom sm-margin-40px-bottom  last-paragraph-no-margin"
+                            style="visibility: visible;">
+                            <div class="feature-box-1 position-relative">
+                                <div class="feature-content">
+                                    <div class="text-green text-large margin-10px-bottom alt-font font-weight-600">
+                                        Förderung der Elektromobilität und Stromleitungsbau.
+                                    </div>
+                                    <ul class="p-md-0 list-style-2">
+                                        <li class="text-medium line-height-28">Auswahl von Standorten für den Bau von
+                                            Stromleitungen und Stromstationen.
+                                        </li>
+                                        <li class="text-medium line-height-28">Erhöhte Anzahl von Elektrofahrzeugen auf
+                                            den
+                                            Straßen.
+                                        </li>
+                                        <li class="text-medium line-height-28">Verbesserte Ladeinfrastruktur.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                        <!-- start features box item -->
+                        <div class="col margin-six-bottom md-margin-50px-bottom sm-margin-40px-bottom  last-paragraph-no-margin"
+                            style="visibility: visible;">
+                            <div class="feature-box-1 position-relative">
+                                <div class="feature-content">
+                                    <div class="text-green text-large margin-10px-bottom alt-font font-weight-600">
+                                        Optimiertes Katasterwesen
+                                    </div>
+                                    <ul class="p-md-0 list-style-2">
+                                        <li class="text-medium line-height-28">Schnellere und präzisere
+                                            Grundstücksverwaltung.
+                                        </li>
+                                        <li class="text-medium line-height-28">Digitale Prozesse für Grundbuchdaten.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                        <!-- start features box item -->
+                        <div class="col margin-six-bottom md-margin-50px-bottom sm-margin-40px-bottom  last-paragraph-no-margin"
+                            style="visibility: visible;">
+                            <div class="feature-box-1 position-relative">
+                                <div class="feature-content">
+                                    <div class="text-green text-large margin-10px-bottom alt-font font-weight-600">
+                                        Nachhaltige Landschaftsplanung
+                                    </div>
+                                    <ul class="p-md-0 list-style-2">
+                                        <li class="text-medium line-height-28">Bessere Verwaltung von Grünflächen und
+                                            Naturschutzgebieten.
+
+                                        </li>
+                                        <li class="text-medium line-height-28">Integration von Umweltdaten für
+                                            nachhaltige
+                                            Landschaftsentwicklung.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                    </div>
+
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div
+                                class="col-10 text-left margin-10px-bottom md-margin-50px-bottom sm-margin-30px-bottom">
+                                <h6 class="font-weight-300 margin-15px-bottom">Datenquellen und Anwendungen:</h6>
+                            </div>
+
+                            <div class="col-lg-10 col-md-10">
+                                <ul class="p-0 list-style-5">
+                                    <li class="margin-5px-bottom"><label
+                                            class="datenquelle w-50 d-inline-block">OpenDataPortal der
+                                            Landeshauptstadt Dresden</label><a class="text-decoration-underline"
+                                            href="https://opendata.dresden.de/informationsportal/#app/startpage//"
+                                            target="_blank">OpenDataPortal Dresden</a>
+                                    </li>
+                                    <li class="margin-5px-bottom"><label
+                                            class="datenquelle w-50 d-inline-block">Vitejs.dev</label><a
+                                            class="text-decoration-underline" href="https://vitejs.dev/"
+                                            target="_blank">Next
+                                            Generation Frontend Tooling</a>
+                                    </li>
+                                    <li class="margin-5px-bottom"><label
+                                            class="datenquelle w-50 d-inline-block">React.js</label><a
+                                            class="text-decoration-underline" href="https://react.dev/"
+                                            target="_blank">React library for web interfaces </a>
+                                    </li>
+                                    <li class="margin-5px-bottom"><label class="datenquelle w-50 d-inline-block">ArcGIS
+                                            Maps
+                                            SDK
+                                            for
+                                            JavaScript:</label><a class="text-decoration-underline"
+                                            href="https://developers.arcgis.com/javascript/latest/" target="_blank">Data
+                                            visualisation and hosting</a>
+                                    </li>
+                                    <li class="margin-5px-bottom"><label class="datenquelle w-50 d-inline-block">Website
+                                            erstellen:</label><a class="text-decoration-underline"
+                                            href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="wow animate__fadeIn border-top border-color-medium-gray no-padding"
+        style="visibility: visible; animation-name: fadeIn;">
+        <div class="container-fluid p-0">
+            <div class="row justify-content-between align-items-center g-0 padding-30px-lr md-padding-15px-lr">
+                <div class="w-45 text-start">
+                    <div class="blog-nav-link blog-nav-link-prev text-extra-dark-gray">
+                        <span class="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Previous
+                            Project</span>
+                        <a href="clustering-layout-03.html">
+                            <i class="ti-arrow-left blog-nav-icon"></i>
+                            Clustering
+                        </a>
+                    </div>
+                </div>
+                <div class="w-10 text-center">
+                    <div class="text-extra-dark-gray">
+                        <span class="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Home</span>
+                        <a href="../index.html" class="blog-nav-home"><i class="ti-layout-grid2-alt"></i></a>
+                    </div>
+                </div>
+                <div class="w-45 text-end">
+                    <div class="blog-nav-link blog-nav-link-next text-extra-dark-gray">
+                        <span class="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Next
+                            Project</span>
+                        <a href="kunstkarten-layout-01.html">
+                            <i class="ti-arrow-right blog-nav-icon"></i>
+                            Kunstkarten mit Python erstellen
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end blog navigation bar section -->
+    <!-- start footer -->
+    <footer class="footer-clean-dark bg-extra-dark-gray padding-two-tb sm-padding-30px-tb">
+        <div class="footer-widget-area padding-30px-bottom">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <!-- start contact information -->
+                    <div class="col-lg-4 col-md-4 col-sm-6 widget sm-margin-30px-bottom">
+                        <div
+                            class="widget-title alt-font text-extra-small text-uppercase text-white-2 margin-15px-bottom font-weight-600">
+                            contact information</div>
+                        <div class="text-small line-height-24 text-medium-gray">e-mail: <a
+                                href="mailto:k.lisochenko@web.de" class="text-medium-gray">k.lisochenko@web.de</a></div>
+                    </div>
+                    <!-- end contact information -->
+                    <!-- start quick links -->
+                    <div class="col-lg-4 col-md-4 col-sm-6 widget sm-margin-30px-bottom">
+                        <div
+                            class="widget-title alt-font text-extra-small text-white-2 text-uppercase margin-15px-bottom font-weight-600">
+                            quick links</div>
+                        <ul class="list-unstyled">
+                            <li class="w-50 float-start"><a href="kunstkarten-layout-01.html"
+                                    class="text-medium-gray text-small">Kunstkarten</a></li>
+                            <li class="w-50 float-start"><a href="flussystem-layout-03.html"
+                                    class="text-medium-gray text-small">Flusssystem</a>
+                            </li>
+                            <li class="w-50 float-start"><a href="ubahn-layout-03.html"
+                                    class="text-medium-gray text-small">Berliner U-Bahn</a>
+                            </li>
+                            <li class="w-50 float-start"><a href="bergbbau-layout-01.html"
+                                    class="text-medium-gray text-small">Risikomanagement</a></li>
+                            <li class="w-50 float-start"><a href="clustering-layout-03.html"
+                                    class="text-medium-gray text-small">Clustering</a>
+                            </li>
+                            <li class="w-50 float-start"><a href="dresden-layout-03.html"
+                                    class="text-medium-gray text-small">Dresden</a></li>
+                        </ul>
+
+                    </div>
+                    <!-- end quick links -->
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="border-color-medium-dark-gray border-top padding-30px-top">
+                <div class="row">
+                    <!-- start copyright -->
+                    <div class="col-12 text-small text-center text-medium-gray">© 2024 Alle Rechte vorbehalten<br />
+                        Kirill Lisochenko</div>
+                    <!-- end copyright -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!-- start scroll to top -->
+    <a class="scroll-top-arrow" href="javascript:void(0);" style="display: inline;"><i class="ti-arrow-up"></i></a>
+    <!-- end scroll to top  -->
+    <!-- javascript -->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bootsnav.js"></script>
+    <script type="text/javascript" src="../js/jquery.nav.js"></script>
+    <script type="text/javascript" src="../js/hamburger-menu.js"></script>
+    <script type="text/javascript" src="../js/theme-vendors.min.js"></script>
+    <!-- setting -->
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/prism.js"></script>
+</body>
+
+</html>
