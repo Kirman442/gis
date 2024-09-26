@@ -25,6 +25,10 @@ a:hover {
     text-decoration: none;
 }
 
+a.text-green-hover:hover {
+    color: #089995 !important;
+}
+
 .slider-example-focus {
     transition: box-shadow 200ms ease-in-out;
 }
