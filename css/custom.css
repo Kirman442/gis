@@ -15,3 +15,34 @@ section {
 .list-style-5 li {
     border-bottom: 0px;
 }
+
+.bg-deep-green {
+    background-color: #089995;
+}
+
+a:hover {
+    color: #089995;
+    text-decoration: none;
+}
+
+.slider-example-focus {
+    transition: box-shadow 200ms ease-in-out;
+}
+
+.slider-example-focus:focus {
+    outline: none;
+    box-shadow: 0px 0px 15px 5px #089995;
+}
+
+.slider-example-relative-size {
+    --default-handle-width: clamp(40px, 10vw, 200px);
+}
+
+.slider-example-opacity-and-size:focus {
+    --default-handle-opacity: 0;
+}
+
+.slider-example-opacity-and-size {
+    --default-handle-width: 200px;
+    --default-handle-color: #132c74;
+}
