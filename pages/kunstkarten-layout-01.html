@@ -165,8 +165,7 @@
                         welche Entfernung für die Kartenausschnitte gewählt
                         wird.</p>
                     <pre><code class="language-python">point = (52.5170365, 13.3888599)
-                            G = ox.graph_from_point(point, dist=15000, retain_all=True, 
-                            simplify = True, network_type='all')</code></pre>
+    G = ox.graph_from_point(point, dist=15000, retain_all=True, simplify = True, network_type='all')</code></pre>
                     <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
                         Man kann auch einen benutzerdefinierten Filter
                         verwenden - einen Filter, der anstelle des
@@ -190,9 +189,10 @@
                         Verkehrsnetzabschnitte anpassen.
                     </p>
                     <pre><code class="language-python">fig, ax = ox.plot_graph(Groads, node_size=0,figsize=(8, 8), 
-                                                    dpi = 300,bgcolor = bgcolor,
-                                                    save = True, edge_color=roadColors,
-                                                    edge_linewidth=roadWidths, edge_alpha=1, filepath="data/" + city + ".png", close=True)</code></pre>
+                        dpi = 300,bgcolor = bgcolor,
+                        save = True, edge_color=roadColors,
+                        edge_linewidth=roadWidths, edge_alpha=1, 
+                        filepath="data/" + city + ".png", close=True)</code></pre>
                     <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
                         Danach zeichnen wir die Karte mit dem Modul
                         ox.plot_graph. Wir fügen eine Hintergrundfarbe und
@@ -254,33 +254,34 @@
                         Problem. Wir müssen sie für uns noch ein wenig
                         verfeinern und los geht's!
                     </p>
-                    <pre><code class="language-python">def deg_to_dms(deg, pretty_print=None):
-                                #Convert from decimal degrees to degrees, minutes, seconds.
-                            
-                                m, s = divmod(abs(deg)*3600, 60)
-                                d, m = divmod(m, 60)
-                                if deg < 0:
-                                    d = -d
-                                d, m = int(d), int(m)
-                            
-                                if pretty_print:
-                                    if pretty_print=='latitude':
-                                        hemi = 'N' if d>=0 else 'S'
-                                    elif pretty_print=='longitude':
-                                        hemi = 'E' if d>=0 else 'W'
-                                    else:
-                                        hemi = '?'
-                                    return '{d:d}°{m:d}′ {hemi:1s}'.format(
-                                                d=abs(d), m=m, hemi=hemi)
-                                return d, m, s
-                            
-                            #Take the lat/lon from the place name to convert to dms coordinates
-                            geolocator = Nominatim(user_agent="degdms")
-                            location = geolocator.geocode(city, language="en")
-                            # Convert lat/lon to dms coordinates
-                            lat = deg_to_dms(location.latitude, pretty_print='latitude')
-                            lon = deg_to_dms(location.longitude, pretty_print='longitude')
-                            coords = f"{lat} / {lon}"</code></pre>
+                    <pre><code class="language-python">
+def deg_to_dms(deg, pretty_print=None):
+    #Convert from decimal degrees to degrees, minutes, seconds.
+
+    m, s = divmod(abs(deg)*3600, 60)
+    d, m = divmod(m, 60)
+    if deg < 0:
+        d = -d
+    d, m = int(d), int(m)
+
+    if pretty_print:
+        if pretty_print=='latitude':
+            hemi = 'N' if d>=0 else 'S'
+        elif pretty_print=='longitude':
+            hemi = 'E' if d>=0 else 'W'
+        else:
+            hemi = '?'
+        return '{d:d}°{m:d}′ {hemi:1s}'.format(
+                    d=abs(d), m=m, hemi=hemi)
+    return d, m, s
+    
+#Take the lat/lon from the place name to convert to dms coordinates
+geolocator = Nominatim(user_agent="degdms")
+location = geolocator.geocode(city, language="en")
+# Convert lat/lon to dms coordinates
+lat = deg_to_dms(location.latitude, pretty_print='latitude')
+lon = deg_to_dms(location.longitude, pretty_print='longitude')
+coords = f"{lat} / {lon}"</code></pre>
                     <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
                         Die zweite Bibliothek zum Drucken von Text auf ein
                         Bild. Dafür brauchen wir ttf-Fonts, ich habe sie von
@@ -289,40 +290,42 @@
                         experimentieren, um alles schön zu machen, obwohl
                         der Begriff der Schönheit für jeden anders ist :)
                     </p>
-                    <pre><code class="language-python">#Take the name of the place and country from the geoaddress to write it on the image
-                            firstWord, * middle, lastWord = location.address.split()
-                            
-                            fontsize = 240
-                            font = ImageFont.truetype("m:\\projekte\\Fonts\\CaviarDreams.ttf", size=fontsize)
-                            font_dms = ImageFont.truetype("m:\\projekte\\Fonts\\BerlinSmallCaps.ttf", size=int(fontsize/3))
-                            font_countryName = ImageFont.truetype("m:\\projekte\\Fonts\\BerlinSmallCaps.ttf", size=int(fontsize/2))</code></pre>
+                    <pre><code class="language-python">
+#Take the name of the place and country from the geoaddress to write it on the image
+firstWord, * middle, lastWord = location.address.split()
+
+fontsize = 240
+font = ImageFont.truetype("m:\\projekte\\Fonts\\CaviarDreams.ttf", size=fontsize)
+font_dms = ImageFont.truetype("m:\\projekte\\Fonts\\BerlinSmallCaps.ttf", size=int(fontsize/3))
+font_countryName = ImageFont.truetype("m:\\projekte\\Fonts\\BerlinSmallCaps.ttf", size=int(fontsize/2))</code></pre>
 
                     <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
                         Überlagerung des Standortnames und der Koordinaten
                         auf der Karte
                     </p>
-                    <pre><code class="language-python">with Image.open("data/" + city + ".png").convert("RGBA") as im_base:
-                                
-                                #Make image with the same size as original to compose them later together
-                                im_txt = Image.new("RGBA", im_base.size, (255, 255, 255, 0))
-                                draw_text = ImageDraw.Draw(im_txt)
-                                
-                                picWidth, picHeight = im_txt.size
-                                # Calculate the size of the inscription relative to the image for correct positioning
-                                    
-                                wordLenghtInPixels = draw_text.textlength(city.upper(), font)
-                                word_dms = draw_text.textlength(coords, font_dms)
-                                word_country = draw_text.textlength(lastWord, font_countryName)
-                                
-                                # Writing the inscriptions
-                                draw_text.text((picWidth/2, picHeight /4), city.upper(), fill="#ffffff99", anchor="ms", font=font)
-                                draw_text.text((picWidth/2, ((picHeight /4) - fontsize + 10)), coords, fill="#ffffff80", anchor="ms", font=font_dms)
-                                draw_text.text((picWidth/2, ((picHeight /4) + fontsize / 2 + 20)), lastWord, fill="#ffffff80", anchor="ms", font=font_countryName)
-                                
-                                #compose and display the final image
-                                out = Image.alpha_composite(im_base, im_txt)
-                                # out.show()
-                                out.save("city of " + city + ".png" )</code></pre>
+                    <pre><code class="language-python">
+with Image.open("data/" + city + ".png").convert("RGBA") as im_base:
+        
+    #Make image with the same size as original to compose them later together
+    im_txt = Image.new("RGBA", im_base.size, (255, 255, 255, 0))
+    draw_text = ImageDraw.Draw(im_txt)
+    
+    picWidth, picHeight = im_txt.size
+    # Calculate the size of the inscription relative to the image for correct positioning
+        
+    wordLenghtInPixels = draw_text.textlength(city.upper(), font)
+    word_dms = draw_text.textlength(coords, font_dms)
+    word_country = draw_text.textlength(lastWord, font_countryName)
+    
+    # Writing the inscriptions
+    draw_text.text((picWidth/2, picHeight /4), city.upper(), fill="#ffffff99", anchor="ms", font=font)
+    draw_text.text((picWidth/2, ((picHeight /4) - fontsize + 10)), coords, fill="#ffffff80", anchor="ms", font=font_dms)
+    draw_text.text((picWidth/2, ((picHeight /4) + fontsize / 2 + 20)), lastWord, fill="#ffffff80", anchor="ms", font=font_countryName)
+    
+    #compose and display the final image
+    out = Image.alpha_composite(im_base, im_txt)
+    # out.show()
+    out.save("city of " + city + ".png" )</code></pre>
                     <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
                         Man wählt die Schriftarten aus, spielt mit ihrer
                         Größe, Farbe und Transparenz, richtet sie in der
