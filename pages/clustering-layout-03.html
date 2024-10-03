@@ -111,11 +111,11 @@
                         brauchen wir es für weitere
                         Analysen. Und natürlich das Feld mit der Geometrie.</p>
                     <pre><code class="language-json">{
-                    "type": "Feature",
-                    "properties": { "operator": "Vodafone", "city_name": "Hamburg", "deployment_type": "5G NR",
-                    "status": "Commercial Availability" },
-                    "geometry": { "type": "Point", "coordinates": [ 9.99368, 53.55108 ]
-                    }</code></pre>
+"type": "Feature",
+"properties": { "operator": "Vodafone", "city_name": "Hamburg", "deployment_type": "5G NR",
+"status": "Commercial Availability" },
+"geometry": { "type": "Point", "coordinates": [ 9.99368, 53.55108 ]
+}</code></pre>
 
 
                     <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
@@ -127,54 +127,53 @@
                         Bundeslandes vorhanden
                         war.</p>
                     <pre><code class="language-python">
-                            import geopandas as gpd
-                            import json
-                            import osmnx as ox
-                            from arcgis.gis import GIS
-                            from arcgis.features import FeatureLayerCollection
-                            
-                            
-                            inputgeojson = r'm:\projekte\Ookla-5G\301023_ookla_5g.geojson'
-                            iputcsv = r'm:\projekte\Ookla-5G\DeutsclandStaedteListe.csv'
-                            country_name = {'country': 'Germany'}
-                            
-                            # Read the CSV file and create a dictionary mapping city names to land types
-                            city_land_types = {}
-                            with open(iputcsv, 'r', encoding='utf-8') as f:
-                            for line in f:
-                            res = (line.strip().split(','))
-                            city, land_type = res[0], res[-1].replace("(", "").replace(")", "")
-                            city_land_types[city] = land_type
-                            
-                            # Load the GeoJSON file into a GeoDataFrame
-                            with open(inputgeojson, 'r', encoding='utf-8') as f:
-                            geojson_data = json.load(f)
-                            
-                            # Iterate through the features and add the land_type field
-                            for feature in geojson_data['features']:
-                            city_name = feature['properties']['city_name']
-                            if city_name in city_land_types:
-                            feature['properties']['land_type'] = city_land_types[city_name]
-                            else:
-                            feature['properties']['land_type'] = 'Unknown'
-                            
-                            # Filter features based on city names
-                            filtered_features = [feature for feature in geojson_data['features'] if feature['properties']['city_name'] in
-                            city_land_types]
-                            
-                            # Create a GeoDataFrame from the filtered features and set crs
-                            filtered_gdf = gpd.GeoDataFrame.from_features(filtered_features).set_crs(epsg=4326, inplace=True)
-                        </code></pre>
+import geopandas as gpd
+import json
+import osmnx as ox
+from arcgis.gis import GIS
+from arcgis.features import FeatureLayerCollection
+
+inputgeojson = r'm:\projekte\Ookla-5G\301023_ookla_5g.geojson'
+iputcsv = r'm:\projekte\Ookla-5G\DeutsclandStaedteListe.csv'
+country_name = {'country': 'Germany'}
+
+# Read the CSV file and create a dictionary mapping city names to land types
+city_land_types = {}
+with open(iputcsv, 'r', encoding='utf-8') as f:
+    for line in f:
+        res = (line.strip().split(','))
+        city, land_type = res[0], res[-1].replace("(", "").replace(")", "")
+        city_land_types[city] = land_type
+
+# Load the GeoJSON file into a GeoDataFrame
+with open(inputgeojson, 'r', encoding='utf-8') as f:
+    geojson_data = json.load(f)
+
+# Iterate through the features and add the land_type field
+    for feature in geojson_data['features']:
+        city_name = feature['properties']['city_name']
+        if city_name in city_land_types:
+            feature['properties']['land_type'] = city_land_types[city_name]
+        else:
+            feature['properties']['land_type'] = 'Unknown'
+
+# Filter features based on city names
+filtered_features = [feature for feature in geojson_data['features'] if feature['properties']['city_name'] in
+city_land_types]
+
+# Create a GeoDataFrame from the filtered features and set crs
+filtered_gdf = gpd.GeoDataFrame.from_features(filtered_features).set_crs(epsg=4326, inplace=True)
+</code></pre>
                     <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
                         Ich filterte den ursprünglichen Datensatz nach den Städten, wobei ich ein neues Feld hinzufügte,
                         und nun sieht das
                         Objektverzeichnis wie folgt aus:</p>
                     <pre><code class="language-json">{
-                        "type": "Feature",
-                        "properties": { "operator": "Vodafone", "city_name": "Hamburg", "deployment_type": "5G NR",
-                        "status": "Commercial Availability", "land_type": "HH" },
-                        "geometry": { "type": "Point", "coordinates": [ 9.99368, 53.55108 ]
-                        }</code></pre>
+"type": "Feature",
+"properties": { "operator": "Vodafone", "city_name": "Hamburg", "deployment_type": "5G NR",
+"status": "Commercial Availability", "land_type": "HH" },
+"geometry": { "type": "Point", "coordinates": [ 9.99368, 53.55108 ]
+}</code></pre>
 
 
                     <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
@@ -226,17 +225,17 @@
                         eine neue geojson-Datei.
                     </p>
                     <pre><code class="language-python"># Get place boundary related to the place name as a geodataframe
-                    multi_polygon_gdf = ox.geocode_to_gdf (country_name)
-                    
-                    # make spatial join
-                    points_in_polygons = gpd.sjoin(filtered_gdf, multi_polygon_gdf, how="inner", predicate='within')
-                    
-                    # Delete index_right column after spatial join
-                    if 'index_right' in points_in_polygons:
-                    points_in_polygons.drop(columns=['index_right'], inplace=True)
-                    
-                    # convert gdf to json string
-                    geojson_points_in_polygons = points_in_polygons.to_json()</code></pre>
+multi_polygon_gdf = ox.geocode_to_gdf (country_name)
+
+# make spatial join
+points_in_polygons = gpd.sjoin(filtered_gdf, multi_polygon_gdf, how="inner", predicate='within')
+
+# Delete index_right column after spatial join
+if 'index_right' in points_in_polygons:
+    points_in_polygons.drop(columns=['index_right'], inplace=True)
+
+# convert gdf to json string
+geojson_points_in_polygons = points_in_polygons.to_json()</code></pre>
                     <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
                         Es ist auf jeden Fall einfacher, genauer und schneller als die Suche nach den Grenzen einer
                         Verwaltungseinheit, z. B.
@@ -259,19 +258,19 @@
 
                     <pre><code class="language-python">portal = GIS("https://you_portal_address.maps.arcgis.com/", username="****", password="****")
                     
-                    item_properties = {
-                    'type': 'GeoJson',
-                    'title': 'Ookla GeoJSON 5G net',
-                    'typeKeywords': ['Ookla', '5G', 'Mobile Netz', 'GeoJSON', '5G Tower'],
-                    'description':'Ookla 5G Map Germany',
-                    'tags': ['Ookla', '5G', 'Mobile Netz', 'GeoJSON', '5G Tower']
-                    }
-                    
-                    user = portal.users.search(query="username:****")
-                    item_title = item_properties['title']
-                    item_type = item_properties['type']
-                    
-                    feature_item = portal.content.search(query = item_title)</code></pre>
+item_properties = {
+'type': 'GeoJson',
+'title': 'Ookla GeoJSON 5G net',
+'typeKeywords': ['Ookla', '5G', 'Mobile Netz', 'GeoJSON', '5G Tower'],
+'description':'Ookla 5G Map Germany',
+'tags': ['Ookla', '5G', 'Mobile Netz', 'GeoJSON', '5G Tower']
+}
+
+user = portal.users.search(query="username:****")
+item_title = item_properties['title']
+item_type = item_properties['type']
+
+feature_item = portal.content.search(query = item_title)</code></pre>
                     <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
                         Dann müssen wir prüfen, ob eine solche Ebene bereits geladen ist oder nicht, damit wir sie im
                         Falle einer
@@ -285,27 +284,26 @@
                         ständig verwenden wird.
                     </p>
                     <pre><code class="language-python">if feature_item:
-                    content_item = user[0].items()
-                    # Getting the layers Id
-                    matching_numbers = [item.itemid for item in content_item if item.title == item_title and item.type == item_type]
-                    
-                    # We get the required layer, update and publish it.
-                    #Then we print its data for information.
-                    
-                    
-                    hosted_layer = portal.content.get(matching_numbers[0])
-                    hosted_layer.update(item_properties, geojson_points_in_polygons)
-                    hosted_layer.publish(overwrite = True, file_type='geojson')
-                    print(f"Item id : {hosted_layer.id}, Item type: {hosted_layer.type}.")
-                    print('layer updated')
-                    else:
-                    # If no layer found, we simply publish a new one
-                    item = portal.content.add(item_properties, geojson_points_in_polygons)
-                    item.publish(overwrite = True, file_type='geojson')
-                    print(f"Item id : {hosted_layer.id}, Item type: {hosted_layer.type}.")
-                    print('layer added')
-                    
-                    print('All jobs done')</code></pre>
+    content_item = user[0].items()
+    # Getting the layers Id
+    matching_numbers = [item.itemid for item in content_item if item.title == item_title and item.type == item_type]
+
+    # We get the required layer, update and publish it.
+    #Then we print its data for information.
+
+    hosted_layer = portal.content.get(matching_numbers[0])
+    hosted_layer.update(item_properties, geojson_points_in_polygons)
+    hosted_layer.publish(overwrite = True, file_type='geojson')
+    print(f"Item id : {hosted_layer.id}, Item type: {hosted_layer.type}.")
+    print('layer updated')
+else:
+    # If no layer found, we simply publish a new one
+    item = portal.content.add(item_properties, geojson_points_in_polygons)
+    item.publish(overwrite = True, file_type='geojson')
+    print(f"Item id : {hosted_layer.id}, Item type: {hosted_layer.type}.")
+    print('layer added')
+
+print('All jobs done')</code></pre>
 
                     <p class="text-medium text-dark-gray line-height-28 sm-line-height-26">
                         Sobald die Geojson-Daten hochgeladen sind, werden sie automatisch als Feature Layer (gehostet)
