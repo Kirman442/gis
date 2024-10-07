@@ -7,7 +7,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
-    <meta name="author" content="GIS-Projekt">
+    <meta name="author" content="Kirill Lisochenko">
+    <meta name="robots" content="noindex, nofollow">
     <!-- description -->
     <meta name="description" content="GIS-Projekt">
     <!-- keywords -->
@@ -48,9 +49,11 @@
                         <ul id="accordion" class="nav navbar-nav no-margin alt-font text-normal"
                             data-in="animate__fadeIn" data-out="animate__fadeOut">
                             <!-- start menu item -->
-                            <li class="dropdown">
-                                <a href="../index.html">Home</a><i class="fa-solid fa-angle-down dropdown-toggle"
-                                    data-bs-toggle="dropdown" aria-hidden="true"></i>
+                            <li>
+                                <a class="custom-link" href="../index.html">Home</a>
+                            </li>
+                            <li>
+                                <a class="custom-link" href="about-me.html">About</a>
                             </li>
                             <!-- end menu item -->
                         </ul>
@@ -66,7 +69,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-8 col-lg-7 p-0 cover-background md-h-500px sm-h-300px"
-                    style="background:url('../images/Venezuela.jpg')"></div>
+                    style="background:url('../images/flussystem/VenezuelaTitle.jpg')"></div>
                 <div class="col-xl-4 col-lg-5 p-0">
                     <div
                         class="padding-seventeen-lr padding-twenty-tb lg-padding-40px-lr md-padding-50px-tb sm-padding-30px-all">
@@ -532,6 +535,15 @@ gdf.plot(ax=ax, color=gdf['color'], linewidth=gdf['line_width'], alpha=1)</code>
 
                     </div>
                     <!-- end quick links -->
+                    <!-- start about me -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 widget sm-margin-30px-bottom">
+                        <div
+                            class="widget-title alt-font text-extra-small text-uppercase text-white-2 margin-15px-bottom font-weight-600">
+                            About me</div>
+                        <div class="text-small line-height-24 text-medium-gray"><a href="about-me.html"
+                                class="text-medium-gray text-small">Mehr sehen</a></div>
+                    </div>
+                    <!-- end about me -->
                 </div>
             </div>
         </div>

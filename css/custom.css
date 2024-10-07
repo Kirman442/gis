@@ -50,3 +50,21 @@ a.text-green-hover:hover {
     --default-handle-width: 200px;
     --default-handle-color: #132c74;
 }
+
+.grayscale-filter {
+    filter: grayscale(100%);
+}
+
+
+.border-color-green {
+    border-color: #089995 !important;
+}
+
+
+.scroll-top-arrow:hover {
+    background: #089995;
+}
+
+.navbar-collapse a.custom-link {
+    color: #089995 !important;
+}

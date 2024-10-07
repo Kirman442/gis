@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
     <meta name="author" content="Kirill Lisochenko">
+    <meta name="robots" content="noindex, nofollow">
     <!-- description -->
     <meta name="description" content="GIS-Projekte">
     <!-- keywords -->
@@ -48,9 +49,11 @@
                         <ul id="accordion" class="nav navbar-nav no-margin alt-font text-normal"
                             data-in="animate__fadeIn" data-out="animate__fadeOut">
                             <!-- start menu item -->
-                            <li class="dropdown">
-                                <a href="../index.html">Home</a><i class="fa-solid fa-angle-down dropdown-toggle"
-                                    data-bs-toggle="dropdown" aria-hidden="true"></i>
+                            <li>
+                                <a class="custom-link" href="../index.html">Home</a>
+                            </li>
+                            <li>
+                                <a class="custom-link" href="about-me.html">About</a>
                             </li>
                             <!-- end menu item -->
                         </ul>
@@ -211,7 +214,7 @@ G = ox.graph_from_point(point, dist=15000, retain_all=True, simplify = True, net
                         <div class="col-lg-7 margin-four-bottom">
                             <p class="text-extra-large  text-dark-gray text-center line-height-28">Vollständige
                                 unbeschriftete Karte von Köln</p>
-                            <img src="../images/koeln1.jpg" alt class="w-100" data-no-retina>
+                            <img src="../images/osmnxmaps/koeln1.jpg" alt class="w-100" data-no-retina>
                         </div>
                     </div>
 
@@ -845,6 +848,15 @@ with Image.open("data/" + city + ".png").convert("RGBA") as im_base:
 
                     </div>
                     <!-- end quick links -->
+                    <!-- start about me -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 widget sm-margin-30px-bottom">
+                        <div
+                            class="widget-title alt-font text-extra-small text-uppercase text-white-2 margin-15px-bottom font-weight-600">
+                            About me</div>
+                        <div class="text-small line-height-24 text-medium-gray"><a href="about-me.html"
+                                class="text-medium-gray text-small">Mehr sehen</a></div>
+                    </div>
+                    <!-- end about me -->
                 </div>
             </div>
         </div>
