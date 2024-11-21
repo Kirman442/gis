@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import KunstkartenFoto from "/images/home/Pekin_1_1_1_0_5_1.jpg"
+import UbahnFoto from "/images/home/brabutor.jpg"
+import FlussFoto from "/images/home/Fluss_Germany.jpg"
+import BergbauFoto from "/images/home/risikomanagement.jpg"
+import DresdenFoto from "/images/home/Dresden-hc.jpg"
+import ClusteringFoto from "/images/home/clustering2.jpg"
 
 const HomeGallery = () => {
     return (
@@ -15,7 +21,7 @@ const HomeGallery = () => {
                                     <figure>
                                         <div className=" bg-extra-dark-gray">
                                             <Link to="/portfolio/Kunstkarten" className="text-medium-gray text-small">
-                                                <img src="/images/home/Pekin_1_1_1_0_5_1.jpg" alt="Kunstkarten" />
+                                                <img src={KunstkartenFoto} alt="Kunstkarten" />
                                             </Link>
                                         </div>
                                         <figcaption>
@@ -44,7 +50,7 @@ const HomeGallery = () => {
                                     <figure>
                                         <div className="blog-img bg-extra-dark-gray">
                                             <Link to="/portfolio/Flusssystem" className="text-medium-gray text-small">
-                                                <img src="/images/home/Fluss_Germany.jpg" alt="Flusssystemstkarten" />
+                                                <img src={FlussFoto} alt="Flusssystemstkarten" />
                                             </Link>
                                         </div>
                                         <figcaption>
@@ -74,7 +80,7 @@ const HomeGallery = () => {
                                     <figure>
                                         <div className="blog-img bg-extra-dark-gray">
                                             <Link to="/portfolio/Ubahn" className="text-medium-gray text-small">
-                                                <img src="/images/home/brabutor.jpg" alt="Berliner U-Bahn
+                                                <img src={UbahnFoto} alt="Berliner U-Bahn
                                                     Geschichte" />
                                             </Link>
                                         </div>
@@ -107,7 +113,7 @@ const HomeGallery = () => {
                                     <figure>
                                         <div className="blog-img bg-extra-dark-gray">
                                             <Link to="/portfolio/Bergbau" className="text-medium-gray text-small">
-                                                <img src="/images/home/risikomanagement.jpg" alt="Risikomanagement" />
+                                                <img src={BergbauFoto} alt="Risikomanagement" />
                                             </Link>
                                         </div>
                                         <figcaption>
@@ -138,7 +144,7 @@ const HomeGallery = () => {
                                     <figure>
                                         <div className="blog-img bg-extra-dark-gray">
                                             <Link to="/portfolio/Dresden" className="text-medium-gray text-small">
-                                                <img src="/images/home/Dresden-hc.jpg" alt="Infrastruktur um
+                                                <img src={DresdenFoto} alt="Infrastruktur um
                                                     Dresden" />
                                             </Link>
                                         </div>
@@ -168,7 +174,7 @@ const HomeGallery = () => {
                                     <figure>
                                         <div className="blog-img bg-extra-dark-gray">
                                             <Link to="/portfolio/Clustering" className="text-medium-gray text-small">
-                                                <img src="/images/home/clustering2.jpg" alt="Clustering" />
+                                                <img src={ClusteringFoto} alt="Clustering" />
                                             </Link>
                                         </div>
                                         <figcaption>

@@ -4,6 +4,9 @@ import PortfolioSlider from "../components/PortfolioSlider";
 import { CircularProgressbar } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 
+import PortfolioFoto from "/images/about/aboutFotoMain.jpg"
+import PortfolioFoto2 from "/images/about/aboutFoto1.jpg"
+
 const Skills = [
     {
         value: '70',
@@ -39,7 +42,7 @@ const About = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-xl-6 col-lg-7 p-0 cover-background md-h-500px sm-h-300px grayscale-filter"
-                            style={{ background: "url('../images/about/aboutFotoMain.jpg')" }}></div>
+                            style={{ background: `url(${PortfolioFoto})` }}></div>
                         <div className="col-xl-6 col-lg-5 p-0  bg-medium-light-gray">
                             <div className="padding-seventeen-lr padding-twenty-tb lg-padding-40px-lr md-padding-50px-tb sm-padding-30px-all">
                                 <i className="fa-solid fa-quote-left text-green icon-extra-large margin-5px-bottom"></i>
@@ -74,7 +77,9 @@ const About = () => {
                 <div className="container-fluid">
                     <div className="row row-cols-1 row-cols-lg-2">
                         <div className="col-12 col-lg-4 cover-background md-h-450px "
-                            style={{ background: "url('../images/about/aboutFoto1.jpg')" }}>
+                            style={{
+                                background: `url(${PortfolioFoto2})`
+                            }}>
                         </div>
                         <div
                             className="col-12 col-lg-8 padding-five-tb padding-five-lr md-padding-nine-half-tb xs-padding-15px-lr xs-padding-50px-tb">

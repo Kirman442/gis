@@ -15,63 +15,65 @@ import 'lightgallery/css/lg-thumbnail.css';
 import Code from "../../components/code";
 import { py1, py2, py3, py4, py5 } from "./kartenCode";
 
+import KunstkartenFoto from "/images/kunstkarten/kunstkarten_portfolio1.jpg"
+
 const OldImages = [
     {
-        src: '/images/kunstkarten/city-of-Dortmund_1.jpg',
-        thumb: '/images/kunstkarten/city-of-Dortmund_1.jpg',
+        src: `${import.meta.env.BASE_URL}images/kunstkarten/city-of-Dortmund_1.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/city-of-Dortmund_1.jpg`,
         alt: 'Dortmund',
     },
     {
-        src: "/images/kunstkarten/city-of-Koln_1.jpg",
-        thumb: "/images/kunstkarten/city-of-Koln_1.jpg",
+        src: `${import.meta.env.BASE_URL}images/kunstkarten/city-of-Koln_1.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/city-of-Koln_1.jpg`,
         alt: "Köln",
     },
     {
-        src: "/images/kunstkarten/city-of-Paris_1.jpg",
-        thumb: "/images/kunstkarten/city-of-Paris_1.jpg",
+        src: `${import.meta.env.BASE_URL}images/kunstkarten/city-of-Paris_1.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/city-of-Paris_1.jpg`,
         alt: "Paris",
     }
 ];
 
 const NewImages = [
     {
-        src: '/images/kunstkarten/Dortmund_final_9500_211011.jpg',
-        thumb: '/images/kunstkarten/Dortmund_final_9500_211011.jpg',
+        src: `${import.meta.env.BASE_URL}images/kunstkarten/Dortmund_final_9500_211011.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Dortmund_final_9500_211011.jpg`,
         alt: 'Dortmund',
     },
     {
-        src: "/images/kunstkarten/Tripoly_final_12500_20052.jpg",
-        thumb: "/images/kunstkarten/Tripoly_final_12500_20052.jpg",
+        src: `${import.meta.env.BASE_URL}images/kunstkarten/Tripoly_final_12500_20052.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Tripoly_final_12500_20052.jpg`,
         alt: "Tripoli"
     },
     {
-        src: "/images/kunstkarten/Dubai_final_12500_211042.jpg",
-        thumb: "/images/kunstkarten/Dubai_final_12500_211042.jpg",
+        src: `${import.meta.env.BASE_URL}images/kunstkarten/Dubai_final_12500_211042.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Dubai_final_12500_211042.jpg`,
         alt: "Dubai",
     },
     {
-        src: "/images/kunstkarten/Ho-Chi-Minh_final_7000_211042.jpg",
-        thumb: "/images/kunstkarten/Ho-Chi-Minh_final_7000_211042.jpg",
+        src: `${import.meta.env.BASE_URL}images/kunstkarten/Ho-Chi-Minh_final_7000_211042.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Ho-Chi-Minh_final_7000_211042.jpg`,
         alt: "Ho-Chi-Minh",
     },
     {
-        src: "/images/kunstkarten/Istanbul_final_19500_211042.jpg",
-        thumb: "/images/kunstkarten/Istanbul_final_19500_211042.jpg",
+        src: `${import.meta.env.BASE_URL}images/kunstkarten/Istanbul_final_19500_211042.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Istanbul_final_19500_211042.jpg`,
         alt: "Istanbul",
     },
     {
-        src: "/images/kunstkarten/Moscow_final_19000_211042.jpg",
-        thumb: "/images/kunstkarten/Moscow_final_19000_211042.jpg",
+        src: `${import.meta.env.BASE_URL}images/kunstkarten/Moscow_final_19000_211042.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Moscow_final_19000_211042.jpg`,
         alt: "Moscow",
     },
     {
-        src: "/images/kunstkarten/Paris_final_19500_111052.jpg",
-        thumb: "/images/kunstkarten/Paris_final_19500_111052.jpg",
+        src: `${import.meta.env.BASE_URL}images/kunstkarten/Paris_final_19500_111052.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Paris_final_19500_111052.jpg`,
         alt: "Paris",
     },
     {
-        src: "/images/kunstkarten/Stockholm_final_7500_20112.jpg",
-        thumb: "/images/kunstkarten/Stockholm_final_7500_20112.jpg",
+        src: `${import.meta.env.BASE_URL}images/kunstkarten/Stockholm_final_7500_20112.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Stockholm_final_7500_20112.jpg`,
         alt: "Stockholm",
     }
 ];
@@ -111,7 +113,7 @@ const PortfolioKunstkarten = () => {
             {/* <!-- start page title section --> */}
             <section data-parallax-background-ratio="0.3"
                 style={{
-                    backgroundImage: "url('/images/kunstkarten/kunstkarten_portfolio1.jpg')",
+                    backgroundImage: `url(${KunstkartenFoto})`,
                     maxHeight: '650px'
                 }}>
                 <div className="opacity-light bg-extra-dark-gray"></div>
@@ -255,7 +257,7 @@ const PortfolioKunstkarten = () => {
                                 <div className="col-lg-7 margin-four-bottom">
                                     <p className="text-extra-large  text-dark-gray text-center line-height-28">Vollständige
                                         unbeschriftete Karte von Köln</p>
-                                    <img src="../images/kunstkarten/koeln1.jpg" className="w-100" data-no-retina />
+                                    <img src={`${import.meta.env.BASE_URL}images/kunstkarten/koeln1.jpg`} className="w-100" data-no-retina />
                                 </div>
                             </div>
 
@@ -417,7 +419,7 @@ const PortfolioKunstkarten = () => {
                             </p>
                             <div className="row">
                                 <div className="col-lg-6">
-                                    <img className="alignleft" src="/images/kunstkarten/Berlin_water_grenze.png" />
+                                    <img className="alignleft" src={`${import.meta.env.BASE_URL}images/kunstkarten/Berlin_water_grenze.png`} />
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Teil
                                         der Spree in Berlin. Hier können Sie
                                         deutlich sehen, was ich meine.
@@ -425,7 +427,7 @@ const PortfolioKunstkarten = () => {
                                         gebildet.</p>
                                 </div>
                                 <div className="col-lg-6">
-                                    <img className="alignleft" src="/images/kunstkarten/Berlin_water_ohne_grenze.png" />
+                                    <img className="alignleft" src={`${import.meta.env.BASE_URL}images/kunstkarten/Berlin_water_ohne_grenze.png`} />
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Und
                                         hier ist ein Multipolygon</p>
                                     <p className="d-inline-block"></p>

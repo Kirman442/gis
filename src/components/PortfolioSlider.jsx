@@ -45,7 +45,7 @@ const PortfolioSlider = () => {
                                     <figure>
                                         <div className="portfolio-img bg-extra-dark-gray">
                                             <img
-                                                src="../images/about/aboutPekin1000.jpg"
+                                                src={`${import.meta.env.BASE_URL}images/about/aboutPekin1000.jpg`}
                                                 alt=""
                                                 className="grayscale-filter"
                                             />
@@ -71,7 +71,7 @@ const PortfolioSlider = () => {
                                     <figure>
                                         <div className="portfolio-img bg-extra-dark-gray">
                                             <img
-                                                src="../images/about/aboutFluss1000.jpg"
+                                                src={`${import.meta.env.BASE_URL}images/about/aboutFluss1000.jpg`}
                                                 alt="Example"
                                                 className="grayscale-filter"
                                             />
@@ -96,7 +96,7 @@ const PortfolioSlider = () => {
                                     <figure>
                                         <div className="portfolio-img bg-extra-dark-gray">
                                             <img
-                                                src="../images/home/brabutor.jpg"
+                                                src={`${import.meta.env.BASE_URL}images/home/brabutor.jpg`}
                                                 alt="Example"
                                                 className="grayscale-filter"
                                             />
@@ -122,7 +122,7 @@ const PortfolioSlider = () => {
                                     <figure>
                                         <div className="portfolio-img bg-extra-dark-gray">
                                             <img
-                                                src="../images/home/risikomanagement.jpg"
+                                                src={`${import.meta.env.BASE_URL}images/home/risikomanagement.jpg`}
                                                 alt="Example"
                                                 className="grayscale-filter"
                                             />
@@ -148,7 +148,7 @@ const PortfolioSlider = () => {
                                     <figure>
                                         <div className="portfolio-img bg-extra-dark-gray">
                                             <img
-                                                src="../images/home/clustering2.jpg"
+                                                src={`${import.meta.env.BASE_URL}images/home/clustering2.jpg`}
                                                 alt="Example"
                                                 className="grayscale-filter"
                                             />
@@ -173,7 +173,7 @@ const PortfolioSlider = () => {
                                     <figure>
                                         <div className="portfolio-img bg-extra-dark-gray">
                                             <img
-                                                src="../images/home/Dresden-hc.jpg"
+                                                src={`${import.meta.env.BASE_URL}images/home/Dresden-hc.jpg`}
                                                 alt="Example"
                                                 className="grayscale-filter"
                                             />

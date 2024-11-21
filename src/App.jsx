@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './components/Header';
 import Footer from "./components/Footer";
@@ -22,16 +22,16 @@ function App() {
       <ScrollToTop />
       <ScrollToTopButton />
       <Header />
-      <Routes>
+      <Routes basename={import.meta.env.BASE_URL}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
         <Route path="/portfolio/Kunstkarten" element={<PortfolioKunstkarten />} />
         <Route path="/portfolio/Flusssystem" element={<PortfolioFlusssystem />} />
         <Route path="/portfolio/Ubahn" element={<PortfolioUbahn />} />
         <Route path="/portfolio/Bergbau" element={<PortfolioBergbau />} />
         <Route path="/portfolio/Clustering" element={<PortfolioClustering />} />
         <Route path="/portfolio/Dresden" element={<PortfolioDresden />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div >

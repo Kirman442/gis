@@ -1,12 +1,12 @@
 import React from "react";
 import HomeGallery from "../components/HomeGallery";
+import gislogo from "/images/home/gis-projekte-logo-1920.jpg"
 
 const Home = () => {
     return (
         <div>
             <section
-
-                style={{ backgroundImage: "url('/images/home/gis-projekte-logo-1920.jpg')" }}
+                style={{ backgroundImage: `url(${gislogo})` }}
             >
                 <div className="opacity-medium bg-extra-dark-gray"></div>
                 <div className="container position-relative">
