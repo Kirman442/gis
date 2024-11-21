@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import BergbauFoto from "/images/bergbau/risiko_main.jpg"
+
 const PortfolioBergbau = () => {
     return (
         <div>
             {/* <!-- start page title section --> */}
             <section className="parallax" data-parallax-background-ratio="0.5"
-                style={{ background: "url('/images/bergbau/risiko_main.jpg')", maxHeight: '650px' }}>
+                style={{ background: `url(${BergbauFoto})`, maxHeight: '650px' }}>
                 <div className="opacity-light bg-extra-dark-gray"></div>
                 <div className="container position-relative">
                     <div className="row align-items-center">
@@ -89,7 +91,7 @@ const PortfolioBergbau = () => {
                             <h6 className="alt-font text-green">Vorüberlegung</h6>
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <img className="alignright col-lg-6" src="/images/bergbau/stollenbau.jpg"
+                                    <img className="alignright col-lg-6" src={`${import.meta.env.BASE_URL}images/bergbau/stollenbau.jpg`}
                                         data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Beim Schreiben eines
@@ -149,7 +151,7 @@ const PortfolioBergbau = () => {
                             <h6 className="alt-font text-green">Berechnung der Sohlen- und Firstenhöhen</h6>
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <img className="alignright col-lg-6" src="/images/bergbau/StreckeUndAbbauFrage.jpg"
+                                    <img className="alignright col-lg-6" src={`${import.meta.env.BASE_URL}images/bergbau/StreckeUndAbbauFrage.jpg`}
                                         data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Um die Sohlenhöhen
@@ -168,7 +170,7 @@ const PortfolioBergbau = () => {
                             </div>
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <img className="alignright col-lg-6" src="../images/bergbau/StreckeUndAbbau_punkte.jpg"
+                                    <img className="alignright col-lg-6" src={`${import.meta.env.BASE_URL}images/bergbau/StreckeUndAbbau_punkte.jpg`}
                                         data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Über den searchcursor
@@ -197,7 +199,7 @@ const PortfolioBergbau = () => {
                                 gespeichert.</p>
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <img className="alignright col-lg-6" src="../images/bergbau/tins_skizze.jpg"
+                                    <img className="alignright col-lg-6" src={`${import.meta.env.BASE_URL}images/bergbau/tins_skizze.jpg`}
                                         data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Für die
@@ -232,7 +234,7 @@ const PortfolioBergbau = () => {
                                     <p className="alignright col-lg-6"> Die meisten Oberflächenanalysen in GIS werden von Raster-
                                         oder
                                         TIN-Daten ausgeführt</p>
-                                    <img className="alignright col-lg-6" src="../images/bergbau/tins_new.jpg"
+                                    <img className="alignright col-lg-6" src={`${import.meta.env.BASE_URL}images/bergbau/tins_new.jpg`}
                                         data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Zur automatisierten
@@ -259,7 +261,7 @@ const PortfolioBergbau = () => {
                                 <div className="col-lg-12">
                                     <p className="alignright col-lg-6"> Modellierung und Erstellung eines dreidimensionalen Objekts
                                         auf der Grundlage der Daten</p>
-                                    <img className="alignright col-lg-6" src="../images/bergbau/3DStrecke2.jpg"
+                                    <img className="alignright col-lg-6" src={`${import.meta.env.BASE_URL}images/bergbau/3DStrecke2.jpg`}
                                         data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Im letzten Schritt
@@ -284,7 +286,7 @@ const PortfolioBergbau = () => {
                                 <div className="col-lg-12">
                                     <p className="alignright col-lg-6">Am Ende der Berechnungen und Transformationen haben wir ein
                                         fertiges 3D-Modell</p>
-                                    <img className="alignright col-lg-6" src="../images/bergbau/3DStrecke3.jpg"
+                                    <img className="alignright col-lg-6" src={`${import.meta.env.BASE_URL}images/bergbau/3DStrecke3.jpg`}
                                         data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Aus dem bis hierhin

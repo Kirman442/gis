@@ -14,31 +14,32 @@ import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
 
+import FlussFoto from "/images/flusssystem/VenezuelaTitle.jpg"
 
 const flussImages = [
     {
-        src: '/images/flusssystem/France.jpg',
-        thumb: '/images/flusssystem/France.jpg',
+        src: `${import.meta.env.BASE_URL}images/flusssystem/France.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/flusssystem/France.jpg`,
         alt: 'France',
     },
     {
-        src: "/images/flusssystem/Germany.jpg",
-        thumb: "/images/flusssystem/Germany.jpg",
+        src: `${import.meta.env.BASE_URL}images/flusssystem/Germany.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/flusssystem/Germany.jpg`,
         alt: "Germany"
     },
     {
-        src: "/images/flusssystem/Uruguay.jpg",
-        thumb: "/images/flusssystem/Uruguay.jpg",
+        src: `${import.meta.env.BASE_URL}images/flusssystem/Uruguay.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/flusssystem/Uruguay.jpg`,
         alt: "Uruguay",
     },
     {
-        src: "/images/flusssystem/Venezuela.jpg",
-        thumb: "/images/flusssystem/Venezuela.jpg",
+        src: `${import.meta.env.BASE_URL}images/flusssystem/Venezuela.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/flusssystem/Venezuela.jpg`,
         alt: "Venezuela",
     },
     {
-        src: "/images/flusssystem/South_America_upland50_ord_flow6.jpg",
-        thumb: "/images/flusssystem/South_America_upland50_ord_flow6.jpg",
+        src: `${import.meta.env.BASE_URL}images/flusssystem/South_America_upland50_ord_flow6.jpg`,
+        thumb: `${import.meta.env.BASE_URL}images/flusssystem/South_America_upland50_ord_flow6.jpg`,
         alt: "South America",
     }
 ];
@@ -80,7 +81,7 @@ const PortfolioFlusssystem = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-xl-8 col-lg-7 p-0 cover-background md-h-500px sm-h-300px"
-                            style={{ background: "url('/images/flusssystem/VenezuelaTitle.jpg')" }}></div>
+                            style={{ background: `url(${FlussFoto})` }}></div>
                         <div className="col-xl-4 col-lg-5 p-0">
                             <div
                                 className="padding-seventeen-lr padding-twenty-tb lg-padding-40px-lr md-padding-50px-tb sm-padding-30px-all">

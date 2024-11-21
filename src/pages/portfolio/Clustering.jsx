@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Code from "../../components/code";
 import { Cluster1, Cluster2, Cluster3, Cluster4, Cluster5, Cluster6 } from "./kartenCode";
 
+import ClusteringFoto from "/images/clustering/clustering_main.jpg"
+
 const PortfolioClustering = () => {
     return (
         <div>
@@ -13,7 +15,7 @@ const PortfolioClustering = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-xl-8 col-lg-7 p-0 cover-background md-h-500px sm-h-300px"
-                            style={{ background: "url('/images/clustering/clustering_main.jpg')" }}></div>
+                            style={{ background: `url(${ClusteringFoto})` }}></div>
                         <div className="col-xl-4 col-lg-5 p-0">
                             <div
                                 className="padding-seventeen-lr padding-twenty-tb lg-padding-40px-lr md-padding-50px-tb sm-padding-30px-all">

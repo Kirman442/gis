@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ImgComparisonSlider } from '@img-comparison-slider/react';
 
+import UbahnFoto from "/images/ubahn/1902ca_buelowstr.jpg"
 
 const PortfolioUbahn = () => {
     return (
@@ -11,7 +12,7 @@ const PortfolioUbahn = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-xl-8 col-lg-7 p-0 cover-background md-h-500px sm-h-300px"
-                            style={{ background: "url('../images/ubahn/1902ca_buelowstr.jpg')" }}></div>
+                            style={{ background: `url(${UbahnFoto})` }}></div>
                         <div className="col-xl-4 col-lg-5 p-0">
                             <div
                                 className="padding-seventeen-lr padding-twenty-tb lg-padding-40px-lr md-padding-50px-tb sm-padding-30px-all">
@@ -73,17 +74,12 @@ const PortfolioUbahn = () => {
                                 <div className="row">
                                     <div className="col-12">
                                         <style className="darkreader darkreader--sync" media="screen"></style>
-                                        {/* <img-comparison-slider className="slider-example-focus slider-example-opacity-and-size"
-                                            value="50">
-                                            <img slot="first" src="/images/ubahn/ubahn_schemamap.jpg" />
-                                            <img slot="second" src="../images/ubahn/ubahn_geomap3.jpg" />
-                                        </img-comparison-slider> */}
                                         <ImgComparisonSlider
                                             className="slider-example-focus slider-example-opacity-and-size"
                                             value="50"
                                         >
-                                            <img slot="first" src="/images/ubahn/ubahn_schemamap.jpg" />
-                                            <img slot="second" src="/images/ubahn/ubahn_geomap3.jpg" />
+                                            <img slot="first" src={`${import.meta.env.BASE_URL}images/ubahn/ubahn_schemamap.jpg`} />
+                                            <img slot="second" src={`${import.meta.env.BASE_URL}images/ubahn/ubahn_geomap3.jpg`} />
                                         </ImgComparisonSlider>
                                     </div>
                                 </div>
@@ -146,7 +142,7 @@ const PortfolioUbahn = () => {
 
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <img className="alignright" src="../images/ubahn/2200_1343.png" data-no-retina />
+                                    <img className="alignright" src={`${import.meta.env.BASE_URL}images/ubahn/2200_1343.png`} data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">z ist der Maßstab, in
                                         dem sie angezeigt wird (je größer der z-Wert, desto größer die Vergrößerung);
@@ -168,7 +164,7 @@ const PortfolioUbahn = () => {
                                     <p className="text-extra-large  text-dark-gray text-center line-height-28">Das Gesamtbild, das
                                         wir letztendlich sehen, wird aus vielen Kacheln zu einem einzigen Bild zusammengefügt:
                                     </p>
-                                    <img src="../images/ubahn/tile_map_story.jpg" className="w-100" data-no-retina />
+                                    <img src={`${import.meta.env.BASE_URL}images/ubahn/tile_map_story.jpg`} className="w-100" data-no-retina />
                                 </div>
                             </div>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">

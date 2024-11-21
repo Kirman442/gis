@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import DresdenFoto from "/images/dresden/geodata_around_dresden.jpg"
+
 const PortfolioDresden = () => {
     return (
         <div>
@@ -9,7 +11,7 @@ const PortfolioDresden = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-xl-8 col-lg-7 p-0 cover-background md-h-500px sm-h-300px"
-                            style={{ background: "url('/images/dresden/geodata_around_dresden.jpg')" }}></div>
+                            style={{ background: `url(${DresdenFoto})` }}></div>
                         <div className="col-xl-4 col-lg-5 p-0">
                             <div
                                 className="padding-seventeen-lr padding-twenty-tb lg-padding-40px-lr md-padding-50px-tb sm-padding-30px-all">
