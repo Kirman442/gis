@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import PageNotFoundFoto from "/images/home/gis-projekte-logo-1920.jpg"
+
 const NotFound = () => {
     return (
         <div>
             {/* <!-- start page not found section --> */}
-            <section id="home" className="parallax p-0 mobile-height" style={{ background: "url('/images/home/gis-projekte-logo-1920.jpg')" }}>
+            <section id="home" className="parallax p-0 mobile-height" style={{ background: `url(${PageNotFoundFoto})` }}>
                 <div className="opacity-full bg-extra-dark-gray"></div>
                 <div className="container position-relative full-screen">
                     <div className="row h-100 align-items-center">

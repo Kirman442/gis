@@ -324,7 +324,7 @@ const PortfolioBergbau = () => {
                                     }}
                                 >
                                     <iframe
-                                        src="/images/bergbau/Scene640_480_191123.mp4"
+                                        src={`${import.meta.env.BASE_URL}images/bergbau/Scene640_480_191123.mp4`}
                                         title="Video Embed"
                                         allowFullScreen
                                         style={{
