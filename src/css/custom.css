@@ -1,0 +1,104 @@
+section {
+    padding: 70px 0;
+    overflow: hidden;
+}
+
+.text-green,
+.btn.text-green {
+    color: #089995;
+}
+
+.datenquelle {
+    font-weight: 400;
+}
+
+.list-style-5 li {
+    border-bottom: 0px;
+}
+
+.bg-deep-green {
+    background-color: #089995;
+}
+
+a:hover {
+    color: #089995;
+    text-decoration: none;
+}
+
+a.text-green-hover:hover {
+    color: #089995 !important;
+}
+
+.slider-example-focus {
+    transition: box-shadow 200ms ease-in-out;
+}
+
+.slider-example-focus:focus {
+    outline: none;
+    box-shadow: 0px 0px 15px 5px #089995;
+}
+
+.slider-example-relative-size {
+    --default-handle-width: clamp(40px, 10vw, 200px);
+}
+
+.slider-example-opacity-and-size:focus {
+    --default-handle-opacity: 0;
+}
+
+.slider-example-opacity-and-size {
+    --default-handle-width: 200px;
+    --default-handle-color: #132c74;
+}
+
+.grayscale-filter {
+    filter: grayscale(100%);
+}
+
+
+.border-color-green {
+    border-color: #089995 !important;
+}
+
+
+.scroll-top-arrow:hover {
+    background: #089995;
+}
+
+.navbar-collapse a.custom-link {
+    color: #089995 !important;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.chart-percent {
+    text-align: -webkit-center
+}
+
+.gallery-item {
+    margin: 5px;
+    cursor: pointer;
+}
+
+.img-responsive {
+    margin: 5px
+}
+
+.text-deep-green {
+    color: #089995 !important;
+}
