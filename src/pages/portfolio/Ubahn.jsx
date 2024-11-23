@@ -77,6 +77,7 @@ const PortfolioUbahn = () => {
                                         <ImgComparisonSlider
                                             className="slider-example-focus slider-example-opacity-and-size"
                                             value="50"
+                                            style={{ cursor: "pointer" }}
                                         >
                                             <img slot="first" src={`${import.meta.env.BASE_URL}images/ubahn/ubahn_schemamap.jpg`} />
                                             <img slot="second" src={`${import.meta.env.BASE_URL}images/ubahn/ubahn_geomap3.jpg`} />

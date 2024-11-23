@@ -36,8 +36,8 @@ const getMenuItems = (pathname) => {
 
 const Header = () => {
     const location = useLocation();
-    const [isVisible, setIsVisible] = useState(true); // Показывать/скрывать меню
-    const [lastScrollY, setLastScrollY] = useState(0); // Последняя позиция скролла
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     // Логика скроллинга
     const handleScroll = () => {
@@ -71,8 +71,8 @@ const Header = () => {
                 top: 0,
                 width: "100%",
                 zIndex: 1000,
-                transform: isVisible ? "translateY(0)" : "translateY(-100%)", // Плавное скрытие
-                transition: "transform 0.3s ease", // Плавная анимация
+                transform: isVisible ? "translateY(0)" : "translateY(-100%)",
+                transition: "transform 0.3s ease",
             }}
         >
             {/* --start navigation -- */}

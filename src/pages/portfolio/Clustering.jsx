@@ -14,8 +14,9 @@ const PortfolioClustering = () => {
             <section className="p-0 bg-extra-dark-gray top-space">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-xl-8 col-lg-7 p-0 md-h-500px sm-h-300px">
-                            <img
+                        <div className="col-xl-8 col-lg-7 cover-background p-0 md-h-500px sm-h-300px"
+                            style={{ background: `url(${ClusteringFoto})` }}></div>
+                        {/* <img
                                 src={ClusteringFoto}
                                 alt="Clustering"
                                 className="cover-background"
@@ -24,7 +25,8 @@ const PortfolioClustering = () => {
                                     width: "90%",
                                     height: "100%",
                                 }}
-                            /></div>
+                            />
+                        </div> */}
                         <div className="col-xl-4 col-lg-5 p-0">
                             <div
                                 className="padding-seventeen-lr padding-twenty-tb lg-padding-40px-lr md-padding-50px-tb sm-padding-30px-all">

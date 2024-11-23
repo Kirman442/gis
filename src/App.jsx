@@ -1,6 +1,6 @@
 import React from 'react';
-import { HashRouter, Route, Routes } from 'react-router-dom';
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './components/Header';
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop"
@@ -22,7 +22,7 @@ function App() {
       <ScrollToTop />
       <ScrollToTopButton />
       <Header />
-      <Routes basename={import.meta.env.BASE_URL}>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/portfolio/Kunstkarten" element={<PortfolioKunstkarten />} />
@@ -34,7 +34,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
-    </div >
+    </div>
   );
 }
 

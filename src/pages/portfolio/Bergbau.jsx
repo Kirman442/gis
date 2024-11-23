@@ -8,7 +8,7 @@ const PortfolioBergbau = () => {
         <div>
             {/* <!-- start page title section --> */}
             <section className="parallax" data-parallax-background-ratio="0.5"
-                style={{ background: `url(${BergbauFoto})`, maxHeight: '650px' }}>
+                style={{ background: `url(${BergbauFoto})`, maxHeight: '540px' }}>
                 <div className="opacity-light bg-extra-dark-gray"></div>
                 <div className="container position-relative">
                     <div className="row align-items-center">

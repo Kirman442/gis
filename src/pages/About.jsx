@@ -7,32 +7,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import PortfolioFoto from "/images/about/aboutFotoMain.jpg"
 import PortfolioFoto2 from "/images/about/aboutFoto1.jpg"
 
-const Skills = [
-    {
-        value: '70',
-        header: 'GIS-Open Source',
-        text: 'QGIS, GeoServer, PostgreSQL, PostGIS, Leaflet, OSM..',
-        id: 1
-    },
-    {
-        value: '65',
-        header: 'GIS-Entwicklung',
-        text: 'ArcGIS SDK JS, ArcPy, Python, Arcade, OpenLayers, Geopandas..',
-        id: 2
-    },
-    {
-        value: '65',
-        header: 'ArcGIS Software',
-        text: 'ArcGIS Application (PRO, Online, AppStudio, Experience Builder, Storymaps)',
-        id: 3
-    },
-    {
-        value: '55',
-        header: 'Web-Entwicklung',
-        text: 'HTML, CSS, Flask, GIT, Vite, React.js, Node.js',
-        id: 4
-    }
-];
+import { AboutSkills as Skills } from "../components/SliderAndFotosMaps"
 
 const About = () => {
     return (
@@ -279,7 +254,7 @@ const About = () => {
             {/* <!-- end quotation skills section --> */}
             {/* <!-- start skills section --> */}
             <section id="expertise" className="wow animate__fadeIn parallax" data-parallax-background-ratio="0.4"
-                style={{ background: "url('../images/about/aboutSkills.jpg')" }}>
+                style={{ background: `url(${import.meta.env.BASE_URL}images/about/aboutSkills.jpg)` }}>
                 <div className="opacity-full bg-black"></div>
                 <div className="container position-relative">
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 justify-content-center">

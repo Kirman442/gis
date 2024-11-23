@@ -1,11 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import KunstkartenFoto from "/images/home/Pekin_1_1_1_0_5_1.jpg"
-import UbahnFoto from "/images/home/brabutor.jpg"
-import FlussFoto from "/images/home/Fluss_Germany.jpg"
-import BergbauFoto from "/images/home/risikomanagement.jpg"
-import DresdenFoto from "/images/home/Dresden-hc.jpg"
-import ClusteringFoto from "/images/home/clustering2.jpg"
+import { HomeProjectFotos } from "./SliderAndFotosMaps";
 
 const HomeGallery = () => {
     return (
@@ -15,188 +10,30 @@ const HomeGallery = () => {
                     <div className="col-12 ">
                         <ul className=" grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-1col xs-grid-1col blog-post-style4 gutter-large">
                             <li className="grid-sizer"></li>
-                            {/* -- Kunstkarten -- */}
-                            <div className="fade-in">
-                                <li className="grid-item">
-                                    <figure>
-                                        <div className=" bg-extra-dark-gray">
-                                            <Link to="/portfolio/Kunstkarten" className="text-medium-gray text-small">
-                                                <img src={KunstkartenFoto} alt="Kunstkarten" />
-                                            </Link>
-                                        </div>
-                                        <figcaption>
-                                            <div className="portfolio-hover-main text-start">
-                                                <div className="blog-hover-box align-bottom">
-                                                    <span
-                                                        className="post-author text-extra-small text-medium-gray text-uppercase d-block margin-5px-bottom sm-margin-5px-bottom">18
-                                                        April 2024</span>
-                                                    <h6 className="alt-font d-block text-white-2 font-weight-400 mb-0"><Link to="/portfolio/Kunstkarten" className="text-white-2 text-green-hover">Kunstkarten
-                                                        mit Python
-                                                        erstellen</Link></h6>
-                                                    <p className="text-medium-gray margin-10px-top blog-hover-text">Sehen
-                                                        wir uns an, wie wir mit
-                                                        Python und
-                                                        OpenStreetMap-Daten schöne
-                                                        Karten erstellen können.</p>
-                                                </div>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </li>
-                            </div>
-                            {/* -- Flusssystem-- */}
-                            <div className="fade-in">
-                                <li className="grid-item">
-                                    <figure>
-                                        <div className="blog-img bg-extra-dark-gray">
-                                            <Link to="/portfolio/Flusssystem" className="text-medium-gray text-small">
-                                                <img src={FlussFoto} alt="Flusssystemstkarten" />
-                                            </Link>
-                                        </div>
-                                        <figcaption>
-                                            <div className="portfolio-hover-main text-start">
-                                                <div className="blog-hover-box align-bottom">
-                                                    <span
-                                                        className="post-author text-extra-small text-medium-gray text-uppercase d-block margin-5px-bottom sm-margin-5px-bottom">25
-                                                        Mai 2024</span>
-                                                    <h6 className="alt-font d-block text-white-2 font-weight-400 mb-0">
-                                                        <Link to="/portfolio/Flusssystem" className="text-white-2 text-green-hover">
-                                                            Die Visualisierung des
-                                                            Flusssystems
-                                                        </Link>
-                                                    </h6>
-                                                    <p className="text-medium-gray margin-10px-top blog-hover-text">Filtern und
-                                                        stilisieren das globale Flusssystem eines ganzen Kontinents oder eines
-                                                        bestimmten Landes.</p>
-                                                </div>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </li>
-                            </div>
-                            {/* -- Berliner U-bahn-- */}
-                            <div className="fade-in">
-                                <li className="grid-item">
-                                    <figure>
-                                        <div className="blog-img bg-extra-dark-gray">
-                                            <Link to="/portfolio/Ubahn" className="text-medium-gray text-small">
-                                                <img src={UbahnFoto} alt="Berliner U-Bahn
-                                                    Geschichte" />
-                                            </Link>
-                                        </div>
-                                        <figcaption>
-                                            <div className="portfolio-hover-main text-start">
-                                                <div className="blog-hover-box align-bottom">
-                                                    <span
-                                                        className="post-author text-extra-small text-medium-gray text-uppercase d-block margin-5px-bottom sm-margin-5px-bottom">19
-                                                        Dezember 2023</span>
-                                                    <h6 className="alt-font d-block text-white-2 font-weight-400 mb-0">
-                                                        <Link className="text-white-2 text-green-hover" to="/portfolio/Ubahn" >Berliner U-Bahn Geschichte</Link>
+                            {HomeProjectFotos.map((HProjectFotos) => (
 
-                                                    </h6>
-                                                    <p className="text-medium-gray margin-10px-top blog-hover-text">Interaktive
-                                                        Karte über die Entwicklung und den Bau der Berliner U-Bahn.</p>
-                                                </div>
+                                <div key={HProjectFotos.id} className="fade-in">
+                                    <li className="grid-item">
+                                        <figure>
+                                            <div className=" bg-extra-dark-gray">
+                                                <Link to={HProjectFotos.link} className="text-medium-gray text-small">
+                                                    <img src={HProjectFotos.image} alt={HProjectFotos.alt} />
+                                                </Link>
                                             </div>
-                                        </figcaption>
-                                    </figure>
-                                </li>
-                            </div>
-                        </ul>
-                    </div>
-                    <div className="col-12 ">
-                        <ul className=" grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-1col xs-grid-1col blog-post-style4 gutter-large">
-                            <li className="grid-sizer"></li>
-                            {/* -- Risikomanagement -- */}
-                            <div className="fade-in">
-                                <li className="grid-item">
-                                    <figure>
-                                        <div className="blog-img bg-extra-dark-gray">
-                                            <Link to="/portfolio/Bergbau" className="text-medium-gray text-small">
-                                                <img src={BergbauFoto} alt="Risikomanagement" />
-                                            </Link>
-                                        </div>
-                                        <figcaption>
-                                            <div className="portfolio-hover-main text-start">
-                                                <div className="blog-hover-box align-bottom">
-                                                    <span
-                                                        className="post-author text-extra-small text-medium-gray text-uppercase d-block margin-5px-bottom sm-margin-5px-bottom">25
-                                                        August 2022 | Kirill
-                                                        Lisochenko & Martin Burzynski</span>
-                                                    <h6 className="alt-font d-block text-white-2 font-weight-400 mb-0">
-                                                        <Link className="text-white-2 text-green-hover" to="/portfolio/Bergbau" >
-                                                            Risikomanagement
-                                                            oberflächennaher Strukturen
-                                                        </Link>
-                                                    </h6>
-                                                    <p className="text-medium-gray margin-10px-top blog-hover-text">GIS-technische
-                                                        Umsetzung eines vorgegebenen Workflows zur Erstellung von
-                                                        3D-Bergbaustrukturen.</p>
+                                            <figcaption>
+                                                <div className="portfolio-hover-main text-start">
+                                                    <div className="blog-hover-box align-bottom">
+                                                        <span
+                                                            className="post-author text-extra-small text-medium-gray text-uppercase d-block margin-5px-bottom sm-margin-5px-bottom">{HProjectFotos.data}</span>
+                                                        <h6 className="alt-font d-block text-white-2 font-weight-400 mb-0"><Link to={HProjectFotos.link} className="text-white-2 text-green-hover">{HProjectFotos.header}</Link></h6>
+                                                        <p className="text-medium-gray margin-10px-top blog-hover-text">{HProjectFotos.text}</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </li>
-                            </div>
-                            {/* -- Dresden  -- */}
-                            <div className="fade-in">
-                                <li className="grid-item">
-                                    <figure>
-                                        <div className="blog-img bg-extra-dark-gray">
-                                            <Link to="/portfolio/Dresden" className="text-medium-gray text-small">
-                                                <img src={DresdenFoto} alt="Infrastruktur um
-                                                    Dresden" />
-                                            </Link>
-                                        </div>
-                                        <figcaption>
-                                            <div className="portfolio-hover-main text-start">
-                                                <div className="blog-hover-box align-bottom">
-                                                    <span
-                                                        className="post-author text-extra-small text-medium-gray text-uppercase d-block margin-5px-bottom sm-margin-5px-bottom">25
-                                                        September 2023</span>
-                                                    <h6 className="alt-font d-block text-white-2 font-weight-400 mb-0">
-                                                        <Link className="text-white-2 text-green-hover" to="/portfolio/Dresden" >
-                                                            Infrastruktur um
-                                                            Dresden
-                                                        </Link></h6>
-                                                    <p className="text-medium-gray margin-10px-top blog-hover-text">Projekt zur
-                                                        Digitalisierung der Verkehrs-, Elektro-, Kataster- und
-                                                        Landschaftsinfrastruktur rund um Dresden.</p>
-                                                </div>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </li>
-                            </div>
-                            {/* -- Clustering  -- */}
-                            <div className="fade-in">
-                                <li className="grid-item">
-                                    <figure>
-                                        <div className="blog-img bg-extra-dark-gray">
-                                            <Link to="/portfolio/Clustering" className="text-medium-gray text-small">
-                                                <img src={ClusteringFoto} alt="Clustering" />
-                                            </Link>
-                                        </div>
-                                        <figcaption>
-                                            <div className="portfolio-hover-main text-start">
-                                                <div className="blog-hover-box align-bottom">
-                                                    <span
-                                                        className="post-author text-extra-small text-medium-gray text-uppercase d-block margin-5px-bottom sm-margin-5px-bottom">25
-                                                        März 2024</span>
-                                                    <h6 className="alt-font d-block text-white-2 font-weight-400 mb-0">
-                                                        <Link className="text-white-2 text-green-hover" to="/portfolio/Clustering" >
-                                                            Clustering
-                                                        </Link>
-                                                    </h6>
-                                                    <p className="text-medium-gray margin-10px-top blog-hover-text">Manchmal müssen
-                                                        wir eine große Menge an Daten auf der Karte anzeigen. Und in diesem Fall
-                                                        ist es besser, Clustering zu verwenden</p>
-                                                </div>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </li>
-                            </div>
+                                            </figcaption>
+                                        </figure>
+                                    </li>
+                                </div>
+                            ))}
                         </ul>
                     </div>
                 </div>

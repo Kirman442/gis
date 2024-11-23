@@ -16,33 +16,7 @@ import 'lightgallery/css/lg-thumbnail.css';
 
 import FlussFoto from "/images/flusssystem/VenezuelaTitle.jpg"
 
-const flussImages = [
-    {
-        src: `${import.meta.env.BASE_URL}images/flusssystem/France.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/flusssystem/France.jpg`,
-        alt: 'France',
-    },
-    {
-        src: `${import.meta.env.BASE_URL}images/flusssystem/Germany.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/flusssystem/Germany.jpg`,
-        alt: "Germany"
-    },
-    {
-        src: `${import.meta.env.BASE_URL}images/flusssystem/Uruguay.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/flusssystem/Uruguay.jpg`,
-        alt: "Uruguay",
-    },
-    {
-        src: `${import.meta.env.BASE_URL}images/flusssystem/Venezuela.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/flusssystem/Venezuela.jpg`,
-        alt: "Venezuela",
-    },
-    {
-        src: `${import.meta.env.BASE_URL}images/flusssystem/South_America_upland50_ord_flow6.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/flusssystem/South_America_upland50_ord_flow6.jpg`,
-        alt: "South America",
-    }
-];
+import { FlusssystemImages as flussImages } from "../../components/SliderAndFotosMaps"
 
 const PortfolioFlusssystem = () => {
     const [thumbnails, setThumbnails] = useState([]);
@@ -104,14 +78,14 @@ const PortfolioFlusssystem = () => {
             {/* <!-- end about product section --> */}
 
             {/* <!-- start about product section --> */}
-            <section className="wow animate__fadeIn">
+            <section>
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-10">
                             <h5 className="alt-font text-green">Einleitung</h5>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Nachdem ich <a href="https://www.qgistutorials.com/en/docs/3/river_styling_expressions.html"
-                                    target="_blank"><strong className="text-decoration-underline">diesen Beitrag</strong></a>
+                                    target="_blank"><strong className="text-decoration-underline">diesen Beitrag </strong></a>
                                 auf LinkedIn angesehen hatte, fühlte ich mich inspiriert, diesen Weg zu wiederholen, jedoch
                                 ausschließlich durch die
                                 Programmierung mit Python und ein wenig Übung im Umgang mit GeoPandas, Matplotlib, PIL, OSMnx
@@ -326,11 +300,6 @@ const PortfolioFlusssystem = () => {
                                             </a>
                                         ))}
                                     </LightGallery>
-                                    {/* <ul className="hover-option2 portfolio-gallery portfolio-wrapper grid grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col"
-                                        style="position: relative; height: 570px;">
-                                        <li className="grid-sizer"></li>
-
-                                    </ul> */}
                                 </div>
                             </div>
 
@@ -367,7 +336,7 @@ const PortfolioFlusssystem = () => {
                 </div>
             </section>
 
-            <section className="wow animate__fadeIn border-top border-color-medium-gray no-padding"
+            <section className="border-top border-color-medium-gray no-padding"
                 style={{ visibility: "visible", animationName: "fadeIn" }}>
                 <div className="container-fluid p-0">
                     <div className="row justify-content-between align-items-center g-0 padding-30px-lr md-padding-15px-lr">

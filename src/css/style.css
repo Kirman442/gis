@@ -3692,45 +3692,6 @@ aside .latest-post li figure {width: 75px;}
 .latest-post li div {line-height: normal; padding-left: 22px; position: relative; top: -1px;}
 .latest-post li figure:hover img, .latest-post li figure:focus img {transform: none; -webkit-transform: none; -moz-transform: none; -ms-transform: none; -o-transform: none;} 
 
-/* newsletter */
-.newsletter input {float: left; font-size: 12px; color: #fff; width: 100%; height: 100%; padding: 0 38px 0 12px}
-.newsletter .btn.btn-arrow-small {background: transparent none repeat scroll 0 0; margin-right: 0; height: 100%; padding-top: 0;  padding-bottom: 5px; text-align: center; right: 0; border-width: 0 0 0 1px}
-.newsletter .btn.btn-arrow-small i {color: #626262; font-size: 16px; display: block; margin-top: 6px;}
-.newsletter {width: 100%; height: 33px}
-footer .form-results {font-size: 12px;}
-.newsletter .btn.border-color-white {border-color:#fff}
-.newsletter .btn.border-color-black {border-color:#000}
-.newsletter .btn.border-color-extra-dark-gray {border-color:#232323}
-.newsletter .btn.border-color-medium-dark-gray {border-color:#363636}
-.newsletter .btn.border-color-dark-gray {border-color:#939393}
-.newsletter .btn.border-color-extra-medium-gray {border-color:#dbdbdb}
-.newsletter .btn.border-color-medium-gray {border-color:#e4e4e4}
-.newsletter .btn.border-color-extra-light-gray {border-color:#ededed}
-.newsletter .btn.border-color-light-gray {border-color:#f5f5f5}
-.newsletter .btn.border-color-light-pink {border-color:#862237}
-.newsletter .btn.border-color-deep-pink {border-color:var(--base-color)}
-.newsletter .btn.border-color-transparent-pink {border-color: rgba(255, 33, 79, 0.45);}
-
-/* instagram feed */
-.instafeed-grid ul {list-style: none; padding: 0; margin: 0; display: flex; width: 100%; flex-wrap: wrap; text-align: center;}
-.instafeed-grid li {padding:0 10px 10px 0; width: 33.333%; box-sizing: border-box; display: inline-block}
-.instafeed-grid li img {width: 100%}
-.instafeed-grid li figure {position: relative; overflow: hidden; margin-bottom: 0;}
-.instafeed-grid li figure a .insta-counts{position: absolute; bottom: -100%; left: 0; text-align: center; background: rgba(35,35,35,0.8); color: #fff; width: 100%; font-size: 12px;}
-.instafeed-grid li figure:hover a .insta-counts{bottom: 0;}
-.instafeed-grid li figure a .insta-counts i {margin-right: 5px; margin-left: 5px; vertical-align: middle;}
-.instafeed-grid li figure span {vertical-align: middle;}
-aside .instafeed-grid.gutter-very-small, footer .instafeed-grid.gutter-very-small {margin-left: -3px; margin-right: -3px;}
-aside .instafeed-grid.gutter-small, footer .instafeed-grid.gutter-small {margin-left: -5px; margin-right: -5px;}
-aside .instafeed-grid.gutter-medium, footer .instafeed-grid.gutter-medium {margin-left: -7px; margin-right: -7px;}
-aside .instafeed-grid.gutter-large, footer .instafeed-grid.gutter-large {margin-left: -10px; margin-right: -10px;}
-aside .instafeed-grid.gutter-extra-large, footer .instafeed-grid.gutter-extra-large {margin-left: -15px; margin-right: -15px;}
-
-/* instagram feed style 1 */
-.instafeed-grid.instafeed-style-02 li figure a .insta-counts {bottom: 0; height: 100%; height: 100%; opacity: 0;}
-.instafeed-grid.instafeed-style-02 figure:hover a .insta-counts {opacity: 1;}
-.instafeed-grid.instafeed-style-02 figure a .insta-counts i {position: relative; display: block; font-size: 28px; color: #fff; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%);}
-
 /* ===================================
    27. Home page
 ====================================== */

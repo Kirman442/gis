@@ -17,66 +17,7 @@ import { py1, py2, py3, py4, py5 } from "./kartenCode";
 
 import KunstkartenFoto from "/images/kunstkarten/kunstkarten_portfolio1.jpg"
 
-const OldImages = [
-    {
-        src: `${import.meta.env.BASE_URL}images/kunstkarten/city-of-Dortmund_1.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/city-of-Dortmund_1.jpg`,
-        alt: 'Dortmund',
-    },
-    {
-        src: `${import.meta.env.BASE_URL}images/kunstkarten/city-of-Koln_1.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/city-of-Koln_1.jpg`,
-        alt: "Köln",
-    },
-    {
-        src: `${import.meta.env.BASE_URL}images/kunstkarten/city-of-Paris_1.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/city-of-Paris_1.jpg`,
-        alt: "Paris",
-    }
-];
-
-const NewImages = [
-    {
-        src: `${import.meta.env.BASE_URL}images/kunstkarten/Dortmund_final_9500_211011.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Dortmund_final_9500_211011.jpg`,
-        alt: 'Dortmund',
-    },
-    {
-        src: `${import.meta.env.BASE_URL}images/kunstkarten/Tripoly_final_12500_20052.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Tripoly_final_12500_20052.jpg`,
-        alt: "Tripoli"
-    },
-    {
-        src: `${import.meta.env.BASE_URL}images/kunstkarten/Dubai_final_12500_211042.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Dubai_final_12500_211042.jpg`,
-        alt: "Dubai",
-    },
-    {
-        src: `${import.meta.env.BASE_URL}images/kunstkarten/Ho-Chi-Minh_final_7000_211042.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Ho-Chi-Minh_final_7000_211042.jpg`,
-        alt: "Ho-Chi-Minh",
-    },
-    {
-        src: `${import.meta.env.BASE_URL}images/kunstkarten/Istanbul_final_19500_211042.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Istanbul_final_19500_211042.jpg`,
-        alt: "Istanbul",
-    },
-    {
-        src: `${import.meta.env.BASE_URL}images/kunstkarten/Moscow_final_19000_211042.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Moscow_final_19000_211042.jpg`,
-        alt: "Moscow",
-    },
-    {
-        src: `${import.meta.env.BASE_URL}images/kunstkarten/Paris_final_19500_111052.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Paris_final_19500_111052.jpg`,
-        alt: "Paris",
-    },
-    {
-        src: `${import.meta.env.BASE_URL}images/kunstkarten/Stockholm_final_7500_20112.jpg`,
-        thumb: `${import.meta.env.BASE_URL}images/kunstkarten/Stockholm_final_7500_20112.jpg`,
-        alt: "Stockholm",
-    }
-];
+import { KunstkartenOldImages, KunstkartenNewImages } from "../../components/SliderAndFotosMaps"
 
 const PortfolioKunstkarten = () => {
     const [thumbnails, setThumbnails] = useState([]);
@@ -84,7 +25,7 @@ const PortfolioKunstkarten = () => {
     // On-the-fly preview generationу
     useEffect(() => {
         const generateThumbnails = async () => {
-            const thumbPromises = NewImages.map((image) => createThumbnail(image.src));
+            const thumbPromises = KunstkartenNewImages.map((image) => createThumbnail(image.src));
             const thumbs = await Promise.all(thumbPromises);
             setThumbnails(thumbs);
         };
@@ -340,7 +281,7 @@ const PortfolioKunstkarten = () => {
                                                     speed={500}
                                                     plugins={[lgThumbnail, lgZoom]}
                                                 >
-                                                    {OldImages.map((image, index) => (
+                                                    {KunstkartenOldImages.map((image, index) => (
                                                         <li
                                                             key={image.src}
                                                             data-src={image.src}
@@ -458,7 +399,7 @@ const PortfolioKunstkarten = () => {
                                     <div className="col-12 filter-content overflow-hidden">
                                         <LightGallery
                                             plugins={[lgZoom, lgThumbnail]} mode="lg-fade">
-                                            {NewImages.map((image, index) => (
+                                            {KunstkartenNewImages.map((image, index) => (
                                                 <a
                                                     key={image.src}
                                                     className="gallery-item grid-item "
