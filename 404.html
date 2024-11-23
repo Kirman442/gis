@@ -2,7 +2,11 @@
 <html>
 
 <head>
-    <meta http-equiv="refresh" content="0; url=/react-gis/" />
+    <script>
+        // Перенаправляем все запросы на index.html
+        const redirectTo = location.pathname.replace('/react-gis/', '/');
+        location.replace('/react-gis/' + '#' + redirectTo);
+    </script>
 </head>
 
 <body>
