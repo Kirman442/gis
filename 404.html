@@ -4,8 +4,8 @@
 <head>
     <script>
         // Перенаправляем все запросы на index.html
-        const redirectTo = location.pathname.replace('/react-gis/', '/');
-        location.replace('/react-gis/' + '#' + redirectTo);
+        const path = location.pathname.replace('/react-gis', '');
+        location.replace('/react-gis/#' + path);
     </script>
 </head>
 
