@@ -1,11 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Head from '../../components/Head';
 
 import DresdenFoto from "/images/dresden/geodata_around_dresden.jpg"
 
 const PortfolioDresden = () => {
     return (
         <div>
+            <Head
+                title="GIS-Projekte | Infrastruktur um Dresden"
+                description="Projekt zur Digitalisierung
+                                    der Verkehrs-, Elektro-, Kataster- und Landschaftsinfrastruktur rund um Dresden."
+                keywords="gis services, qgis expertise, kartographie, geoinformation, programmierung, visualisierung"
+            />
             {/* <!-- start about product section --> */}
             <section className="p-0 bg-extra-dark-gray top-space">
                 <div className="container-fluid">

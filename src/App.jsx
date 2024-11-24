@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop"
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import Head from './components/Head';
 import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/404';
@@ -19,6 +20,7 @@ import PortfolioDresden from './pages/portfolio/Dresden'
 function App() {
   return (
     <div>
+      <Head />
       <ScrollToTop />
       <ScrollToTopButton />
       <Header />

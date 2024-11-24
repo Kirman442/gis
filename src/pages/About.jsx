@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PortfolioSlider from "../components/PortfolioSlider";
+import Head from '../components/Head';
 import { CircularProgressbar } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 
@@ -12,6 +13,11 @@ import { AboutSkills as Skills } from "../components/SliderAndFotosMaps"
 const About = () => {
     return (
         <div>
+            <Head
+                title="GIS-Projekte | About"
+                description="Über mich und meine GIS-Dienstleistungen"
+                keywords="gis services, qgis expertise, kartographie, geoinformation, programmierung, visualisierung"
+            />
             {/* <!-- start about product section --> */}
             <section className="p-0 bg-extra-dark-gray top-space">
                 <div className="container-fluid">

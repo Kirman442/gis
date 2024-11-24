@@ -1,10 +1,15 @@
 import React from "react";
+import Head from '../components/Head';
 import HomeGallery from "../components/HomeGallery";
 import gislogo from "/images/home/gis-projekte-logo-1920.jpg"
 
 const Home = () => {
     return (
         <div>
+            <Head
+                title="GIS-Projekte | Home"
+                description="Willkommen bei GIS-Projekte - Ein Rückblick auf kleine Projekte, die durch interessante Geschichten inspiriert wurden."
+            />
             <section
                 style={{ backgroundImage: `url(${gislogo})` }}
             >

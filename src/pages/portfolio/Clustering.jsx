@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import Code from "../../components/code";
+import Head from '../../components/Head';
 import { Cluster1, Cluster2, Cluster3, Cluster4, Cluster5, Cluster6 } from "./kartenCode";
 
 import ClusteringFoto from "/images/clustering/clustering_main.jpg"
@@ -9,7 +9,11 @@ import ClusteringFoto from "/images/clustering/clustering_main.jpg"
 const PortfolioClustering = () => {
     return (
         <div>
-
+            <Head
+                title="GIS-Projekte | Clustering"
+                description="Clustering ist eine Methode zur Reduzierung von Punkten in einer Ebene, indem sie auf der Grundlage ihrer räumlichen Nähe zueinander in Clustern gruppiert werden."
+                keywords="gis services, qgis expertise, kartographie, geoinformation, programmierung, visualisierung"
+            />
             {/* <!-- start about product section --> */}
             <section className="p-0 bg-extra-dark-gray top-space">
                 <div className="container-fluid">

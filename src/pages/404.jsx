@@ -1,11 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Head from '../components/Head'
 
 import PageNotFoundFoto from "/images/home/gis-projekte-logo-1920.jpg"
 
 const NotFound = () => {
     return (
         <div>
+            <Head
+                title="GIS-Projekte | 404"
+                description="Page not found"
+                keywords="gis services, qgis expertise, kartographie, geoinformation, programmierung, visualisierung"
+            />
             {/* <!-- start page not found section --> */}
             <section id="home" className="parallax p-0 mobile-height" style={{ background: `url(${PageNotFoundFoto})` }}>
                 <div className="opacity-full bg-extra-dark-gray"></div>

@@ -7,6 +7,7 @@ import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 
 import Code from "../../components/code";
+import Head from '../../components/Head';
 import { Fluss1, Fluss2, Fluss3, Fluss4 } from "./kartenCode";
 
 // import gallery styles
@@ -50,6 +51,11 @@ const PortfolioFlusssystem = () => {
     };
     return (
         <div>
+            <Head
+                title="GIS-Projekte | Flusssystem"
+                description="Filtern und stilisieren das globale Flusssystem eines ganzen Kontinents oder eines bestimmten Landes."
+                keywords="gis services, qgis expertise, kartographie, geoinformation, programmierung, visualisierung"
+            />
             {/* <!-- start about product section --> */}
             <section className="p-0 bg-extra-dark-gray top-space">
                 <div className="container-fluid">

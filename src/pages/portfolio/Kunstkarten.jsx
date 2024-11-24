@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import 'prismjs/themes/prism-solarizedlight.css';
-// import "prismjs/themes/prism.css";
 import "prismjs/themes/prism-okaidia.css";
 import LightGallery from 'lightgallery/react';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
@@ -13,6 +11,7 @@ import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
 
 import Code from "../../components/code";
+import Head from '../../components/Head';
 import { py1, py2, py3, py4, py5 } from "./kartenCode";
 
 import KunstkartenFoto from "/images/kunstkarten/kunstkarten_portfolio1.jpg"
@@ -51,6 +50,11 @@ const PortfolioKunstkarten = () => {
     };
     return (
         <div>
+            <Head
+                title="GIS-Projekte | Kunstkarten"
+                description="Kunstkarten mit Python erstellen"
+                keywords="gis services, qgis expertise, kartographie, geoinformation, programmierung, visualisierung"
+            />
             {/* <!-- start page title section --> */}
             <section data-parallax-background-ratio="0.3"
                 style={{

@@ -1,12 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ImgComparisonSlider } from '@img-comparison-slider/react';
+import Head from '../../components/Head';
 
 import UbahnFoto from "/images/ubahn/1902ca_buelowstr.jpg"
 
 const PortfolioUbahn = () => {
     return (
         <div>
+            <Head
+                title="GIS-Projekte | Berliner U-Bahn Geschichte"
+                description="Interaktive Karte über die Entwicklung und den Bau der Berliner U-Bahn."
+                keywords="gis services, qgis expertise, kartographie, geoinformation, programmierung, visualisierung"
+            />
             {/* <!-- start about product section --> */}
             <section className="p-0 bg-extra-dark-gray top-space">
                 <div className="container-fluid">
@@ -16,7 +22,7 @@ const PortfolioUbahn = () => {
                         <div className="col-xl-4 col-lg-5 p-0">
                             <div
                                 className="padding-seventeen-lr padding-twenty-tb lg-padding-40px-lr md-padding-50px-tb sm-padding-30px-all">
-                                <h3 className="alt-font text-extra-light-gray font-weight-600 mb-0">Berliner U-Bahn Geschichte.</h3>
+                                <h3 className="alt-font text-extra-light-gray font-weight-600 mb-0">Berliner U-Bahn Geschichte</h3>
                                 <div className="bg-deep-green separator-line-horrizontal-full d-inline-block margin-25px-tb"></div>
                                 <p className="w-90 w-100 margin-35px-bottom text-medium line-height-28">Interaktive Karte über die
                                     Entwicklung und den Bau der Berliner U-Bahn.</p>

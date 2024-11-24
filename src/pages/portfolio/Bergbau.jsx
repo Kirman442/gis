@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Head from '../../components/Head';
 import BergbauFoto from "/images/bergbau/risiko_main.jpg"
 
 const PortfolioBergbau = () => {
     return (
         <div>
+            <Head
+                title="GIS-Projekte | Risikomanagement"
+                description="GIS-technische Umsetzung zur Erstellung von 3D-Bergbaustrukturen."
+                keywords="gis services, qgis expertise, kartographie, geoinformation, programmierung, visualisierung"
+            />
             {/* <!-- start page title section --> */}
             <section className="parallax" data-parallax-background-ratio="0.5"
                 style={{ background: `url(${BergbauFoto})`, maxHeight: '540px' }}>
