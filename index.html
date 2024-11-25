@@ -4,16 +4,26 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <script type="text/javascript">
+    // (function (l) {
+    //   if (l.search[1] === '/') {
+    //     var decoded = l.search.slice(1).split('&').map(function (s) {
+    //       return s.replace(/~and~/g, '&')
+    //     }).join('?');
+    //     window.history.replaceState(null, null,
+    //       l.pathname.slice(0, -1) + decoded + l.hash
+    //     );
+    //   }
+    // }(window.location))
     (function (l) {
+      const basePath = '/gis/'; // базовый путь приложения
       if (l.search[1] === '/') {
-        var decoded = l.search.slice(1).split('&').map(function (s) {
-          return s.replace(/~and~/g, '&')
+        const decoded = l.search.slice(1).split('&').map(function (s) {
+          return s.replace(/~and~/g, '&');
         }).join('?');
-        window.history.replaceState(null, null,
-          l.pathname.slice(0, -1) + decoded + l.hash
-        );
+        const newPath = basePath + l.pathname.slice(1) + decoded + l.hash;
+        window.history.replaceState(null, null, newPath);
       }
-    }(window.location))
+    }(window.location));
   </script>
   <script type="module" crossorigin src="/gis/assets/index-DGtEWxHn.js"></script>
   
