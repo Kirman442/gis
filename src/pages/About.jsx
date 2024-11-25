@@ -5,8 +5,15 @@ import Head from '../components/Head';
 import { CircularProgressbar } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 
-import PortfolioFoto from "/images/about/aboutFotoMain.jpg"
-import PortfolioFoto2 from "/images/about/aboutFoto1.jpg"
+
+const isWebpSupported = () => {
+    const elem = document.createElement('canvas');
+    return !!(elem.getContext && elem.getContext('2d')) && elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+};
+const webpSupported = isWebpSupported();
+
+const PortfolioFoto = `${import.meta.env.BASE_URL}images/about/aboutFotoMain.${webpSupported ? 'webp' : 'jpg'}`
+const PortfolioFoto2 = `${import.meta.env.BASE_URL}images/about/aboutFoto1.${webpSupported ? 'webp' : 'jpg'}`
 
 import { AboutSkills as Skills } from "../components/SliderAndFotosMaps"
 
@@ -260,7 +267,7 @@ const About = () => {
             {/* <!-- end quotation skills section --> */}
             {/* <!-- start skills section --> */}
             <section id="expertise" className="wow animate__fadeIn parallax" data-parallax-background-ratio="0.4"
-                style={{ background: `url(${import.meta.env.BASE_URL}images/about/aboutSkills.jpg)` }}>
+                style={{ background: `url(${import.meta.env.BASE_URL}images/about/aboutSkills.${webpSupported ? 'webp' : 'jpg'})` }}>
                 <div className="opacity-full bg-black"></div>
                 <div className="container position-relative">
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 justify-content-center">

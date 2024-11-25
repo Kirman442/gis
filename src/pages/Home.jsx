@@ -1,7 +1,13 @@
 import React from "react";
 import Head from '../components/Head';
 import HomeGallery from "../components/HomeGallery";
-import gislogo from "/images/home/gis-projekte-logo-1920.jpg"
+
+const isWebpSupported = () => {
+    const elem = document.createElement('canvas');
+    return !!(elem.getContext && elem.getContext('2d')) && elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+};
+const webpSupported = isWebpSupported();
+const gislogo = `${import.meta.env.BASE_URL}images/home/gis-projekte-logo-1920.${webpSupported ? 'webp' : 'jpg'}`
 
 const Home = () => {
     return (

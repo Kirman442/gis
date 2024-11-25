@@ -4,7 +4,13 @@ import Code from "../../components/code";
 import Head from '../../components/Head';
 import { Cluster1, Cluster2, Cluster3, Cluster4, Cluster5, Cluster6 } from "./kartenCode";
 
-import ClusteringFoto from "/images/clustering/clustering_main.jpg"
+const isWebpSupported = () => {
+    const elem = document.createElement('canvas');
+    return !!(elem.getContext && elem.getContext('2d')) && elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+};
+const webpSupported = isWebpSupported();
+
+const ClusteringFoto = `${import.meta.env.BASE_URL}images/clustering/clustering_main.${webpSupported ? 'webp' : 'jpg'}`
 
 const PortfolioClustering = () => {
     return (

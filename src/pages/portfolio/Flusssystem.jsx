@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 import "prismjs/themes/prism-okaidia.css";
 import LightGallery from 'lightgallery/react';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
@@ -15,9 +18,15 @@ import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
 
-import FlussFoto from "/images/flusssystem/VenezuelaTitle.jpg"
-
 import { FlusssystemImages as flussImages } from "../../components/SliderAndFotosMaps"
+
+const isWebpSupported = () => {
+    const elem = document.createElement('canvas');
+    return !!(elem.getContext && elem.getContext('2d')) && elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+};
+const webpSupported = isWebpSupported();
+
+const FlussFoto = `${import.meta.env.BASE_URL}images/flusssystem/VenezuelaTitle.${webpSupported ? 'webp' : 'jpg'}`
 
 const PortfolioFlusssystem = () => {
     const [thumbnails, setThumbnails] = useState([]);
@@ -60,8 +69,10 @@ const PortfolioFlusssystem = () => {
             <section className="p-0 bg-extra-dark-gray top-space">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-xl-8 col-lg-7 p-0 cover-background md-h-500px sm-h-300px"
-                            style={{ background: `url(${FlussFoto})` }}></div>
+                        <LazyLoadComponent>
+                            <div className="col-xl-8 col-lg-7 p-0 cover-background md-h-500px sm-h-300px"
+                                style={{ background: `url(${FlussFoto})` }}></div>
+                        </LazyLoadComponent>
                         <div className="col-xl-4 col-lg-5 p-0">
                             <div
                                 className="padding-seventeen-lr padding-twenty-tb lg-padding-40px-lr md-padding-50px-tb sm-padding-30px-all">

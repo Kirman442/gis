@@ -2,7 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Head from '../../components/Head';
 
-import DresdenFoto from "/images/dresden/geodata_around_dresden.jpg"
+const isWebpSupported = () => {
+    const elem = document.createElement('canvas');
+    return !!(elem.getContext && elem.getContext('2d')) && elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+};
+const webpSupported = isWebpSupported();
+
+const DresdenFoto = `${import.meta.env.BASE_URL}images/dresden/geodata_around_dresden.${webpSupported ? 'webp' : 'jpg'}`
 
 const PortfolioDresden = () => {
     return (

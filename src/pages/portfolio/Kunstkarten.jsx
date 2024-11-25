@@ -14,9 +14,15 @@ import Code from "../../components/code";
 import Head from '../../components/Head';
 import { py1, py2, py3, py4, py5 } from "./kartenCode";
 
-import KunstkartenFoto from "/images/kunstkarten/kunstkarten_portfolio1.jpg"
-
 import { KunstkartenOldImages, KunstkartenNewImages } from "../../components/SliderAndFotosMaps"
+
+const isWebpSupported = () => {
+    const elem = document.createElement('canvas');
+    return !!(elem.getContext && elem.getContext('2d')) && elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+};
+const webpSupported = isWebpSupported();
+
+const KunstkartenFoto = `${import.meta.env.BASE_URL}images/kunstkarten/kunstkarten_portfolio1.${webpSupported ? 'webp' : 'jpg'}`
 
 const PortfolioKunstkarten = () => {
     const [thumbnails, setThumbnails] = useState([]);

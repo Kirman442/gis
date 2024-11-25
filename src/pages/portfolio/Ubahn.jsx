@@ -3,7 +3,13 @@ import { Link } from "react-router-dom";
 import { ImgComparisonSlider } from '@img-comparison-slider/react';
 import Head from '../../components/Head';
 
-import UbahnFoto from "/images/ubahn/1902ca_buelowstr.jpg"
+const isWebpSupported = () => {
+    const elem = document.createElement('canvas');
+    return !!(elem.getContext && elem.getContext('2d')) && elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+};
+const webpSupported = isWebpSupported();
+
+const UbahnFoto = `${import.meta.env.BASE_URL}images/ubahn/1902ca_buelowstr.${webpSupported ? 'webp' : 'jpg'}`
 
 const PortfolioUbahn = () => {
     return (
@@ -85,8 +91,8 @@ const PortfolioUbahn = () => {
                                             value="50"
                                             style={{ cursor: "pointer" }}
                                         >
-                                            <img slot="first" src={`${import.meta.env.BASE_URL}images/ubahn/ubahn_schemamap.jpg`} />
-                                            <img slot="second" src={`${import.meta.env.BASE_URL}images/ubahn/ubahn_geomap3.jpg`} />
+                                            <img slot="first" src={`${import.meta.env.BASE_URL}images/ubahn/ubahn_schemamap.${webpSupported ? 'webp' : 'jpg'}`} />
+                                            <img slot="second" src={`${import.meta.env.BASE_URL}images/ubahn/ubahn_geomap3.${webpSupported ? 'webp' : 'jpg'}`} />
                                         </ImgComparisonSlider>
                                     </div>
                                 </div>
@@ -149,7 +155,7 @@ const PortfolioUbahn = () => {
 
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <img className="alignright" src={`${import.meta.env.BASE_URL}images/ubahn/2200_1343.png`} data-no-retina />
+                                    <img className="alignright" src={`${import.meta.env.BASE_URL}images/ubahn/2200_1343.${webpSupported ? 'webp' : 'png'}`} data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">z ist der Maßstab, in
                                         dem sie angezeigt wird (je größer der z-Wert, desto größer die Vergrößerung);
@@ -171,7 +177,7 @@ const PortfolioUbahn = () => {
                                     <p className="text-extra-large  text-dark-gray text-center line-height-28">Das Gesamtbild, das
                                         wir letztendlich sehen, wird aus vielen Kacheln zu einem einzigen Bild zusammengefügt:
                                     </p>
-                                    <img src={`${import.meta.env.BASE_URL}images/ubahn/tile_map_story.jpg`} className="w-100" data-no-retina />
+                                    <img src={`${import.meta.env.BASE_URL}images/ubahn/tile_map_story.${webpSupported ? 'webp' : 'jpg'}`} className="w-100" data-no-retina />
                                 </div>
                             </div>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
