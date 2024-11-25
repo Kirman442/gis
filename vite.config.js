@@ -35,7 +35,6 @@ export default defineConfig({
           );
 
           if (isFontFile) {
-            // Сохраняем шрифты в определенной структуре
             return 'fonts/[name][extname]';
           }
 
