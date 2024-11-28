@@ -208,7 +208,7 @@ const PortfolioKunstkarten = () => {
                                 <div className="col-lg-7 margin-four-bottom">
                                     <p className="text-extra-large  text-dark-gray text-center line-height-28">Vollständige
                                         unbeschriftete Karte von Köln</p>
-                                    <img src={`${import.meta.env.BASE_URL}images/kunstkarten/koeln1.jpg`} className="w-100" data-no-retina />
+                                    <img src={`${import.meta.env.BASE_URL}images/kunstkarten/koeln1.${webpSupported ? 'webp' : 'jpg'}`} className="w-100" data-no-retina />
                                 </div>
                             </div>
 
