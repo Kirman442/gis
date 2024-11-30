@@ -16,6 +16,7 @@ const PortfolioFoto = `${import.meta.env.BASE_URL}images/about/aboutFotoMain.${w
 const PortfolioFoto2 = `${import.meta.env.BASE_URL}images/about/aboutFoto1.${webpSupported ? 'webp' : 'jpg'}`
 
 import { AboutSkills as Skills } from "../components/SliderAndFotosMaps"
+import { AboutWeiterbildung as Wtb } from '../components/SliderAndFotosMaps'
 
 const About = () => {
     return (
@@ -70,130 +71,28 @@ const About = () => {
                             }}>
                         </div>
                         <div
-                            className="col-12 col-lg-8 padding-five-tb padding-five-lr md-padding-nine-half-tb xs-padding-15px-lr xs-padding-50px-tb">
+                            className="col-12 col-lg-8 padding-five-top padding-five-lr md-padding-nine-half-tb xs-padding-15px-lr xs-padding-50px-tb">
                             <div className="row row-cols-1 row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-sm-2">
                                 {/* <!-- start feature box item --> */}
-                                <div
-                                    className="col margin-six-bottom md-margin-40px-bottom last-paragraph-no-margin text-center text-md-start">
-                                    <div className="row">
-
-                                        <div className="col-lg-3 text-center">
-                                            <h3 className="text-light-gray font-weight-300 mb-0 letter-spacing-minus-2">01</h3>
-                                        </div>
-                                        <div className="col-lg-9 margin-5px-top text-center text-lg-start">
-                                            <span
-                                                className="alt-font text-extra-dark-gray font-weight-600 margin-one-bottom d-block">Weiterbildungen
-                                                im GIS Fachbereich</span>
-                                            <span
-                                                className="alt-font text-extra-small text-uppercase margin-10px-bottom d-block">Selbständige
-                                                Durchführung mehrerer kleiner Projekte.</span>
-                                            <p className="d-inline-block w-90 xl-w-95">Programmierung,
-                                                Datenbearbeitung, Visualisierung, 3D-Modellierung</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* <!-- end feature box item --> */}
-                                {/* <!-- start feature box item --> */}
-                                <div
-                                    className="col margin-six-bottom md-margin-40px-bottom last-paragraph-no-margin text-center text-md-start">
-                                    <div className="row">
-
-                                        <div className="col-lg-3 text-center">
-                                            <h3 className="text-light-gray font-weight-300 mb-0 letter-spacing-minus-2">02</h3>
-                                        </div>
-                                        <div className="col-lg-9 margin-5px-top text-center text-lg-start">
-                                            <span
-                                                className="alt-font text-extra-dark-gray font-weight-600 margin-one-bottom d-block">Universität
-                                                Helsinki</span>
-                                            <span
-                                                className="alt-font text-extra-small text-uppercase margin-10px-bottom d-block">Fakultät
-                                                für Geowissenschafteften und Geographie</span>
-                                            <p className="d-inline-block w-90 xl-w-95">Geo-Python und Datenanalyse, manage and
-                                                visualise spatial data using Python</p>
+                                {Wtb.map((wtb) => (
+                                    <div key={wtb.id}
+                                        className="col margin-six-bottom text-center last-paragraph-no-margin">
+                                        <div className="row">
+                                            <div className="col-lg-3 text-center">
+                                                <h3 className="text-light-gray font-weight-300 mb-0 letter-spacing-minus-2">
+                                                    {wtb.id}
+                                                </h3>
+                                            </div>
+                                            <div className="col-lg-9 margin-5px-top text-center text-lg-start">
+                                                <span className="alt-font text-extra-dark-gray font-weight-600 margin-one-bottom d-block">
+                                                    {wtb.header}
+                                                </span>
+                                                <span className="alt-font text-extra-small text-uppercase margin-10px-bottom d-block">{wtb.desc}</span>
+                                                <p className="d-inline-block w-90 xl-w-95">{wtb.text}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                {/* <!-- end feature box item --> */}
-                                {/* <!-- start feature box item --> */}
-                                <div
-                                    className="col margin-six-bottom md-margin-40px-bottom last-paragraph-no-margin text-center text-md-start">
-                                    <div className="row">
-
-                                        <div className="col-lg-3 text-center">
-                                            <h3 className="text-light-gray font-weight-300 mb-0 letter-spacing-minus-2">03</h3>
-                                        </div>
-                                        <div className="col-lg-9 margin-5px-top text-center text-lg-start">
-                                            <span
-                                                className="alt-font text-extra-dark-gray font-weight-600 margin-one-bottom d-block">ESRI-zertifizierte
-                                                Schulungen</span>
-                                            <span
-                                                className="alt-font text-extra-small text-uppercase margin-10px-bottom d-block">Weiterbildung
-                                                als Geodatenspezialist</span>
-                                            <p className="d-inline-block w-90 xl-w-95">Geo Application, Cartography, Spatial
-                                                Analysis ...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* <!-- end feature box item --> */}
-                                {/* <!-- start feature box item --> */}
-                                <div
-                                    className="col margin-six-bottom md-margin-40px-bottom last-paragraph-no-margin text-center text-md-start">
-                                    <div className="row">
-                                        <div className="col-lg-3 text-center">
-                                            <h3 className="text-light-gray font-weight-300 mb-0 letter-spacing-minus-2">04</h3>
-                                        </div>
-                                        <div className="col-lg-9 margin-5px-top text-center text-lg-start">
-                                            <span
-                                                className="alt-font text-extra-dark-gray font-weight-600 margin-one-bottom d-block">Universität
-                                                Helsinki</span>
-                                            <span
-                                                className="alt-font text-extra-small text-uppercase margin-10px-bottom d-block">Fakultät
-                                                für Informatik</span>
-                                            <p className="d-inline-block w-90 xl-w-95">Python Programmierung, JavaScript-basierte
-                                                Web-Entwicklung</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* <!-- end feature box item --> */}
-                                {/* <!-- start feature box item --> */}
-                                <div
-                                    className="col md-margin-40px-bottom lg-margin-six-bottom last-paragraph-no-margin text-center text-md-start">
-                                    <div className="row">
-                                        <div className="col-lg-3 text-center">
-                                            <h3 className="text-light-gray font-weight-300 mb-0 letter-spacing-minus-2">05</h3>
-                                        </div>
-                                        <div className="col-lg-9 margin-5px-top text-center text-lg-start">
-                                            <span
-                                                className="alt-font text-extra-dark-gray font-weight-600 margin-one-bottom d-block">GIS-Spezialist
-                                                für
-                                                Softwftware- Entwicklung</span>
-                                            <span
-                                                className="alt-font text-extra-small text-uppercase margin-10px-bottom d-block">ZECK
-                                                GmbH</span>
-                                            <p className="d-inline-block w-90 xl-w-95">Softwftware- Entwicklung GIS- basierte
-                                                Application</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* <!-- end feature box item --> */}
-                                {/* <!-- start feature box item --> */}
-                                <div className="col last-paragraph-no-margin text-center text-md-start">
-                                    <div className="row">
-                                        <div className="col-lg-3 text-center">
-                                            <h3 className="text-light-gray font-weight-300 mb-0 letter-spacing-minus-2">06</h3>
-                                        </div>
-                                        <div className="col-lg-9 margin-5px-top text-center text-lg-start">
-                                            <span
-                                                className="alt-font text-extra-dark-gray font-weight-600 margin-one-bottom d-block">GIS-
-                                                Akademie</span>
-                                            <span
-                                                className="alt-font text-extra-small text-uppercase margin-10px-bottom d-block">Weiterbildung
-                                                als GIS- und Geodatenspezialist</span>
-                                            <p className="d-inline-block w-90 xl-w-95">Desktop-GIS, WebGIS, Projektarbeit,
-                                                Prakrtikum</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                ))}
                                 {/* <!-- end feature box item --> */}
                             </div>
                         </div>

@@ -147,7 +147,7 @@ export const HomeProjectFotos = [
         data: '18 April 2024',
         link: '/portfolio/Kunstkarten',
         header: 'Kunstkarten mit Python erstellen',
-        text: 'Sehenwir uns an, wie wir mit Python und OpenStreetMap-Daten schöne Karten erstellen können.',
+        text: 'Sehen wir uns an, wie wir mit Python und OpenStreetMap-Daten schöne Karten erstellen können.',
         id: 1
     },
     {
@@ -223,5 +223,44 @@ export const FlusssystemImages = [
         src: `${import.meta.env.BASE_URL}images/flusssystem/South_America_upland50_ord_flow6.${webpSupported ? 'webp' : 'jpg'}`,
         thumb: `${import.meta.env.BASE_URL}images/flusssystem/South_America_upland50_ord_flow6.${webpSupported ? 'webp' : 'jpg'}`,
         alt: "South America",
+    }
+];
+
+export const AboutWeiterbildung = [
+    {
+        header: 'Weiterbildungen im GIS Fachbereich',
+        desc: 'Selbständige Durchführung mehrerer kleiner Projekte',
+        text: 'Programmierung, Datenbearbeitung, Visualisierung, 3D-Modellierung',
+        id: 1
+    },
+    {
+        header: 'Universität Helsinki',
+        desc: 'Fakultät für Geowissenschafteften und Geographie',
+        text: 'Geo-Python und Datenanalyse, manage and visualise spatial data using Python',
+        id: 2
+    },
+    {
+        header: 'ESRI-zertifizierte Schulungen',
+        desc: 'Weiterbildung als Geodatenspezialist',
+        text: 'Geo Application, Cartography, Spatial Analysis ...',
+        id: 3
+    },
+    {
+        header: 'Universität Helsinki',
+        desc: 'Fakultät für Informatik',
+        text: 'Python Programmierung, JavaScript-basierte Web-Entwicklung',
+        id: 4
+    },
+    {
+        header: 'GIS-Spezialist für Softwftware- Entwicklung',
+        desc: 'ZECK GmbH',
+        text: 'Softwftware- Entwicklung GIS- basierte Application',
+        id: 5
+    },
+    {
+        header: 'GIS- Akademie',
+        desc: 'Weiterbildung als GIS- und Geodatenspezialist',
+        text: 'Desktop-GIS, WebGIS, Projektarbeit, Prakrtikum',
+        id: 6
     }
 ];
