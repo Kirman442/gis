@@ -66,9 +66,12 @@ a.text-green-hover:hover {
 }
 
 .navbar-collapse a.custom-link {
-    color: #09b6b4  !important;
+    color: #09b6b4 !important;
 }
 
+span.navbar-menu-trigger {
+    background: #09b6b4 !important;
+}
 
 @keyframes fadeIn {
     from {
