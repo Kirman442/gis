@@ -99,9 +99,9 @@ const Header = () => {
                             aria-label="Toggle navigation"
                         >
                             <span className="sr-only">toggle navigation</span>
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
+                            <span className="icon-bar navbar-menu-trigger"></span>
+                            <span className="icon-bar navbar-menu-trigger"></span>
+                            <span className="icon-bar navbar-menu-trigger"></span>
                         </button>
 
                         {/* Navi menu */}
