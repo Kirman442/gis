@@ -10,9 +10,17 @@ const isWebpSupported = () => {
     return !!(elem.getContext && elem.getContext('2d')) && elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
 };
 
+const isImageCached = (url) => {
+    const img = new Image();
+    img.src = url;
+
+    return img.complete; // Вернет true, если изображение уже загружено
+};
+
 const Home = () => {
     const webpSupported = isWebpSupported();
     const gislogo = `${import.meta.env.BASE_URL}images/home/gis-projekte-logo-1920.${webpSupported ? 'webp' : 'jpg'}`
+    const imageCached = isImageCached(gislogo);
 
     useEffect(() => {
         const link = document.createElement('link');
@@ -32,7 +40,7 @@ const Home = () => {
                 title="GIS-Projekte | Home"
                 description="Willkommen bei GIS-Projekte - Ein Rückblick auf kleine Projekte, die durch interessante Geschichten inspiriert wurden."
             />
-            <LazyLoadComponent>
+            <LazyLoadComponent visibleByDefault={imageCached}>
                 <section
                     style={{ backgroundImage: `url(${gislogo})` }}
                 >
