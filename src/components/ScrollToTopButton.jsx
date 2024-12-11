@@ -29,7 +29,8 @@ const ScrollToTopButton = () => {
     return (
         <div>
             {isVisible && (
-                <button
+                <button id="ToTop"
+                    aria-label="To op"
                     onClick={scrollToTop}
                     className="scroll-to-top-btn"
                 >

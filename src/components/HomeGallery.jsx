@@ -11,9 +11,9 @@ const HomeGallery = () => {
                         <ul className=" grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-1col xs-grid-1col blog-post-style4 gutter-large">
                             <li className="grid-sizer"></li>
                             {HomeProjectFotos.map((HProjectFotos) => (
+                                <li key={HProjectFotos.id} className="grid-item">
+                                    <div className="fade-in">
 
-                                <div key={HProjectFotos.id} className="fade-in">
-                                    <li className="grid-item">
                                         <figure>
                                             <div className=" bg-extra-dark-gray">
                                                 <Link to={HProjectFotos.link} className="text-medium-gray text-small">
@@ -25,14 +25,15 @@ const HomeGallery = () => {
                                                     <div className="blog-hover-box align-bottom">
                                                         <span
                                                             className="post-author text-extra-small text-medium-gray text-uppercase d-block margin-5px-bottom sm-margin-5px-bottom">{HProjectFotos.data}</span>
-                                                        <h6 className="alt-font d-block text-white-2 font-weight-400 mb-0"><Link to={HProjectFotos.link} className="text-white-2 text-green-hover">{HProjectFotos.header}</Link></h6>
+                                                        <span className="text-extra-large alt-font d-block text-white-2 font-weight-400 mb-0"><Link to={HProjectFotos.link} className="text-white-2 text-green-hover">{HProjectFotos.header}</Link></span>
                                                         <p className="text-medium-gray margin-10px-top blog-hover-text">{HProjectFotos.text}</p>
                                                     </div>
                                                 </div>
                                             </figcaption>
                                         </figure>
-                                    </li>
-                                </div>
+                                    </div>
+                                </li>
+
                             ))}
                         </ul>
                     </div>
