@@ -5,7 +5,7 @@ section {
 
 .text-green,
 .btn.text-green {
-    color: #089995;
+    color: #065f5c;
 }
 
 .datenquelle {
@@ -110,3 +110,30 @@ a.text-green-hover:hover {
     z-index: 1000;
     transition: transform 0.3s ease;
 }
+
+h2.custom-home-portfolio-header {
+    font-size: 25px;
+    line-height: 1.2;
+    color: #232323;
+    font-weight: 400;
+    margin: 0;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    h2.custom-home-portfolio-header {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+}
+
+@media (min-width: 1200px) {
+    h2.custom-home-portfolio-header {
+        font-size: 30px;
+        line-height: 1.4;
+    }
+}
+
+/* .text-extra-large {
+    margin: 0 0 25px;
+} */
