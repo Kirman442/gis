@@ -85,7 +85,7 @@ const PortfolioKunstkarten = () => {
                                 mit Python erstellen</h4>
                             <p className="text-medium line-height-28 sm-line-height-26">Sehen wir uns an, wie wir mit Python und
                                 OpenStreetMap-Daten schöne Karten erstellen können.</p>
-                            <span className="text-dark-gray opacity6 alt-font mb-0 text-uppercase text-small">18
+                            <span className="text-black opacity6 alt-font mb-0 text-uppercase text-small">18
                                 April 2024&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                                 Programmierung,
                                 Datenbearbeitung, Visualisierung</span>
@@ -98,7 +98,7 @@ const PortfolioKunstkarten = () => {
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-10">
-                            <h5 className="alt-font text-green">OSMnx installieren</h5>
+                            <p className="text-extra-large alt-font text-green">OSMnx installieren</p>
                             <p className="text-medium line-height-28 sm-line-height-26">Als
                                 erstes brauchen wir Python und einen Workflow. Ich
                                 werde Conda verwenden, um den Workflow zu erstellen,
@@ -121,8 +121,8 @@ const PortfolioKunstkarten = () => {
                                 Gebäudegrundrissen, Haltestellen, Höhendaten,
                                 Straßenausrichtungen, Geschwindigkeit/Reisezeit und
                                 Routenführung arbeiten.</p>
-                            <h6 className="alt-font text-green">Straßen und
-                                Straßennetzen herunterladen</h6>
+                            <p className="text-extra-large alt-font text-green">Straßen und
+                                Straßennetzen herunterladen</p>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Nach
                                 der erfolgreichen Installation von OSMnx können wir
                                 mit der Programmierung beginnen. Für unsere Aufgabe
@@ -179,7 +179,7 @@ const PortfolioKunstkarten = () => {
                                 um Autobahnen, Schnellstraßen und ihre Verbindungen
                                 zu erhalten.</p>
 
-                            <h5 className="alt-font text-green">Datenverarbeitung</h5>
+                            <p className="text-extra-large alt-font text-green">Datenverarbeitung</p>
 
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Sowohl graph_from_place() als auch
@@ -208,11 +208,11 @@ const PortfolioKunstkarten = () => {
                                 <div className="col-lg-7 margin-four-bottom">
                                     <p className="text-extra-large  text-dark-gray text-center line-height-28">Vollständige
                                         unbeschriftete Karte von Köln</p>
-                                    <img src={`${import.meta.env.BASE_URL}images/kunstkarten/koeln1.${webpSupported ? 'webp' : 'jpg'}`} className="w-100" data-no-retina />
+                                    <img src={`${import.meta.env.BASE_URL}images/kunstkarten/koeln1.${webpSupported ? 'webp' : 'jpg'}`} alt="Unbeschriftete Karte von Köln" className="w-100" data-no-retina />
                                 </div>
                             </div>
 
-                            <h5 className="alt-font text-green">Beschriftung</h5>
+                            <p className="text-extra-large alt-font text-green">Beschriftung</p>
 
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Die Karte ist fertig, aber was ist eine Karte ohne
@@ -279,18 +279,20 @@ const PortfolioKunstkarten = () => {
                                 um ein Vektorbild handelt, können Sie es ohne
                                 Qualitätsverlust einfach groß machen).
                             </p>
-                            <h5 className="alt-font text-green">Erste Version</h5>
+                            <p className="text-extra-large alt-font text-green">Erste Version</p>
                             <section className="wow animate__fadeIn bg-light-gray"
                                 style={{ visibility: "visible", animationName: "fadeIn" }}>
                                 <div className="container">
                                     <div className="row">
                                         <div className="col-12 filter-content overflow-hidden">
-                                            <ul className="hover-option2 portfolio-gallery portfolio-wrapper grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-medium">
-                                                <li className="grid-sizer"></li>
-                                                <LightGallery
-                                                    speed={500}
-                                                    plugins={[lgThumbnail, lgZoom]}
-                                                >
+                                            <LightGallery
+                                                speed={500}
+                                                plugins={[lgThumbnail, lgZoom]}
+                                                elementClassNames="light-gallery-wrapper"
+                                                selector="li[data-src]"
+                                            >
+                                                <ul className="hover-option2 portfolio-gallery portfolio-wrapper grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-medium">
+                                                    <li className="grid-sizer"></li>
                                                     {KunstkartenOldImages.map((image, index) => (
                                                         <li
                                                             key={image.src}
@@ -319,8 +321,8 @@ const PortfolioKunstkarten = () => {
                                                             </figure>
                                                         </li>
                                                     ))}
-                                                </LightGallery>
-                                            </ul>
+                                                </ul>
+                                            </LightGallery>
                                         </div>
                                     </div>
                                 </div>
@@ -331,7 +333,7 @@ const PortfolioKunstkarten = () => {
                                 alles neu zu machen, und ich werde Ihnen jetzt
                                 sagen, warum.
                             </p>
-                            <h5 className="alt-font text-green">Zweite Version</h5>
+                            <p className="text-extra-large alt-font text-green">Zweite Version</p>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Ich kam auf dieses Projekt zurück, weil ich dachte,
                                 es wäre schön, auch Gewässer oder vielmehr
@@ -370,7 +372,8 @@ const PortfolioKunstkarten = () => {
                             </p>
                             <div className="row">
                                 <div className="col-lg-6">
-                                    <img className="alignleft" src={`${import.meta.env.BASE_URL}images/kunstkarten/Berlin_water_grenze.png`} />
+                                    <img className="alignleft" src={`${import.meta.env.BASE_URL}images/kunstkarten/Berlin_water_grenze.png`} alt="Teil
+                                        der Spree in Berlin Polygonen" />
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Teil
                                         der Spree in Berlin. Hier können Sie
                                         deutlich sehen, was ich meine.
@@ -378,7 +381,8 @@ const PortfolioKunstkarten = () => {
                                         gebildet.</p>
                                 </div>
                                 <div className="col-lg-6">
-                                    <img className="alignleft" src={`${import.meta.env.BASE_URL}images/kunstkarten/Berlin_water_ohne_grenze.png`} />
+                                    <img className="alignleft" src={`${import.meta.env.BASE_URL}images/kunstkarten/Berlin_water_ohne_grenze.png`} alt="Teil
+                                        der Spree in Berlin Multipolygon" />
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Und
                                         hier ist ein Multipolygon</p>
                                     <p className="d-inline-block"></p>
@@ -445,7 +449,7 @@ const PortfolioKunstkarten = () => {
                             <div className="container">
                                 <div className="row justify-content-center">
                                     <div className="col-12 text-center margin-10px-bottom md-margin-50px-bottom sm-margin-30px-bottom">
-                                        <h6 className="font-weight-300 margin-15px-bottom">Datenquellen und Anwendungen:</h6>
+                                        <p className="text-extra-large font-weight-300 margin-15px-bottom">Datenquellen und Anwendungen:</p>
                                     </div>
                                     <div className="col-lg-10 col-md-10">
                                         <ul className="p-0 list-style-5">
@@ -498,20 +502,20 @@ const PortfolioKunstkarten = () => {
                     <div className="row justify-content-between align-items-center g-0 padding-30px-lr md-padding-15px-lr">
                         <div className="w-45 text-start">
                             <div className="blog-nav-link blog-nav-link-prev text-extra-dark-gray">
-                                <span className="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Previous
+                                <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Previous
                                     Project</span>
                                 <Link className="blog-nav-home" to="/portfolio/Dresden" ><i className="ti-arrow-left blog-nav-icon"></i>Infrastruktur um Dresden</Link>
                             </div>
                         </div>
                         <div className="w-10 text-center">
                             <div className="text-extra-dark-gray">
-                                <span className="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Home</span>
-                                <Link className="blog-nav-home" to="/" ><i className="ti-layout-grid2-alt"></i></Link>
+                                <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Home</span>
+                                <Link className="blog-nav-home" to="/" aria-label="Home page link"><i className="ti-layout-grid2-alt"></i></Link>
                             </div>
                         </div>
                         <div className="w-45 text-end">
                             <div className="blog-nav-link blog-nav-link-next text-extra-dark-gray">
-                                <span className="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Next
+                                <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Next
                                     Project</span>
                                 <Link className="blog-nav-home" to="/portfolio/Flusssystem" ><i className="ti-arrow-right blog-nav-icon"></i>Die Visualisierung des Flusssystems</Link>
                             </div>
