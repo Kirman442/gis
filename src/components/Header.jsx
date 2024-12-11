@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 
-const getMenuItems = (pathname) => {
+const getMenuItems = (pathname, closeMenu) => {
     if (pathname === "/") {
         return (
             <li>
-                <Link className="custom-link" to="/about">About</Link>
+                <Link className="custom-link" to="/about" onClick={closeMenu}>About</Link>
             </li>
         );
     }
@@ -13,7 +13,7 @@ const getMenuItems = (pathname) => {
     if (pathname === "/about") {
         return (
             <li>
-                <Link className="custom-link" to="/">Home</Link>
+                <Link className="custom-link" to="/" onClick={closeMenu}>Home</Link>
             </li>
         );
     }
@@ -22,10 +22,10 @@ const getMenuItems = (pathname) => {
         return (
             <>
                 <li>
-                    <Link className="custom-link" to="/">Home</Link>
+                    <Link className="custom-link" to="/" onClick={closeMenu}>Home</Link>
                 </li>
                 <li>
-                    <Link className="custom-link" to="/about">About</Link>
+                    <Link className="custom-link" to="/about" onClick={closeMenu}>About</Link>
                 </li>
             </>
         );
@@ -38,6 +38,7 @@ const Header = () => {
     const location = useLocation();
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [isOpen, setIsOpen] = useState(false);
 
     // Логика скроллинга
     const handleScroll = () => {
@@ -63,6 +64,14 @@ const Header = () => {
         };
     }, [lastScrollY]);
 
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const closeMenu = () => {
+        setIsOpen(false); // Close menu
+    };
+
 
     return (
         <header
@@ -85,6 +94,9 @@ const Header = () => {
                             className="navbar-toggler collapsed"
                             data-bs-toggle="collapse"
                             data-bs-target="#navbar-collapse-toggle-1"
+                            onClick={toggleMenu}
+                            aria-expanded={isOpen}
+                            aria-label="Toggle navigation"
                         >
                             <span className="sr-only">toggle navigation</span>
                             <span className="icon-bar"></span>
@@ -93,9 +105,10 @@ const Header = () => {
                         </button>
 
                         {/* Navi menu */}
-                        <div className="navbar-collapse collapse justify-content-end" id="navbar-collapse-toggle-1">
+                        {/* <div className="navbar-collapse collapse justify-content-end" id="navbar-collapse-toggle-1"> */}
+                        <div className={`navbar-collapse collapse justify-content-end ${isOpen ? 'show' : ''}`} id="navbar-collapse-toggle-1">
                             <ul id="accordion" className="nav navbar-nav no-margin alt-font text-normal">
-                                {getMenuItems(location.pathname)}
+                                {getMenuItems(location.pathname, closeMenu)}
                             </ul>
                         </div>
                     </div>
