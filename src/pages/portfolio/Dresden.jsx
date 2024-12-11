@@ -28,11 +28,11 @@ const PortfolioDresden = () => {
                         <div className="col-xl-4 col-lg-5 p-0">
                             <div
                                 className="padding-seventeen-lr padding-twenty-tb lg-padding-40px-lr md-padding-50px-tb sm-padding-30px-all">
-                                <h3 className="alt-font text-extra-light-gray font-weight-600 mb-0">Infrastruktur um Dresden</h3>
+                                <h4 className="alt-font text-extra-light-gray font-weight-600 mb-0">Infrastruktur um Dresden</h4>
                                 <div className="bg-deep-green separator-line-horrizontal-full d-inline-block margin-25px-tb"></div>
-                                <p className="w-90 w-100 margin-35px-bottom text-medium line-height-28">Projekt zur Digitalisierung
+                                <p className="text-medium-gray w-90 w-100 margin-35px-bottom text-medium line-height-28">Projekt zur Digitalisierung
                                     der Verkehrs-, Elektro-, Kataster- und Landschaftsinfrastruktur rund um Dresden.</p>
-                                <span className="text-dark-gray opacity6 alt-font mb-0 text-uppercase text-small">25
+                                <span className="text-light-gray opacity6 alt-font mb-0 text-uppercase text-small">25
                                     September 2023&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                                     Programmierung,
                                     Datenbearbeitung, Web-App erstellen</span>
@@ -346,7 +346,7 @@ const PortfolioDresden = () => {
                         <div className="container">
                             <div className="row justify-content-center">
                                 <div className="col-12">
-                                    <iframe className="w-100 h-700px" src="https://kirman442.github.io/dresden/"></iframe>
+                                    <iframe className="w-100 h-700px" src="https://kirman442.github.io/dresden/" title="Web-App"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -498,20 +498,20 @@ const PortfolioDresden = () => {
                     <div className="row justify-content-between align-items-center g-0 padding-30px-lr md-padding-15px-lr">
                         <div className="w-45 text-start">
                             <div className="blog-nav-link blog-nav-link-prev text-extra-dark-gray">
-                                <span className="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Previous
+                                <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Previous
                                     Project</span>
                                 <Link className="blog-nav-home" to="/portfolio/Clustering" ><i className="ti-arrow-left blog-nav-icon"></i>Clustering</Link>
                             </div>
                         </div>
                         <div className="w-10 text-center">
                             <div className="text-extra-dark-gray">
-                                <span className="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Home</span>
-                                <Link className="blog-nav-home" to="/" ><i className="ti-layout-grid2-alt"></i></Link>
+                                <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Home</span>
+                                <Link className="blog-nav-home" to="/" aria-label="Home page link"><i className="ti-layout-grid2-alt"></i></Link>
                             </div>
                         </div>
                         <div className="w-45 text-end">
                             <div className="blog-nav-link blog-nav-link-next text-extra-dark-gray">
-                                <span className="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Next
+                                <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Next
                                     Project</span>
                                 <Link className="blog-nav-home" to="/portfolio/Kunstkarten" ><i className="ti-arrow-right blog-nav-icon"></i>Kunstkarten mit Python erstellen</Link>
                             </div>

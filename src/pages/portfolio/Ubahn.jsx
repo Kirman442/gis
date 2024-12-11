@@ -30,9 +30,9 @@ const PortfolioUbahn = () => {
                                 className="padding-seventeen-lr padding-twenty-tb lg-padding-40px-lr md-padding-50px-tb sm-padding-30px-all">
                                 <h3 className="alt-font text-extra-light-gray font-weight-600 mb-0">Berliner U-Bahn Geschichte</h3>
                                 <div className="bg-deep-green separator-line-horrizontal-full d-inline-block margin-25px-tb"></div>
-                                <p className="w-90 w-100 margin-35px-bottom text-medium line-height-28">Interaktive Karte über die
+                                <p className="text-medium-gray w-90 w-100 margin-35px-bottom text-medium line-height-28">Interaktive Karte über die
                                     Entwicklung und den Bau der Berliner U-Bahn.</p>
-                                <span className="text-dark-gray opacity6 alt-font mb-0 text-uppercase text-small">19
+                                <span className="text-light-gray opacity6 alt-font mb-0 text-uppercase text-small">19
                                     Dezember 2023&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                                     Programmierung,
                                     Datenbearbeitung</span>
@@ -47,7 +47,7 @@ const PortfolioUbahn = () => {
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-10">
-                            <h5 className="alt-font text-green">U-Bahn Geschichte</h5>
+                            <h4 className="alt-font text-green">U-Bahn Geschichte</h4>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Die erste Untergrundbahn Berlins entstand 1895 als Verbindungstunnel zwischen zwei
                                 AEG-Fabriken.Dennoch setzte sich
@@ -91,8 +91,8 @@ const PortfolioUbahn = () => {
                                             value="50"
                                             style={{ cursor: "pointer" }}
                                         >
-                                            <img slot="first" src={`${import.meta.env.BASE_URL}images/ubahn/ubahn_schemamap.${webpSupported ? 'webp' : 'jpg'}`} />
-                                            <img slot="second" src={`${import.meta.env.BASE_URL}images/ubahn/ubahn_geomap3.${webpSupported ? 'webp' : 'jpg'}`} />
+                                            <img slot="first" src={`${import.meta.env.BASE_URL}images/ubahn/ubahn_schemamap.${webpSupported ? 'webp' : 'jpg'}`} alt="Berliner Ubahn Schemamap" />
+                                            <img slot="second" src={`${import.meta.env.BASE_URL}images/ubahn/ubahn_geomap3.${webpSupported ? 'webp' : 'jpg'}`} alt="Berliner Ubahn Geomap" />
                                         </ImgComparisonSlider>
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@ const PortfolioUbahn = () => {
                                 der größten Netze Europas entwickelt hat.
                             </p>
 
-                            <h5 className="alt-font text-green">Karte Erstellung</h5>
+                            <h4 className="alt-font text-green">Karte Erstellung</h4>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Um eine solche Karte zu
                                 erstellen, benötigen wir:
                             </p>
@@ -114,7 +114,7 @@ const PortfolioUbahn = () => {
                                 <li className="text-medium line-height-28">ein geeignetes Modell zur Datenspeicherung</li>
                                 <li className="text-medium line-height-28">daten</li>
                             </ul>
-                            <h6 className="alt-font text-green">Anzeigedatenverfahren</h6>
+                            <h5 className="alt-font text-green">Anzeigedatenverfahren</h5>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Lassen Sie uns zunächst die Anforderungen an den Anzeigeverfahren definieren. Er sollte in der
                                 Lage sein:</p>
@@ -155,7 +155,7 @@ const PortfolioUbahn = () => {
 
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <img className="alignright" src={`${import.meta.env.BASE_URL}images/ubahn/2200_1343.${webpSupported ? 'webp' : 'png'}`} data-no-retina />
+                                    <img className="alignright" src={`${import.meta.env.BASE_URL}images/ubahn/2200_1343.${webpSupported ? 'webp' : 'png'}`} alt="Kachel Foto" data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">z ist der Maßstab, in
                                         dem sie angezeigt wird (je größer der z-Wert, desto größer die Vergrößerung);
@@ -177,7 +177,7 @@ const PortfolioUbahn = () => {
                                     <p className="text-extra-large  text-dark-gray text-center line-height-28">Das Gesamtbild, das
                                         wir letztendlich sehen, wird aus vielen Kacheln zu einem einzigen Bild zusammengefügt:
                                     </p>
-                                    <img src={`${import.meta.env.BASE_URL}images/ubahn/tile_map_story.${webpSupported ? 'webp' : 'jpg'}`} className="w-100" data-no-retina />
+                                    <img src={`${import.meta.env.BASE_URL}images/ubahn/tile_map_story.${webpSupported ? 'webp' : 'jpg'}`} alt="Kachel Gesamtbild" className="w-100" data-no-retina />
                                 </div>
                             </div>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
@@ -238,7 +238,7 @@ const PortfolioUbahn = () => {
                         <div className="container">
                             <div className="row justify-content-center">
                                 <div className="col-12">
-                                    <iframe className="w-100 h-700px" src="https://kirman442.github.io/berlinmetro/"></iframe>
+                                    <iframe className="w-100 h-700px" src="https://kirman442.github.io/berlinmetro/" title="Web-App"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -307,20 +307,20 @@ const PortfolioUbahn = () => {
                     <div className="row justify-content-between align-items-center g-0 padding-30px-lr md-padding-15px-lr">
                         <div className="w-45 text-start">
                             <div className="blog-nav-link blog-nav-link-prev text-extra-dark-gray">
-                                <span className="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Previous
+                                <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Previous
                                     Project</span>
                                 <Link className="blog-nav-home" to="/portfolio/Flusssystem" ><i className="ti-arrow-left blog-nav-icon"></i>Die Visualisierung des Flusssystem</Link>
                             </div>
                         </div>
                         <div className="w-10 text-center">
                             <div className="text-extra-dark-gray">
-                                <span className="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Home</span>
-                                <Link className="blog-nav-home" to="/" ><i className="ti-layout-grid2-alt"></i></Link>
+                                <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Home</span>
+                                <Link className="blog-nav-home" to="/" aria-label="Home page link" ><i className="ti-layout-grid2-alt"></i></Link>
                             </div>
                         </div>
                         <div className="w-45 text-end">
                             <div className="blog-nav-link blog-nav-link-next text-extra-dark-gray">
-                                <span className="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Next
+                                <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Next
                                     Project</span>
                                 <Link className="blog-nav-home" to="/portfolio/Bergbau" ><i className="ti-arrow-right blog-nav-icon"></i>Risikomanagement oberflächennaher Strukturen</Link>
                             </div>

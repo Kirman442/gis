@@ -45,7 +45,7 @@ const PortfolioBergbau = () => {
                             <p className="text-medium line-height-28 sm-line-height-26">GIS-technische Umsetzung eines vorgegebenen
                                 Workflows zur Erstellung von 3D-Bergbaustrukturen.
                             </p>
-                            <span className="text-dark-gray opacity6 alt-font mb-0 text-uppercase text-small">25
+                            <span className="text-extra-dark-gray opacity9 alt-font mb-0 text-uppercase text-small">25
                                 August 2022&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                                 Kirill
                                 Lisochenko & Martin Burzynski&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Programmierung,
@@ -55,7 +55,7 @@ const PortfolioBergbau = () => {
                 </div>
             </section>
 
-            <section className="wow animate__fadeIn">
+            <section className="no-padding-top">
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-10">
@@ -104,7 +104,7 @@ const PortfolioBergbau = () => {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <img className="alignright col-lg-6" src={`${import.meta.env.BASE_URL}images/bergbau/stollenbau.${webpSupported ? 'webp' : 'jpg'}`}
-                                        data-no-retina />
+                                        alt="Stollenbau" data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Beim Schreiben eines
                                         Python-Skripts müssen Strecken und Abbaue einzeln betrachtet werden. Strecken dienten
@@ -164,7 +164,7 @@ const PortfolioBergbau = () => {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <img className="alignright col-lg-6" src={`${import.meta.env.BASE_URL}images/bergbau/StreckeUndAbbauFrage.${webpSupported ? 'webp' : 'jpg'}`}
-                                        data-no-retina />
+                                        alt="Strecke" data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Um die Sohlenhöhen
                                         der Strecken Features berechnen zu können, wird die Höheninformation im Bereich der
@@ -183,7 +183,7 @@ const PortfolioBergbau = () => {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <img className="alignright col-lg-6" src={`${import.meta.env.BASE_URL}images/bergbau/StreckeUndAbbau_punkte.${webpSupported ? 'webp' : 'jpg'}`}
-                                        data-no-retina />
+                                        alt="StreckeUndAbbau" data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Über den searchcursor
                                         werden die Punkte der Features ausgelesen und die Distanzen zur Abbaue- Geometrie
@@ -212,7 +212,7 @@ const PortfolioBergbau = () => {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <img className="alignright col-lg-6" src={`${import.meta.env.BASE_URL}images/bergbau/tins_skizze.${webpSupported ? 'webp' : 'jpg'}`}
-                                        data-no-retina />
+                                        alt="Tins skizze" data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Für die
                                         3D-Visualisierung wurde hier die Funktion extrudebetween gewählt. Dabei werden
@@ -247,7 +247,7 @@ const PortfolioBergbau = () => {
                                         oder
                                         TIN-Daten ausgeführt</p>
                                     <img className="alignright col-lg-6" src={`${import.meta.env.BASE_URL}images/bergbau/tins_new.${webpSupported ? 'webp' : 'jpg'}`}
-                                        data-no-retina />
+                                        alt="Tins new skizze" data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Zur automatisierten
                                         Feature Class Erstellung der dreidimensionalen Strecken werden nur noch zwei Funktionen
@@ -274,7 +274,7 @@ const PortfolioBergbau = () => {
                                     <p className="alignright col-lg-6"> Modellierung und Erstellung eines dreidimensionalen Objekts
                                         auf der Grundlage der Daten</p>
                                     <img className="alignright col-lg-6" src={`${import.meta.env.BASE_URL}images/bergbau/3DStrecke2.${webpSupported ? 'webp' : 'jpg'}`}
-                                        data-no-retina />
+                                        alt="3DStrecke" data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Im letzten Schritt
                                         kann nun die extrudebetween-Funktion angewandt werden. Dabei müssen keine weiteren
@@ -299,7 +299,7 @@ const PortfolioBergbau = () => {
                                     <p className="alignright col-lg-6">Am Ende der Berechnungen und Transformationen haben wir ein
                                         fertiges 3D-Modell</p>
                                     <img className="alignright col-lg-6" src={`${import.meta.env.BASE_URL}images/bergbau/3DStrecke3.${webpSupported ? 'webp' : 'jpg'}`}
-                                        data-no-retina />
+                                        alt="3DStrecke" data-no-retina />
 
                                     <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Aus dem bis hierhin
                                         beschriebenen Skripts wurde mit der tool-box und einer GUI in ArcGIS pro eine
@@ -390,20 +390,20 @@ const PortfolioBergbau = () => {
                     <div className="row justify-content-between align-items-center g-0 padding-30px-lr md-padding-15px-lr">
                         <div className="w-45 text-start">
                             <div className="blog-nav-link blog-nav-link-prev text-extra-dark-gray">
-                                <span className="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Previous
+                                <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Previous
                                     Project</span>
                                 <Link className="blog-nav-home" to="/portfolio/Ubahn" ><i className="ti-arrow-left blog-nav-icon"></i>Berliner U-Bahn Geschichte</Link>
                             </div>
                         </div>
                         <div className="w-10 text-center">
                             <div className="text-extra-dark-gray">
-                                <span className="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Home</span>
-                                <Link className="blog-nav-home" to="/" ><i className="ti-layout-grid2-alt"></i></Link>
+                                <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Home</span>
+                                <Link className="blog-nav-home" to="/" aria-label="Home page link"><i className="ti-layout-grid2-alt"></i></Link>
                             </div>
                         </div>
                         <div className="w-45 text-end">
                             <div className="blog-nav-link blog-nav-link-next text-extra-dark-gray">
-                                <span className="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Next
+                                <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Next
                                     Project</span>
                                 <Link className="blog-nav-home" to="/portfolio/Clustering" ><i className="ti-arrow-right blog-nav-icon"></i>Clustering</Link>
                             </div>

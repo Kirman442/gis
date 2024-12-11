@@ -53,7 +53,7 @@ const About = () => {
                             <blockquote className="border-color-green">
                                 <p>Wer aufhört zu lernen, ist alt, sei es mit zwanzig oder achtzig. Wer weiter lernt, bleibt
                                     jung.</p>
-                                <footer>Henry Ford</footer>
+                                <footer className="text-extra-medium-gray">Henry Ford</footer>
                             </blockquote>
                             {/* <!-- end blockquote --> */}
                         </div>
@@ -113,7 +113,7 @@ const About = () => {
                                     Gehirn Informationen verarbeiten. Was Sie sehen und was Sie erleben, während Sie ein Objekt
                                     betrachten, sind völlig
                                     unterschiedliche Dinge.</p>
-                                <footer>Jason Maria</footer>
+                                <footer className="text-extra-medium-gray">Jason Maria</footer>
                             </blockquote>
                             {/* <!-- end blockquote --> */}
                         </div>
@@ -237,8 +237,8 @@ const About = () => {
                         </div>
                         <div className="w-10 text-center">
                             <div className="text-extra-dark-gray">
-                                <Link className="blog-nav-home" to="/">
-                                    <span className="blog-nav-home text-extra-small text-uppercase d-none d-md-block">Home</span>
+                                <Link className="blog-nav-home" to="/" aria-label="Home page link">
+                                    <span className="text-dark-gray blog-nav-home text-extra-small text-uppercase d-none d-md-block">Home</span>
                                     <i className="ti-layout-grid2-alt"></i></Link>
                             </div>
                         </div>

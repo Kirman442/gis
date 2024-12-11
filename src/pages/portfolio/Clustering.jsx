@@ -42,10 +42,10 @@ const PortfolioClustering = () => {
                                 className="padding-seventeen-lr padding-twenty-tb lg-padding-40px-lr md-padding-50px-tb sm-padding-30px-all">
                                 <h3 className="alt-font text-extra-light-gray font-weight-600 mb-0">Clustering</h3>
                                 <div className="bg-deep-green separator-line-horrizontal-full d-inline-block margin-25px-tb"></div>
-                                <p className="w-90 w-100 margin-35px-bottom text-medium line-height-28">Manchmal müssen wir eine
+                                <p className="text-medium-gray w-90 w-100 margin-35px-bottom text-medium line-height-28">Manchmal müssen wir eine
                                     große Menge an Daten auf der Karte anzeigen. Und in diesem Fall ist es besser, Clustering zu
                                     verwenden.</p>
-                                <span className="text-dark-gray opacity6 alt-font mb-0 text-uppercase text-small">25
+                                <span className="text-light-gray opacity6 alt-font mb-0 text-uppercase text-small">25
                                     März 2024&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                                     Programmierung,
                                     Datenbearbeitung, Web-App erstellen</span>
@@ -61,7 +61,7 @@ const PortfolioClustering = () => {
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-10">
-                            <h5 className="alt-font text-green">Einleitung</h5>
+                            <h4 className="alt-font text-green">Einleitung</h4>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Clustering ist eine Methode zur Reduzierung von Punkten in einer Ebene, indem sie auf der
                                 Grundlage ihrer räumlichen
@@ -116,7 +116,7 @@ const PortfolioClustering = () => {
                                 Nach dem Filtern machte ich also einige unerwartete geografische Entdeckungen und reiste
                                 virtuell durch diese Städte.
                             </p>
-                            <h5 className="alt-font text-green">Räumliche Verbindung</h5>
+                            <h4 className="alt-font text-green">Räumliche Verbindung</h4>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Da wir sie aber für unsere Karte nicht brauchen, werden wir sie auf viel zuverlässigere Weise
                                 los, indem wir eine
@@ -154,7 +154,7 @@ const PortfolioClustering = () => {
                                 ArcGIS Developers-Konto
                                 hochladen, um sie später zu visualisieren und eine einseitige React- Webanwendung zu erstellen.
                             </p>
-                            <h5 className="alt-font text-green">Daten Hochladen</h5>
+                            <h4 className="alt-font text-green">Daten Hochladen</h4>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Dazu benötigen wir die Python-API, die ich ganz am Anfang importiert habe. Logge ein, fülle die
                                 Daten unseres Layers
@@ -190,7 +190,7 @@ const PortfolioClustering = () => {
                                 Werten verwenden, wie ich
                                 es in meinem Beispiel getan habe, aber es kostet auch nicht viel Mühe.
                             </p>
-                            <h5 className="alt-font text-green">Web-App</h5>
+                            <h4 className="alt-font text-green">Web-App</h4>
 
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Laden alles auf Github hoch und voila, unsere Karte ist jetzt eine Webanwendung und jeder kann
@@ -216,7 +216,7 @@ const PortfolioClustering = () => {
                         <div className="container">
                             <div className="row justify-content-center">
                                 <div className="col-12">
-                                    <iframe className="w-100 h-800px" src="https://kirman442.github.io/ookla/"></iframe>
+                                    <iframe className="w-100 h-800px" src="https://kirman442.github.io/ookla/" title="Web-App"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -224,7 +224,7 @@ const PortfolioClustering = () => {
                         <div className="container">
                             <div className="row justify-content-center">
                                 <div className="col-12 text-center margin-10px-bottom md-margin-50px-bottom sm-margin-30px-bottom">
-                                    <h6 className="font-weight-300 margin-15px-bottom">Datenquellen und Anwendungen:</h6>
+                                    <p className="text-extra-large font-weight-300 margin-15px-bottom">Datenquellen und Anwendungen:</p>
                                 </div>
 
                                 <div className="col-lg-8 col-md-10">
@@ -279,20 +279,20 @@ const PortfolioClustering = () => {
                     <div className="row justify-content-between align-items-center g-0 padding-30px-lr md-padding-15px-lr">
                         <div className="w-45 text-start">
                             <div className="blog-nav-link blog-nav-link-prev text-extra-dark-gray">
-                                <span className="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Previous
+                                <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Previous
                                     Project</span>
                                 <Link className="blog-nav-home" to="/portfolio/Bergbau" ><i className="ti-arrow-left blog-nav-icon"></i>Risikomanagement oberflächennaher Strukturen</Link>
                             </div>
                         </div>
                         <div className="w-10 text-center">
                             <div className="text-extra-dark-gray">
-                                <span className="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Home</span>
-                                <Link className="blog-nav-home" to="/" ><i className="ti-layout-grid2-alt"></i></Link>
+                                <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Home</span>
+                                <Link className="blog-nav-home" to="/" aria-label="Home page link" ><i className="ti-layout-grid2-alt"></i></Link>
                             </div>
                         </div>
                         <div className="w-45 text-end">
                             <div className="blog-nav-link blog-nav-link-next text-extra-dark-gray">
-                                <span className="text-medium-gray text-extra-small text-uppercase d-none d-md-block">Next
+                                <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Next
                                     Project</span>
                                 <Link className="blog-nav-home" to="/portfolio/Dresden" ><i className="ti-arrow-right blog-nav-icon"></i>Infrastruktur um Dresden</Link>
                             </div>
