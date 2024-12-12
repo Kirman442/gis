@@ -7,42 +7,42 @@ const webpSupported = isWebpSupported();
 
 export const PortfolioSliderFotos = [
     {
-        image: `${import.meta.env.BASE_URL}images/about/aboutPekin1000.${webpSupported ? 'webp' : 'jpg'}`,
+        image: `${import.meta.env.BASE_URL}images/about/aboutPortfolioKunstkarten690.${webpSupported ? 'webp' : 'jpg'}`,
         link: '/portfolio/Kunstkarten',
         header: 'Kunstkarten mit Python erstellen',
         text: 'Programmierung, Datenbearbeitung, Visualisierung',
         id: 1
     },
     {
-        image: `${import.meta.env.BASE_URL}images/about/aboutFluss1000.${webpSupported ? 'webp' : 'jpg'}`,
+        image: `${import.meta.env.BASE_URL}images/about/aboutPortfolioFluss690.${webpSupported ? 'webp' : 'jpg'}`,
         link: '/portfolio/Flusssystem',
         header: 'Die Visualisierung des Flusssystems',
         text: 'Programmierung, Datenbearbeitung',
         id: 2
     },
     {
-        image: `${import.meta.env.BASE_URL}images/home/brabutor.${webpSupported ? 'webp' : 'jpg'}`,
+        image: `${import.meta.env.BASE_URL}images/about/aboutPortfolioUbahn690.${webpSupported ? 'webp' : 'jpg'}`,
         link: '/portfolio/Ubahn',
         header: 'Berliner U-Bahn',
         text: 'Programmierung, Datenbearbeitung',
         id: 3
     },
     {
-        image: `${import.meta.env.BASE_URL}images/home/risikomanagement.${webpSupported ? 'webp' : 'jpg'}`,
+        image: `${import.meta.env.BASE_URL}images/about/aboutPortfolioBergbau690.${webpSupported ? 'webp' : 'jpg'}`,
         link: '/portfolio/Bergbau',
         header: 'Risikomanagement oberflächennaher Strukturen',
         text: 'Programmierung, Datenbearbeitung, 3D-Modellierung',
         id: 4
     },
     {
-        image: `${import.meta.env.BASE_URL}images/home/clustering2.${webpSupported ? 'webp' : 'jpg'}`,
+        image: `${import.meta.env.BASE_URL}images/about/aboutPortfolioClustering690.${webpSupported ? 'webp' : 'jpg'}`,
         link: '/portfolio/Clustering',
         header: 'Clustering',
         text: 'Programmierung, Datenbearbeitung, Web-App',
         id: 5
     },
     {
-        image: `${import.meta.env.BASE_URL}images/home/Dresden-hc.${webpSupported ? 'webp' : 'jpg'}`,
+        image: `${import.meta.env.BASE_URL}images/about/aboutPortfolioDresden690.${webpSupported ? 'webp' : 'jpg'}`,
         link: '/portfolio/Dresden',
         header: 'Infrastruktur um Dresden',
         text: 'Programmierung, Datenbearbeitung, Web-App',
@@ -142,7 +142,7 @@ export const AboutSkills = [
 
 export const HomeProjectFotos = [
     {
-        image: `${import.meta.env.BASE_URL}images/home/Pekin_1_1_1_0_5_1.${webpSupported ? 'webp' : 'jpg'}`,
+        image: `${import.meta.env.BASE_URL}images/home/homePortfolioKunstkarten493.${webpSupported ? 'webp' : 'jpg'}`,
         alt: 'Kunstkarten',
         data: '18 April 2024',
         link: '/portfolio/Kunstkarten',
@@ -151,7 +151,7 @@ export const HomeProjectFotos = [
         id: 1
     },
     {
-        image: `${import.meta.env.BASE_URL}images/home/Fluss_Germany.${webpSupported ? 'webp' : 'jpg'}`,
+        image: `${import.meta.env.BASE_URL}images/home/homePortfolioFluss493.${webpSupported ? 'webp' : 'jpg'}`,
         alt: 'Flusssystemstkarten',
         data: '25 Mai 2024',
         link: '/portfolio/Flusssystem',
@@ -160,7 +160,7 @@ export const HomeProjectFotos = [
         id: 2
     },
     {
-        image: `${import.meta.env.BASE_URL}images/home/brabutor.${webpSupported ? 'webp' : 'jpg'}`,
+        image: `${import.meta.env.BASE_URL}images/home/homePortfolioUbahn493.${webpSupported ? 'webp' : 'jpg'}`,
         alt: 'Berliner U-Bahn Geschichte',
         data: '19 Dezember 2023',
         link: '/portfolio/Ubahn',
@@ -169,7 +169,7 @@ export const HomeProjectFotos = [
         id: 3
     },
     {
-        image: `${import.meta.env.BASE_URL}images/home/risikomanagement.${webpSupported ? 'webp' : 'jpg'}`,
+        image: `${import.meta.env.BASE_URL}images/home/homePortfolioBergbau493.${webpSupported ? 'webp' : 'jpg'}`,
         alt: 'Bergbau Risikomanagement',
         data: '25 August 2022 | Kirill Lisochenko & Martin Burzynski',
         link: '/portfolio/Bergbau',
@@ -178,7 +178,7 @@ export const HomeProjectFotos = [
         id: 4
     },
     {
-        image: `${import.meta.env.BASE_URL}images/home/clustering2.${webpSupported ? 'webp' : 'jpg'}`,
+        image: `${import.meta.env.BASE_URL}images/home/homePortfolioClustering493.${webpSupported ? 'webp' : 'jpg'}`,
         alt: 'Infrastruktur um Dresden',
         data: '25 März 2024',
         link: '/portfolio/Clustering',
@@ -187,7 +187,7 @@ export const HomeProjectFotos = [
         id: 5
     },
     {
-        image: `${import.meta.env.BASE_URL}images/home/Dresden-hc.${webpSupported ? 'webp' : 'jpg'}`,
+        image: `${import.meta.env.BASE_URL}images/home/homePortfolioDresden493.${webpSupported ? 'webp' : 'jpg'}`,
         alt: 'Clustering',
         data: '25 September 2023',
         link: '/portfolio/Dresden',
