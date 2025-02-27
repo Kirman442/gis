@@ -130,7 +130,7 @@ export const AboutSkills = [
     {
         value: '77',
         header: 'GIS-Entwicklung',
-        text: 'ArcGIS SDK JS, ArcPy, Python, Arcade, OpenLayers, Geopandas..',
+        text: 'ArcGIS SDK JS, ArcPy, Python, OpenLayers, Geopandas..',
         id: 2
     },
     {
@@ -142,7 +142,7 @@ export const AboutSkills = [
     {
         value: '67',
         header: 'Web-Entwicklung',
-        text: 'HTML, CSS, Flask, GIT, Vite, react.js, deck.gl, react-map-gl, node.js',
+        text: 'HTML, CSS, Flask, GIT, react.js, deck.gl, react-map-gl',
         id: 4
     }
 ];

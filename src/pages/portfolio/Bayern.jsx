@@ -108,6 +108,9 @@ const PortfolioBayern = () => {
 
                             <h6 className="alt-font text-green">Blick in die Zukunft: Neue Karten, neue Daten, neue Entdeckungen</h6>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                                Das Ziel dieses Projekts war die praktische Untersuchung der Möglichkeiten der Bibliothek Deck.gl im Kontext der Erstellung interaktiver, geoinformatorischer Webanwendungen.  Die Aufgabe bestand darin, am Beispiel der Visualisierung bayerischer Geodaten die Effizienz von Deck.gl für die Arbeit mit Geodaten direkt im Browser zu bewerten.  Das Projekt war als experimentelle Plattform für die Erforschung der Funktionsprinzipien der Bibliothek, ihrer Stärken und potenziellen Grenzen konzipiert.  Als inspirierende Idee diente die Möglichkeit, die Leistungsfähigkeit von WebGL und den Komfort von React.js für die Erstellung einer modernen und informativen Kartenvsualisierung zu nutzen.  Letztendlich sollte das Projekt demonstrieren, inwieweit Deck.gl ein effizientes und flexibles Werkzeug für die Geovisualisierung ist und neue Horizonte für die Weiterentwicklung in diesem Bereich eröffnet.
+                            </p>
+                            <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Die Bayern-Karte ist nur der Anfang, ein erstes Experiment mit Deck.gl. Aber schon jetzt ist das Potenzial der Bibliothek für die Entwicklung moderner geoinformatorischer Webanwendungen erkennbar. Deck.gl ist ein leistungsstarkes und flexibles Werkzeug zur Visualisierung von Geodaten im Browser.
                             </p>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
@@ -116,7 +119,7 @@ const PortfolioBayern = () => {
 
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
 
-                                Das Wichtigste ist: Das Experiment mit Deck.gl inspiriert! Ich habe Erfahrungen gesammelt, ein Verständnis für die Funktionsprinzipien der Bibliothek entwickelt. Es eröffnen sich neue Horizonte für die Kreativität in der Geovisualisierung. Bayern ist erst der Anfang. {/* Die Welt der Karten und Daten wartet! */}
+                                Das Wichtigste ist: Das Experiment mit Deck.gl inspiriert! Ich habe Erfahrungen gesammelt, ein Verständnis für die Funktionsprinzipien der Bibliothek entwickelt. Es eröffnen sich neue Horizonte für die Kreativität in der Geovisualisierung. {/* Bayern ist erst der Anfang. Die Welt der Karten und Daten wartet! */}
                             </p>
 
 
@@ -148,7 +151,7 @@ const PortfolioBayern = () => {
                                             packages
                                             and
                                             libraries:
-                                        </label>Geopandas , Json , Osmnx, d3-scale
+                                        </label>Geopandas , Json , OSMnx, d3-scale
                                         </li>
                                         <li className="margin-5px-bottom"><label className="datenquelle w-50 d-inline-block">react-map-gl</label><a className="text-decoration-underline"
                                             href="https://visgl.github.io/react-map-gl/" target="_blank">Part of vis.gl's Framework Suite</a>
