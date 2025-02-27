@@ -64,21 +64,21 @@ const PortfolioBayern = () => {
                                 Ich interessiere mich schon seit langem für geografische Visualisierungswerkzeuge.  Vor allem, nachdem ich die Kepler.gl-Bibliothek kennengelernt hatte.  Ursprünglich von Uber entwickelt, wurde Kepler.gl für die Bedürfnisse von analytischen Abteilungen geschaffen, die ein tieferes Verständnis der städtischen Dynamik suchen.  Uber Engineering verfügt über kolossale Mengen an Geodaten von Tausenden von Autos, die täglich in verschiedenen Metropolen der Welt unterwegs sind.  Kepler.gl wurde als effektives Werkzeug für die Analyse und Interpretation dieser Daten entwickelt, das ein „Live-Bild“ des Stadtverkehrs ermöglicht.</p>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Unabhängig davon, welche konkreten Werkzeuge und Technologien man verwendet, besteht der Prozess der Erstellung einer Datenvisualisierung normalerweise aus einigen wichtigen Schritten: Datenerfassung, Vorverarbeitung, die untersuchende Analyse der vorbereiteten Daten und schließlich die Erstellung der eigentlichen visuellen Darstellung. Kepler.gl automatisiert und vereinfacht drei dieser vier Schritte in erheblichem Maße, was die Analyse und Visualisierung großer Mengen an Geoinformationen deutlich einfacher macht. Mit diesem Tool kann man relativ schnell und, was wirklich zählt, ziemlich eindrucksvoll eine interaktive Karte auf Basis eigener Geodaten erstellen.</p>
 
-                            <h4 className="alt-font text-green">Kepler.gl vs. Deck.gl:  Analytisches Werkzeug vs. Programmierplattform</h4>
+                            <h6 className="alt-font text-green">Kepler.gl vs. Deck.gl:  Analytisches Werkzeug vs. Programmierplattform</h6>
 
 
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Aber Kepler.gl ist eher so ein „analytisches“ Werkzeug, für diejenigen, die Daten untersuchen.  Ich als Programmierer hatte jedoch Interesse an einem tieferen Verständnis der Mechanismen zur Erstellung solcher Visualisierungen, an der Möglichkeit, tiefer in den Prozess einzutauchen.  In diesem Kontext erregte Deck.gl meine Aufmerksamkeit.  Deck.gl, ebenfalls von Uber entwickelt, ist jedoch keine fertige Analyselösung, sondern eine Plattform, eine Programmbibliothek zur Erstellung maßgeschneiderter Visualisierungen auf Basis von WebGL.  Die WebGL-Technologie setzt natürlich ein gewisses Maß an technischem Fachwissen voraus, bietet aber im Gegenzug unzählige Möglichkeiten zur Feinabstimmung und Erstellung wirklich einzigartiger visueller Darstellungen.  Einer der Hauptvorteile von Deck.gl ist die Verfügbarkeit einer React-Komponente, die in Verbindung mit meiner Erfahrung in der React-Entwicklung vielversprechend für ein experimentelles Projekt erschien.
                             </p>
-                            <h4 className="alt-font text-green">Vergessene Flask-Idee und wiedererwachtes Deck.gl-Verlangen</h4>
+                            <h6 className="alt-font text-green">Vergessene Flask-Idee und wiedererwachtes Deck.gl-Verlangen</h6>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Die ursprüngliche Idee war, eine kleine Anwendung mit Flask API und React.js zu entwickeln.  Auch ein gewisser Datenbestand wurde bereits vorbereitet.  Im Laufe der Arbeit erinnerte ich mich jedoch an den lang gehegten Wunsch, die Möglichkeiten von Deck.gl zu erkunden.  Diese Erinnerung führte zu einer Überprüfung des ursprünglichen Plans.  Es entstand der Wunsch, ein kleines Projekt zu realisieren, um die Effizienz von Deck.gl bei der Arbeit mit Geodaten in der Praxis zu beurteilen.  Das Flask-orientierte Konzept trat vorübergehend in den Hintergrund und wich dem Wunsch, Deck.gl zu erforschen.
                             </p>
-                            <h4 className="alt-font text-green">Datensatz: Umfang und Struktur</h4>
+                            <h6 className="alt-font text-green">Datensatz: Umfang und Struktur</h6>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Als Themengebiet für das Experiment wurde Bayern gewählt.  Der im Projekt verwendete Datensatz umfasste etwa 2000 geografische Koordinaten von Städten (als Punktobjekte), polygonale Darstellungen von Regierungsbezirken (Bezirke), Landkreisen, kreisfreien Städten sowie eine Kontur Bayerns zur Visualisierung der Grenzen.  Obwohl der verwendete Datensatz nicht als extrem groß bezeichnet werden kann, erscheint er für die Zwecke der experimentellen Entwicklung und Demonstration der Möglichkeiten von Deck.gl als durchaus ausreichend.  Insbesondere die geometrische Komplexität von Polygonobjekten wie der kreisfreien Stadt Augsburg beläuft sich auf etwa 2400 Koordinaten, was eine gewisse Belastung bei der Visualisierung und dem Rendering darstellt.
                             </p>
-                            <h4 className="alt-font text-green">Entwicklungsphasen: Von den Daten zur Visualisierung</h4>
+                            <h6 className="alt-font text-green">Entwicklungsphasen: Von den Daten zur Visualisierung</h6>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Der Entwicklungsprozess des Projekts umfasste mehrere Schlüsselphasen, von der Suche und Aufbereitung der Daten bis hin zur direkten Implementierung der interaktiven Karte unter Verwendung der Bibliothek Deck.gl und des Frameworks React.js.  Der erste Schritt war die Suche und Sammlung der benötigten Geodaten.  Zu den Datenquellen gehörten sowohl offene Geoportale als auch spezialisierte Geodienste.  Die erhaltenen Daten stellten eine heterogene Mischung aus Formaten und Strukturen dar, was eine vorbereitende Verarbeitung und Konvertierung der Daten in ein einheitliches, standardisiertes Format erforderte, das für die Verwendung in Deck.gl geeignet ist.
                             </p>
@@ -86,7 +86,7 @@ const PortfolioBayern = () => {
                                 Ein erheblicher Teil der Arbeit war der Entwicklung der React-Anwendung gewidmet, die als „Container“ für die interaktive Karte dient.  Im Rahmen der React-Komponente wurden die Logik zum Laden und Verarbeiten von Daten, zum Erstellen und Konfigurieren von Deck.gl-Layern sowie interaktive Bedienelemente für die Karte implementiert.  Für die Gestaltung der Benutzeroberfläche wurde das Framework Tailwind CSS verwendet, das Komfort und Flexibilität bei der Anpassung des Erscheinungsbilds der Anwendung bietet.
                             </p>
 
-                            <h4 className="alt-font text-green">Technische Feinheiten: Deck.gl – Das Geheimnis der Performance</h4>
+                            <h6 className="alt-font text-green">Technische Feinheiten: Deck.gl – Das Geheimnis der Performance</h6>
 
 
 
@@ -106,7 +106,7 @@ const PortfolioBayern = () => {
                             </p>
 
 
-                            <h4 className="alt-font text-green">Blick in die Zukunft: Neue Karten, neue Daten, neue Entdeckungen</h4>
+                            <h6 className="alt-font text-green">Blick in die Zukunft: Neue Karten, neue Daten, neue Entdeckungen</h6>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Die Bayern-Karte ist nur der Anfang, ein erstes Experiment mit Deck.gl. Aber schon jetzt ist das Potenzial der Bibliothek für die Entwicklung moderner geoinformatorischer Webanwendungen erkennbar. Deck.gl ist ein leistungsstarkes und flexibles Werkzeug zur Visualisierung von Geodaten im Browser.
                             </p>
@@ -120,7 +120,7 @@ const PortfolioBayern = () => {
                             </p>
 
 
-                            <h4 className="alt-font text-green">Web-App</h4>
+                            <h5 className="alt-font text-green">Web-App</h5>
 
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26 margin-35px-top">
                                 Web-App in einem <a href="https://kirman442.github.io/bayern/" target="_blank"><strong
