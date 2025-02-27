@@ -7,6 +7,13 @@ const webpSupported = isWebpSupported();
 
 export const PortfolioSliderFotos = [
     {
+        image: `${import.meta.env.BASE_URL}images/about/aboutPortfolioBayern690.${webpSupported ? 'webp' : 'jpg'}`,
+        link: '/portfolio/Bayern',
+        header: 'Visualisierung Bayerns',
+        text: 'Programmierung, Datenbearbeitung, Web-App',
+        id: 7
+    },
+    {
         image: `${import.meta.env.BASE_URL}images/about/aboutPortfolioKunstkarten690.${webpSupported ? 'webp' : 'jpg'}`,
         link: '/portfolio/Kunstkarten',
         header: 'Kunstkarten mit Python erstellen',
@@ -121,7 +128,7 @@ export const AboutSkills = [
         id: 1
     },
     {
-        value: '65',
+        value: '77',
         header: 'GIS-Entwicklung',
         text: 'ArcGIS SDK JS, ArcPy, Python, Arcade, OpenLayers, Geopandas..',
         id: 2
@@ -133,14 +140,23 @@ export const AboutSkills = [
         id: 3
     },
     {
-        value: '55',
+        value: '67',
         header: 'Web-Entwicklung',
-        text: 'HTML, CSS, Flask, GIT, Vite, React.js, Node.js',
+        text: 'HTML, CSS, Flask, GIT, Vite, react.js, deck.gl, react-map-gl, node.js',
         id: 4
     }
 ];
 
 export const HomeProjectFotos = [
+    {
+        image: `${import.meta.env.BASE_URL}images/home/homePortfolioBayern493.${webpSupported ? 'webp' : 'jpg'}`,
+        alt: 'Bayern',
+        data: '26 Februar 2025',
+        link: '/portfolio/Bayern',
+        header: 'Bayern auf einen Blick',
+        text: 'Eine interaktive Karte der Städte und Regionen mit deck.gl und react-map-gl',
+        id: 7
+    },
     {
         image: `${import.meta.env.BASE_URL}images/home/homePortfolioKunstkarten493.${webpSupported ? 'webp' : 'jpg'}`,
         alt: 'Kunstkarten',
@@ -195,6 +211,7 @@ export const HomeProjectFotos = [
         text: 'Projekt zur Digitalisierung der Verkehrs-, Elektro-, Kataster- und Landschaftsinfrastruktur rund um Dresden.',
         id: 6
     }
+
 ];
 
 

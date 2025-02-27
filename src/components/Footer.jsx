@@ -68,6 +68,11 @@ const Footer = () => {
                             </div>
                             <ul className="list-unstyled">
                                 <li className="w-50 float-start">
+                                    <Link to="/portfolio/Bayern" className="text-medium-gray text-small">
+                                        Bayern
+                                    </Link>
+                                </li>
+                                <li className="w-50 float-start">
                                     <Link to="/portfolio/Kunstkarten" className="text-medium-gray text-small">
                                         Kunstkarten
                                     </Link>
