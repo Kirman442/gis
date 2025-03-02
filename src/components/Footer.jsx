@@ -1,44 +1,70 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
+// const getMenuItemsFooter = (pathname) => {
+//     if (pathname === "/") {
+//         return (
+//             <>
+//                 <div className="widget-title alt-font text-extra-small text-uppercase text-white-2 margin-15px-bottom font-weight-600">
+//                     Über mich
+//                 </div>
+//                 <div className="text-small line-height-24 text-medium-gray">
+//                     <Link to="/about" className="text-medium-gray text-small">
+//                         Mehr sehen
+//                     </Link>
+//                 </div>
+//             </>
+//         );
+//     }
+
+//     if (pathname === "/about") {
+//         return null
+//     }
+
+//     if (pathname.startsWith("/portfolio")) {
+//         return (
+//             <>
+//                 <div className="widget-title alt-font text-extra-small text-uppercase text-white-2 margin-15px-bottom font-weight-600">
+//                     Über mich
+//                 </div>
+//                 <div className="text-small line-height-24 text-medium-gray">
+//                     <Link to="/about" className="text-medium-gray text-small">
+//                         Mehr sehen
+//                     </Link>
+//                 </div>
+//             </>
+//         );
+//     }
+
+//     return null;
+// };
+
 const getMenuItemsFooter = (pathname) => {
-    if (pathname === "/") {
-        return (
-            <>
-                <div className="widget-title alt-font text-extra-small text-uppercase text-white-2 margin-15px-bottom font-weight-600">
-                    About me
-                </div>
-                <div className="text-small line-height-24 text-medium-gray">
-                    <Link to="/about" className="text-medium-gray text-small">
-                        Mehr sehen
-                    </Link>
-                </div>
-            </>
-        );
-    }
+    const widgetTitle = (
+        <div className="widget-title alt-font text-extra-small text-uppercase text-white-2 margin-15px-bottom font-weight-600">
+            Über mich
+        </div>
+    );
 
-    if (pathname === "/about") {
-        return null
-    }
+    const seeMoreLink = (
+        <div className="text-small line-height-24 text-medium-gray">
+            <Link to="/about" className="text-medium-gray text-small">
+                Mehr sehen
+            </Link>
+        </div>
+    );
 
-    if (pathname.startsWith("/portfolio")) {
-        return (
-            <>
-                <div className="widget-title alt-font text-extra-small text-uppercase text-white-2 margin-15px-bottom font-weight-600">
-                    About me
-                </div>
-                <div className="text-small line-height-24 text-medium-gray">
-                    <Link to="/about" className="text-medium-gray text-small">
-                        Mehr sehen
-                    </Link>
-                </div>
-            </>
-        );
-    }
-
-    return null;
+    return (
+        <>
+            {pathname !== "/about" && (
+                <>
+                    {widgetTitle}
+                    {seeMoreLink}
+                </>
+            )}
+        </>
+    );
 };
-
 
 const Footer = () => {
     const locationFooter = useLocation();
@@ -49,7 +75,7 @@ const Footer = () => {
                     <div className="row justify-content-center">
                         <div className="col-lg-4 col-md-4 col-sm-6 widget sm-margin-30px-bottom">
                             <div className="widget-title alt-font text-extra-small text-uppercase text-white-2 margin-15px-bottom font-weight-600">
-                                Contact Information
+                                Kontaktinformationen
                             </div>
                             <div className="text-small line-height-24 text-medium-gray">
                                 e-mail:{" "}
@@ -123,7 +149,7 @@ const Footer = () => {
                 <div className="border-color-medium-dark-gray border-top padding-30px-top">
                     <div className="row">
                         <div className="col-12 text-small text-center text-medium-gray">
-                            © 2024 Alle Rechte vorbehalten<br />
+                            © 2025 Alle Rechte vorbehalten<br />
                             Kirill Lisochenko
                         </div>
                     </div>

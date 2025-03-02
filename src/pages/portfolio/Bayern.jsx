@@ -40,7 +40,7 @@ const PortfolioBayern = () => {
                         <div className="col-xl-4 col-lg-5 p-0">
                             <div
                                 className="padding-seventeen-lr padding-twenty-tb lg-padding-40px-lr md-padding-50px-tb sm-padding-30px-all">
-                                <h3 className="alt-font text-extra-light-gray font-weight-600 mb-0">Visualisierung Bayerns</h3>
+                                <h3 className="alt-font text-extra-light-gray font-weight-600 mb-0">Bayern auf einen Blick</h3>
                                 <div className="bg-deep-green separator-line-horrizontal-full d-inline-block margin-25px-tb"></div>
                                 <p className="text-medium-gray w-90 w-100 margin-35px-bottom text-medium line-height-28">Eine interaktive Karte der Städte und Regionen mit deck.gl und react-map-gl </p>
                                 <span className="text-light-gray opacity6 alt-font mb-0 text-uppercase text-small">25
@@ -70,13 +70,14 @@ const PortfolioBayern = () => {
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Aber Kepler.gl ist eher so ein „analytisches“ Werkzeug, für diejenigen, die Daten untersuchen.  Ich als Programmierer hatte jedoch Interesse an einem tieferen Verständnis der Mechanismen zur Erstellung solcher Visualisierungen, an der Möglichkeit, tiefer in den Prozess einzutauchen.  In diesem Kontext erregte Deck.gl meine Aufmerksamkeit.  Deck.gl, ebenfalls von Uber entwickelt, ist jedoch keine fertige Analyselösung, sondern eine Plattform, eine Programmbibliothek zur Erstellung maßgeschneiderter Visualisierungen auf Basis von WebGL.  Die WebGL-Technologie setzt natürlich ein gewisses Maß an technischem Fachwissen voraus, bietet aber im Gegenzug unzählige Möglichkeiten zur Feinabstimmung und Erstellung wirklich einzigartiger visueller Darstellungen.  Einer der Hauptvorteile von Deck.gl ist die Verfügbarkeit einer React-Komponente, die in Verbindung mit meiner Erfahrung in der React-Entwicklung vielversprechend für ein experimentelles Projekt erschien.
                             </p>
+                            {/* 
                             <h6 className="alt-font text-green">Vergessene Flask-Idee und wiedererwachtes Deck.gl-Verlangen</h6>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Die ursprüngliche Idee war, eine kleine Anwendung mit Flask API und React.js zu entwickeln.  Auch ein gewisser Datenbestand wurde bereits vorbereitet.  Im Laufe der Arbeit erinnerte ich mich jedoch an den lang gehegten Wunsch, die Möglichkeiten von Deck.gl zu erkunden.  Diese Erinnerung führte zu einer Überprüfung des ursprünglichen Plans.  Es entstand der Wunsch, ein kleines Projekt zu realisieren, um die Effizienz von Deck.gl bei der Arbeit mit Geodaten in der Praxis zu beurteilen.  Das Flask-orientierte Konzept trat vorübergehend in den Hintergrund und wich dem Wunsch, Deck.gl zu erforschen.
-                            </p>
+                            </p> */}
                             <h6 className="alt-font text-green">Datensatz: Umfang und Struktur</h6>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
-                                Als Themengebiet für das Experiment wurde Bayern gewählt.  Der im Projekt verwendete Datensatz umfasste etwa 2000 geografische Koordinaten von Städten (als Punktobjekte), polygonale Darstellungen von Regierungsbezirken (Bezirke), Landkreisen, kreisfreien Städten sowie eine Kontur Bayerns zur Visualisierung der Grenzen.  Obwohl der verwendete Datensatz nicht als extrem groß bezeichnet werden kann, erscheint er für die Zwecke der experimentellen Entwicklung und Demonstration der Möglichkeiten von Deck.gl als durchaus ausreichend.  Insbesondere die geometrische Komplexität von Polygonobjekten wie der kreisfreien Stadt Augsburg beläuft sich auf etwa 2400 Koordinaten, was eine gewisse Belastung bei der Visualisierung und dem Rendering darstellt.
+                                Als Themengebiet für das Experiment wurde Bayern gewählt.  Der im Projekt verwendete Datensatz umfasste etwa 2000 geografische Koordinaten von Städten (als Punktobjekte), polygonale Darstellungen von Regierungsbezirken (Bezirke), Landkreisen, kreisfreien Städten sowie eine Kontur Bayerns zur Visualisierung der Grenzen.  Obwohl der verwendete Datensatz nicht als extrem groß bezeichnet werden kann, erscheint er für die Zwecke der experimentellen Entwicklung und Demonstration der Möglichkeiten von Deck.gl als durchaus ausreichend.  Insbesondere die geometrische Komplexität von Polygonobjekten wie der kreisfreien Stadt Augsburg beläuft sich auf etwa 2400 Koordinaten, und jeder Bezirk hat durchschnittlich 14 solcher Objekte plus durchschnittlich 290 Stadtkoordinaten gibt, dann sorgt dies für eine gewisse Belastung bei der Visualisierung und dem Rendering.
                             </p>
                             <h6 className="alt-font text-green">Entwicklungsphasen: Von den Daten zur Visualisierung</h6>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
@@ -113,14 +114,15 @@ const PortfolioBayern = () => {
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Die Bayern-Karte ist nur der Anfang, ein erstes Experiment mit Deck.gl. Aber schon jetzt ist das Potenzial der Bibliothek für die Entwicklung moderner geoinformatorischer Webanwendungen erkennbar. Deck.gl ist ein leistungsstarkes und flexibles Werkzeug zur Visualisierung von Geodaten im Browser.
                             </p>
+                            {/* 
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Vor uns liegt die Erforschung wirklich großer und dynamischer Daten, die Erweiterung der Kartenfunktionalität durch neue Layer und Analysewerkzeuge, die Integration mit Webtechnologien. Die Möglichkeiten sind riesig!
                             </p>
 
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
 
-                                Das Wichtigste ist: Das Experiment mit Deck.gl inspiriert! Ich habe Erfahrungen gesammelt, ein Verständnis für die Funktionsprinzipien der Bibliothek entwickelt. Es eröffnen sich neue Horizonte für die Kreativität in der Geovisualisierung. {/* Bayern ist erst der Anfang. Die Welt der Karten und Daten wartet! */}
-                            </p>
+                                Das Wichtigste ist: Das Experiment mit Deck.gl inspiriert! Ich habe Erfahrungen gesammelt, ein Verständnis für die Funktionsprinzipien der Bibliothek entwickelt. Es eröffnen sich neue Horizonte für die Kreativität in der Geovisualisierung. {/* Bayern ist erst der Anfang. Die Welt der Karten und Daten wartet!
+                            </p> */}
 
 
                             <h5 className="alt-font text-green">Web-App</h5>
@@ -167,10 +169,8 @@ const PortfolioBayern = () => {
                                                 target="_blank">React library for web interfaces
                                             </a>
                                         </li>
-                                        <li className="margin-5px-bottom"><label className="datenquelle w-50 d-inline-block">Website
-                                            erstellen:</label><a className="text-decoration-underline"
-                                                href="https://pages.github.com/" target="_blank">GitHub
-                                                Pages</a>
+                                        <li className="margin-5px-bottom"><label className="datenquelle w-50 d-inline-block">Statistische Berichte und Daten:</label><a className="text-decoration-underline"
+                                            href="https://www.statistik.bayern.de/" target="_blank">Bayerisches Landesamt für Statistik</a>
                                         </li>
                                     </ul>
                                 </div>
