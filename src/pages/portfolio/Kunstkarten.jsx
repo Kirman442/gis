@@ -62,10 +62,11 @@ const PortfolioKunstkarten = () => {
                 keywords="gis services, qgis expertise, kartographie, geoinformation, programmierung, visualisierung"
             />
             {/* <!-- start page title section --> */}
-            <section data-parallax-background-ratio="0.3"
+            <section className="parallax" data-parallax-background-ratio="0.3"
                 style={{
                     backgroundImage: `url(${KunstkartenFoto})`,
-                    maxHeight: '650px'
+                    maxHeight: '650px',
+                    backgroundPosition: '0% 0px'
                 }}>
                 <div className="opacity-light bg-extra-dark-gray"></div>
                 <div className="container position-relative">
