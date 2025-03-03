@@ -68,8 +68,8 @@ a.text-green-hover:hover {
 .navbar-collapse a.custom-link {
     color: #09b6b4 !important;
     display: block;
-    font-size: small;
-    /* font-size: 12px; */
+    /* font-size: small; */
+    font-size: 12px;
     text-transform: uppercase;
     font-weight: 600;
     line-height: 1.42857143;
@@ -142,7 +142,7 @@ h2.custom-home-portfolio-header {
 
 
 .simple-dropdown-div {
-    margin-top: 25px;
+    margin-top: 26px;
 }
 
 .my-dropdown-link-style {
