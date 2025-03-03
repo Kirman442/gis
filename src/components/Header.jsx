@@ -12,8 +12,8 @@ const menuItemsData = [
         condition: (pathname) => pathname !== "/"
     },
     {
-        label: "Portfolio", // Заголовок dropdown пункта
-        type: "hover-dropdown", // Новый тип "hover-dropdown" для Portfolio
+        label: "Portfolio",
+        type: "hover-dropdown",
         condition: (pathname) => true,
         children: [
             {
@@ -119,7 +119,7 @@ const HoverDropdownMenuItem = ({ menuItemData, closeMenu }) => {
                 {menuItemData.children.map((childItem, childIndex) => (
                     <MenuItem key={childIndex}> {/* MenuItem от @szhsin/react-menu */}
                         <Link
-                            className="dropmenu" // Стилизация ссылки внутри MenuItem
+                            className="dropmenu"
                             to={childItem.path}
                         >
                             {childItem.label}
@@ -202,22 +202,11 @@ const Header = () => {
                         </button>
 
                         {/* Navi menu */}
-                        {/* <div className="navbar-collapse collapse justify-content-end" id="navbar-collapse-toggle-1"> */}
                         <div className={`navbar-collapse collapse justify-content-end ${isOpen ? 'show' : ''}`} id="navbar-collapse-toggle-1">
                             <ul id="accordion" className="nav navbar-nav no-margin alt-font text-normal">
                                 {getMenuItems(location.pathname, closeMenu)}
                             </ul>
                         </div>
-                        {/* <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown button
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div> */}
                     </div>
                 </div>
             </nav>
