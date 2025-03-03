@@ -67,6 +67,16 @@ a.text-green-hover:hover {
 
 .navbar-collapse a.custom-link {
     color: #09b6b4 !important;
+    display: block;
+    padding: 23px;
+    font-size: small;
+    text-transform: uppercase;
+
+}
+
+.dropmenu {
+    color: #09b6b4 !important;
+    padding: 10px;
 }
 
 span.navbar-menu-trigger {

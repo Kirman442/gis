@@ -188,8 +188,8 @@ const HoverDropdownMenuItem = ({ menuItemData, closeMenu }) => {
 
     return (
         <li key={menuItemData.label} className="dropdown simple-dropdown"> {/* Обертка LI, если нужно */}
-            <div ref={ref} {...anchorProps}> {/* div style={{ display: 'inline-block' }} для anchor, чтобы работал useHover, display inline-block чтобы li не схлопывался*/}
-                <a href="#" className="custom-link dropdown-toggle" style={{ display: 'block', padding: '23px;' }}>{menuItemData.label}</a> {/*  Используем <a> для стилизации как ссылку,  dropdown-toggle класс может быть не нужен тут*/}
+            <div ref={ref} {...anchorProps} style={{ display: 'inline-block' }}> {/* div для anchor, чтобы работал useHover, display inline-block чтобы li не схлопывался*/}
+                <a href="#" className="custom-link dropdown-toggle">{menuItemData.label}</a> {/*  Используем <a> для стилизации как ссылку,  dropdown-toggle класс может быть не нужен тут*/}
             </div>
 
             <ControlledMenu
@@ -204,7 +204,7 @@ const HoverDropdownMenuItem = ({ menuItemData, closeMenu }) => {
                 {menuItemData.children.map((childItem, childIndex) => (
                     <MenuItem key={childIndex}> {/* MenuItem от @szhsin/react-menu */}
                         <Link
-                            className="custom-link" // Стилизация ссылки внутри MenuItem
+                            className="dropmenu" // Стилизация ссылки внутри MenuItem
                             to={childItem.path}
                         >
                             {childItem.label}
