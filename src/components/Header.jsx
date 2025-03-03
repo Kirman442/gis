@@ -1,5 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from "react-router-dom";
+import { ControlledMenu, MenuItem, useHover, useMenuState } from '@szhsin/react-menu';
+import '@szhsin/react-menu/dist/index.css';
+import '@szhsin/react-menu/dist/transitions/zoom.css';
 
 
 
@@ -45,7 +48,7 @@ const menuItemsData = [
     },
     {
         label: "Portfolio", // Заголовок dropdown пункта
-        type: "dropdown", // Тип - dropdown
+        type: "hover-dropdown", // Новый тип "hover-dropdown" для Portfolio
         condition: (pathname) => true,
         children: [
             {
@@ -93,6 +96,55 @@ const menuItemsData = [
     }
 ];
 
+// const getMenuItems = (pathname, closeMenu) => {
+//     return (
+//         <>
+//             {menuItemsData.map((item, index) => {
+//                 if (item.condition(pathname)) {
+//                     if (item.type === "link") { // Рендерим обычную ссылку
+//                         return (
+//                             <li key={index}>
+//                                 <Link
+//                                     className="custom-link"
+//                                     to={item.path}
+//                                     onClick={closeMenu}
+//                                 >
+//                                     {item.label}
+//                                 </Link>
+//                             </li>
+//                         );
+//                     } else if (item.type === "dropdown") { // Рендерим dropdown пункт
+//                         return (
+//                             <li key={index} className="dropdown simple-dropdown">
+//                                 <a className="custom-link" href="#">{item.label}</a>
+//                                 <i className="fa-solid fa-angle-down dropdown-toggle" data-bs-toggle="dropdown" aria-hidden="true"></i>
+//                                 <ul className="dropdown-menu" role="menu">
+//                                     {/* Рендерим подпункты dropdown, рекурсивно вызывая getMenuItemsForDropdown */}
+//                                     {getMenuItemsForDropdown(item.children, closeMenu)}
+//                                 </ul>
+//                             </li>
+//                         );
+//                     }
+//                 }
+//                 return null;
+//             })}
+//         </>
+//     );
+// };
+
+// const getMenuItemsForDropdown = (dropdownItems, closeMenu) => {
+//     return dropdownItems.map((item, index) => (
+//         <li key={index} className="dropdown">
+//             <Link
+//                 to={item.path}
+//                 onClick={closeMenu}
+//             >
+//                 {item.label}
+//             </Link>
+//         </li>
+//     ));
+// };
+
 const getMenuItems = (pathname, closeMenu) => {
     return (
         <>
@@ -110,16 +162,14 @@ const getMenuItems = (pathname, closeMenu) => {
                                 </Link>
                             </li>
                         );
-                    } else if (item.type === "dropdown") { // Рендерим dropdown пункт
+                    } else if (item.type === "hover-dropdown") { // Рендерим hover-dropdown для Portfolio
                         return (
-                            <li key={index} className="dropdown simple-dropdown">
-                                <a className="custom-link" href="#">{item.label}</a>
-                                <i className="fa-solid fa-angle-down dropdown-toggle" data-bs-toggle="dropdown" aria-hidden="true"></i>
-                                <ul className="dropdown-menu" role="menu">
-                                    {/* Рендерим подпункты dropdown, рекурсивно вызывая getMenuItemsForDropdown */}
-                                    {getMenuItemsForDropdown(item.children, closeMenu)}
-                                </ul>
-                            </li>
+                            <HoverDropdownMenuItem
+                                className="custom-link"
+                                key={index}
+                                menuItemData={item}
+                                closeMenu={closeMenu}
+                            />
                         );
                     }
                 }
@@ -129,17 +179,41 @@ const getMenuItems = (pathname, closeMenu) => {
     );
 };
 
-const getMenuItemsForDropdown = (dropdownItems, closeMenu) => {
-    return dropdownItems.map((item, index) => (
-        <li key={index} className="dropdown">
-            <Link
-                to={item.path}
-                onClick={closeMenu}
+// Компонент для Hover Dropdown MenuItem (Portfolio) - ВЫНЕСЕН В ОТДЕЛЬНЫЙ КОМПОНЕНТ
+const HoverDropdownMenuItem = ({ menuItemData, closeMenu }) => {
+    const ref = useRef(null);
+    // const [isOpen, setOpen] = useState(false);
+    const [menuState, toggle] = useMenuState({ transition: true });
+    const { anchorProps, hoverProps } = useHover(menuState.state, toggle);
+
+    return (
+        <li key={menuItemData.label} className="dropdown simple-dropdown"> {/* Обертка LI, если нужно */}
+            <div ref={ref} {...anchorProps} style={{ display: 'inline-block' }}> {/* div для anchor, чтобы работал useHover, display inline-block чтобы li не схлопывался*/}
+                <a href="#" className="custom-link dropdown-toggle" style={{ padding: '23px;' }}>{menuItemData.label}</a> {/*  Используем <a> для стилизации как ссылку,  dropdown-toggle класс может быть не нужен тут*/}
+            </div>
+
+            <ControlledMenu
+                {...hoverProps}
+                {...menuState}
+                // state={isOpen ? 'open' : 'closed'}
+                anchorRef={ref}
+                onClose={() => toggle(false)}
+                positioning='bottom-start' // или 'bottom-center', 'bottom-end', и т.д. -  позиционирование меню
+            // transition
             >
-                {item.label}
-            </Link>
+                {menuItemData.children.map((childItem, childIndex) => (
+                    <MenuItem key={childIndex}> {/* MenuItem от @szhsin/react-menu */}
+                        <Link
+                            className="custom-link" // Стилизация ссылки внутри MenuItem
+                            to={childItem.path}
+                        >
+                            {childItem.label}
+                        </Link>
+                    </MenuItem>
+                ))}
+            </ControlledMenu>
         </li>
-    ));
+    );
 };
 
 const Header = () => {

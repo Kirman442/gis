@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@img-comparison-slider/react": "^8.0.2",
+    "@szhsin/react-menu": "^4.3.0",
     "bootstrap": "^5.3.3",
     "copy-webpack-plugin": "^12.0.2",
     "framer-motion": "^11.11.17",
