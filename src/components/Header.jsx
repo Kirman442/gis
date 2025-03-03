@@ -188,8 +188,8 @@ const HoverDropdownMenuItem = ({ menuItemData, closeMenu }) => {
 
     return (
         <li key={menuItemData.label} className="dropdown simple-dropdown"> {/* Обертка LI, если нужно */}
-            <div ref={ref} {...anchorProps} style={{ display: 'inline-block' }}> {/* div для anchor, чтобы работал useHover, display inline-block чтобы li не схлопывался*/}
-                <a href="#" className="custom-link dropdown-toggle" style={{ padding: '23px;' }}>{menuItemData.label}</a> {/*  Используем <a> для стилизации как ссылку,  dropdown-toggle класс может быть не нужен тут*/}
+            <div ref={ref} {...anchorProps}> {/* div style={{ display: 'inline-block' }} для anchor, чтобы работал useHover, display inline-block чтобы li не схлопывался*/}
+                <a href="#" className="custom-link dropdown-toggle" style={{ display: 'block', padding: '23px;' }}>{menuItemData.label}</a> {/*  Используем <a> для стилизации как ссылку,  dropdown-toggle класс может быть не нужен тут*/}
             </div>
 
             <ControlledMenu
