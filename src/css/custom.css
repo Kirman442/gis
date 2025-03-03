@@ -68,12 +68,17 @@ a.text-green-hover:hover {
 .navbar-collapse a.custom-link {
     color: #09b6b4 !important;
     display: block;
-    padding: 23px;
     font-size: small;
     text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.42857143;
 
 }
 
+/* nav.navbar.bootsnav li.dropdown ul li {background: rgba(35, 35, 35, 1);
+}
+
+*/
 .dropmenu {
     color: #09b6b4 !important;
     padding: 10px;
