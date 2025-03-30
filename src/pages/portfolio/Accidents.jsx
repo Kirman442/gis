@@ -59,7 +59,10 @@ const PortfolioBayern = () => {
                         <div className="col-lg-10">
                             <h4 className="alt-font text-green">Einleitung</h4>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
-                                Nach meiner Erfahrung mit deck.gl im Projekt "Bayern auf einen Blick" interessierte mich, wie die Kombination aus React + Supabase + Deck.gl mit verschiedenen räumlichen Abfragen und Filterungen funktionieren würde. Supabase unterstützt die PostGIS-Erweiterung und andere Geo-Erweiterungen von PostgreSQL "out of the box" sowie einen vollwertigen RESTful Client.
+                                Nach meiner Erfahrung mit deck.gl im Projekt "Bayern auf einen Blick" interessierte mich, wie die Kombination aus React + Supabase + Deck.gl mit verschiedenen räumlichen Abfragen und Filterungen funktionieren würde. Supabase unterstützt die PostGIS-Erweiterung und andere Geo-Erweiterungen von PostgreSQL "out of the box" sowie einen vollwertigen RESTful API mit PostgREST.
+                            </p>
+                            <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                                Supabase generiert automatisch eine API direkt aus Ihrem Datenbankschema, sodass Sie über eine Restful-Schnittstelle direkt vom Browser aus eine Verbindung zu Ihrer Datenbank herstellen können.
                             </p>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">Für solche Experimente ist es wünschenswert, einen großen Datensatz mit Hunderttausenden von Geodaten zu verwenden, um den Browser und das Framework richtig zu belasten, denn deck.gl ist ein GPU-gestütztes Framework für die visuelle explorative Datenanalyse großer Datensätze. In diesem Beispiel verwende ich "Die Straßenverkehrsunfallstatistik erfasst alle Unfälle mit Personen- oder Sachschäden auf öffentlichen Straßen und Plätzen, die von der Polizei aufgenommen werden" mit 269.000 Datensätzen aus ganz Deutschland. Ich denke, das ist ein sehr guter Ausgangspunkt, um das Zusammenspiel aller drei Komponenten - React.js + Supabase + Deck.gl - zu erleben.
                             </p>
