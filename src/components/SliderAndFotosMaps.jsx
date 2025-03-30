@@ -7,6 +7,13 @@ const webpSupported = isWebpSupported();
 
 export const PortfolioSliderFotos = [
     {
+        image: `${import.meta.env.BASE_URL}images/about/aboutPortfolioAccidents450.${webpSupported ? 'webp' : 'jpg'}`,
+        link: '/portfolio/Accidents',
+        header: 'Geovisualisierung von Unfällen auf deutschen Straßen',
+        text: 'Ein Experiment mit React, Supabase und Deck.gl',
+        id: 8
+    },
+    {
         image: `${import.meta.env.BASE_URL}images/about/aboutPortfolioBayern690.${webpSupported ? 'webp' : 'jpg'}`,
         link: '/portfolio/Bayern',
         header: 'Visualisierung Bayerns',
@@ -148,6 +155,15 @@ export const AboutSkills = [
 ];
 
 export const HomeProjectFotos = [
+    {
+        image: `${import.meta.env.BASE_URL}images/home/homePortfolioAccidents360.${webpSupported ? 'webp' : 'jpg'}`,
+        alt: 'Unfällen auf deutschen Straßen',
+        data: '30 März 2025',
+        link: '/portfolio/Accidents',
+        header: 'Unfallkarte Deutschland',
+        text: 'Ein Experiment mit React, Supabase und Deck.gl',
+        id: 8
+    },
     {
         image: `${import.meta.env.BASE_URL}images/home/homePortfolioBayern493.${webpSupported ? 'webp' : 'jpg'}`,
         alt: 'Bayern',
