@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Code from "../../components/code";
 import Head from '../../components/Head';
-import { Cluster1, Cluster2, Cluster3, Cluster4, Cluster5, Cluster6 } from "./kartenCode";
 
 const isWebpSupported = () => {
     const elem = document.createElement('canvas');
@@ -16,9 +14,9 @@ const PortfolioBayern = () => {
     return (
         <div>
             <Head
-                title="GIS-Projekte | Clustering"
-                description="Clustering ist eine Methode zur Reduzierung von Punkten in einer Ebene, indem sie auf der Grundlage ihrer räumlichen Nähe zueinander in Clustern gruppiert werden."
-                keywords="gis services, qgis expertise, kartographie, geoinformation, programmierung, visualisierung"
+                title="GIS-Projekte | Bayern auf einen Blick"
+                description="Eine interaktive Karte der Städte und Regionen mit deck.gl und react-map-gl"
+                keywords="gis services, deck.gl, kartographie, geoinformation, programmierung, visualisierung"
             />
             {/* <!-- start about product section --> */}
             <section className="p-0 bg-extra-dark-gray top-space">
@@ -142,7 +140,7 @@ const PortfolioBayern = () => {
                         </div>
 
                         <div className="container">
-                            <div className="row justify-content-center">
+                            <div className="row justify-content-center  margin-50px-top">
                                 <div className="col-12 text-center margin-10px-bottom md-margin-50px-bottom sm-margin-30px-bottom">
                                     <p className="text-extra-large font-weight-300 margin-15px-bottom">Datenquellen und Anwendungen:</p>
                                 </div>
@@ -189,7 +187,7 @@ const PortfolioBayern = () => {
                             <div className="blog-nav-link blog-nav-link-prev text-extra-dark-gray">
                                 <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Previous
                                     Project</span>
-                                <Link className="blog-nav-home" to="/portfolio/Kunstkarten" ><i className="ti-arrow-left blog-nav-icon"></i>Kunstkarten mit Python erstellen</Link>
+                                <Link className="blog-nav-home" to="/portfolio/Accidents" ><i className="ti-arrow-left blog-nav-icon"></i>Unfallkarte Deutschland</Link>
 
                             </div>
                         </div>
@@ -203,7 +201,7 @@ const PortfolioBayern = () => {
                             <div className="blog-nav-link blog-nav-link-next text-extra-dark-gray">
                                 <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Next
                                     Project</span>
-                                <Link className="blog-nav-home" to="/portfolio/Dresden" ><i className="ti-arrow-right blog-nav-icon"></i>Infrastruktur um Dresden</Link>
+                                <Link className="blog-nav-home" to="/portfolio/Kunstkarten" ><i className="ti-arrow-right blog-nav-icon"></i>Kunstkarten mit Python erstellen</Link>
                             </div>
                         </div>
                     </div>
