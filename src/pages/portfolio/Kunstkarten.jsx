@@ -505,7 +505,7 @@ const PortfolioKunstkarten = () => {
                             <div className="blog-nav-link blog-nav-link-prev text-extra-dark-gray">
                                 <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Previous
                                     Project</span>
-                                <Link className="blog-nav-home" to="/portfolio/Dresden" ><i className="ti-arrow-left blog-nav-icon"></i>Infrastruktur um Dresden</Link>
+                                <Link className="blog-nav-home" to="/portfolio/Bayern" ><i className="ti-arrow-left blog-nav-icon"></i>Bayern auf einen Blick</Link>
                             </div>
                         </div>
                         <div className="w-10 text-center">
