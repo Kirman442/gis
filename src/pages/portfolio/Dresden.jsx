@@ -513,7 +513,7 @@ const PortfolioDresden = () => {
                             <div className="blog-nav-link blog-nav-link-next text-extra-dark-gray">
                                 <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Next
                                     Project</span>
-                                <Link className="blog-nav-home" to="/portfolio/Kunstkarten" ><i className="ti-arrow-right blog-nav-icon"></i>Kunstkarten mit Python erstellen</Link>
+                                <Link className="blog-nav-home" to="/portfolio/MobileNetwork" ><i className="ti-arrow-right blog-nav-icon"></i>Web visualization of internet speed</Link>
                             </div>
                         </div>
                     </div>
