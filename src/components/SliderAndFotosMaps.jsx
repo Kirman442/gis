@@ -7,6 +7,13 @@ const webpSupported = isWebpSupported();
 
 export const PortfolioSliderFotos = [
     {
+        image: `${import.meta.env.BASE_URL}images/about/aboutPortfolioMobile-Network450.${webpSupported ? 'webp' : 'jpg'}`,
+        link: '/portfolio/MobileNetwork',
+        header: 'Visualizing large-scale internet speed data',
+        text: 'Visualizing millions of data points in a web browser',
+        id: 9
+    },
+    {
         image: `${import.meta.env.BASE_URL}images/about/aboutPortfolioAccidents450.${webpSupported ? 'webp' : 'jpg'}`,
         link: '/portfolio/Accidents',
         header: 'Geovisualisierung von Unfällen auf deutschen Straßen',
@@ -147,14 +154,23 @@ export const AboutSkills = [
         id: 3
     },
     {
-        value: '67',
+        value: '76',
         header: 'Web-Entwicklung',
-        text: 'HTML, CSS, Flask, GIT, react.js, deck.gl, react-map-gl',
+        text: 'HTML, CSS, Flask, GIT, react.js, deck.gl ...',
         id: 4
     }
 ];
 
 export const HomeProjectFotos = [
+    {
+        image: `${import.meta.env.BASE_URL}images/home/homePortfolioMobile-Network360.${webpSupported ? 'webp' : 'jpg'}`,
+        alt: 'High-Performance Web Visualization',
+        data: '27 April 2025',
+        link: '/portfolio/Mobile-Network',
+        header: 'Visualizing large-scale internet speed data',
+        text: 'Visualizing millions of data points in a web browser',
+        id: 9
+    },
     {
         image: `${import.meta.env.BASE_URL}images/home/homePortfolioAccidents360.${webpSupported ? 'webp' : 'jpg'}`,
         alt: 'Unfällen auf deutschen Straßen',
