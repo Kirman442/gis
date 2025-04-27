@@ -17,6 +17,11 @@ const menuItemsData = [
         condition: (pathname) => true,
         children: [
             {
+                path: "/portfolio/MobileNetwork",
+                label: "MobileNetwork",
+                type: "link"
+            },
+            {
                 path: "/portfolio/Accidents",
                 label: "Unfallkarte",
                 type: "link"
