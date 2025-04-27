@@ -201,9 +201,9 @@ const About = () => {
             </section>
             {/* <!-- end skills section --> */}
             {/* <!-- start Beruflicher Werdegang section --> */}
-            <section className="wow animate__fadeIn" style={{ visibility: "visible", animation: "fadeIn" }}>
+            <section className="wow animate__fadeIn" style={{ visibility: "visible" }}>
                 <div className="container">
-                    <div className="row justify-content-center">
+                    {/* <div className="row justify-content-center">
                         <div className="col-lg-7 text-center margin-100px-bottom sm-margin-40px-bottom">
                             <div className="position-relative overflow-hidden w-100">
                                 <span
@@ -211,8 +211,8 @@ const About = () => {
                                     Werdegang</span>
                             </div>
                         </div>
-                    </div>
-                    <div className="row">
+                    </div> */}
+                    <div className="row" style={{ visibility: "hidden" }}>
                         <div className="col-12 text-center btn-dual justify-content-center">
                             {/* <!-- start buttons --> */}
                             <Link to="/pdf/Lisochenko_Kirill_Lebenslauf.pdf" target="_blank"
