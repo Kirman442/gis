@@ -17,6 +17,7 @@ import PortfolioClustering from './pages/portfolio/Clustering'
 import PortfolioDresden from './pages/portfolio/Dresden'
 import PortfolioBayern from './pages/portfolio/Bayern'
 import PortfolioAccidents from './pages/portfolio/Accidents'
+import PortfolioMobileNetwork from './pages/portfolio/MobileNetwork'
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/portfolio/Dresden" element={<PortfolioDresden />} />
         <Route path="/portfolio/Bayern" element={<PortfolioBayern />} />
         <Route path="/portfolio/Accidents" element={<PortfolioAccidents />} />
+        <Route path="/portfolio/MobileNetwork" element={<PortfolioMobileNetwork />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
