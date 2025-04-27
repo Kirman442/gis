@@ -166,7 +166,7 @@ export const HomeProjectFotos = [
         image: `${import.meta.env.BASE_URL}images/home/homePortfolioMobile-Network360.${webpSupported ? 'webp' : 'jpg'}`,
         alt: 'High-Performance Web Visualization',
         data: '27 April 2025',
-        link: '/portfolio/Mobile-Network',
+        link: '/portfolio/MobileNetwork',
         header: 'Visualizing large-scale internet speed data',
         text: 'Visualizing millions of data points in a web browser',
         id: 9

@@ -176,7 +176,7 @@ const PortfolioAccidents = () => {
                             <div className="blog-nav-link blog-nav-link-prev text-extra-dark-gray">
                                 <span className="text-dark-gray text-extra-small text-uppercase d-none d-md-block">Previous
                                     Project</span>
-                                <Link className="blog-nav-home" to="/portfolio/Dresden" ><i className="ti-arrow-left blog-nav-icon"></i>Infrastruktur um Dresden</Link>
+                                <Link className="blog-nav-home" to="/portfolio/MobileNetwork" ><i className="ti-arrow-left blog-nav-icon"></i>Visualizing large-scale internet speed data</Link>
 
                             </div>
                         </div>
