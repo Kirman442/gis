@@ -94,7 +94,7 @@ const Footer = () => {
                             </div>
                             <ul className="list-unstyled">
                                 <li className="w-50 float-start">
-                                    <Link to="/portfolio/Accidents" className="text-medium-gray text-small">
+                                    <Link to="/portfolio/MobileNetwork" className="text-medium-gray text-small">
                                         Mobile Network
                                     </Link>
                                 </li>
