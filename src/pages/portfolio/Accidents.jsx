@@ -8,9 +8,9 @@ const isWebpSupported = () => {
 };
 const webpSupported = isWebpSupported();
 
-const ClusteringFoto = `${import.meta.env.BASE_URL}images/accidents/accidents_main1024.${webpSupported ? 'webp' : 'jpg'}`
+const AccidentsFoto = `${import.meta.env.BASE_URL}images/accidents/accidents_main1024.${webpSupported ? 'webp' : 'jpg'}`
 
-const PortfolioBayern = () => {
+const PortfolioAccidents = () => {
     return (
         <div>
             <Head
@@ -23,7 +23,7 @@ const PortfolioBayern = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-xl-8 col-lg-7 cover-background p-0 md-h-500px sm-h-300px"
-                            style={{ background: `url(${ClusteringFoto})` }}></div>
+                            style={{ background: `url(${AccidentsFoto})` }}></div>
                         {/* <img
                                 src={ClusteringFoto}
                                 alt="Clustering"
@@ -203,4 +203,4 @@ const PortfolioBayern = () => {
     );
 };
 
-export default PortfolioBayern;
+export default PortfolioAccidents;
