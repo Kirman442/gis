@@ -61,7 +61,7 @@ const PortfolioMobileNetwork = () => {
                         <div className="col-lg-10">
                             <h4 className="alt-font text-green">Overview</h4>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
-                                This project demonstrates a high-performance approach to visualizing large-scale internet speed data (download speeds in kbps) across Europe directly in a web browser. By leveraging modern web technologies like <b>Parquet</b>, <b>Apache Arrow</b> <b>Web Workers</b> <b>TypedArrays</b> and <b>Deck.gl</b>, we overcome the common performance bottlenecks associated with handling and rendering large geospatial datasets using traditional methods like <b>GeoJSON</b>
+                                This project demonstrates a high-performance approach to visualizing large-scale internet speed data (download speeds in kbps) across Europe directly in a web browser. By leveraging modern web technologies like <b>Parquet</b>, <b>Apache Arrow</b>, <b>Web Workers</b>, <b>TypedArrays</b> and <b>Deck.gl</b>, we overcome the common performance bottlenecks associated with handling and rendering large geospatial datasets using traditional methods like <b>GeoJSON</b>
                             </p>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Dataset contains performance metrics for global mobile broadband networks in the form of Mercator tiles at scale level 16 (approximately 610.8 meters by 610.8 meters at the equator). Upload and download speeds as well as latency times are recorded with the Speedtest by Ookla apps for Android and iOS and averaged for each tile. The measurements are filtered to obtain results with GPS-quality location accuracy.
@@ -80,7 +80,7 @@ const PortfolioMobileNetwork = () => {
 
                             <h6 className="alt-font text-green">High-Performance Approach</h6>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
-                                To tackle these challenges, we implement a processing pipeline designed for speed and efficiency:
+                                To tackle these challenges, i implement a processing pipeline designed for speed and efficiency:
                             </p>
 
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
