@@ -99,7 +99,7 @@ const PortfolioAccidents = () => {
 
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Die Benutzeroberfläche wird dabei dank asynchroner Funktionen nicht blockiert. Zur Leistungsüberwachung habe ich Funktionen geschrieben, die die Geschwindigkeit und Größe der geladenen Daten messen:<br /><br />
-                                <ul class="p-0 list-style-3">
+                                <ul className="p-0 list-style-3">
                                     <li>Paralleles Laden: 16 gleichzeitige Anfragen an die Supabase</li>
                                     <li>Geodaten (Koordinaten) in 2,78 Sekunden geladen. Anzahl: 269.048, Gesamtgröße: 6,67 MB</li>
                                     <li>Attribute in 2,11 Sekunden geladen und zusammengeführt. Anzahl: 269.048, Gesamtgröße: 11,29 MB</li>
