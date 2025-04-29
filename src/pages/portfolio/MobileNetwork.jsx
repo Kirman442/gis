@@ -71,7 +71,7 @@ const PortfolioMobileNetwork = () => {
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 Visualizing millions of data points in a web browser often hits performance limits:</p>
 
-                            <ul class="p-0 list-style-5">
+                            <ul className="p-0 list-style-5">
                                 <li><b>Slow Parsing:</b> Text-based formats like JSON (used in GeoJSON) require significant CPU time to parse and deserialize into JavaScript objects.</li>
                                 <li><b>High Memory Usage</b>: JSON creates many small, scattered objects, leading to memory bloat and increased garbage collection overhead.</li>
                                 <li><b>Inefficient GPU Uploads</b>: Data from JavaScript objects needs to be converted into a binary format suitable for the GPU, which is a slow process.</li>
@@ -87,7 +87,7 @@ const PortfolioMobileNetwork = () => {
                                 <b>Starting with Efficiency:</b> <span className="text-decoration-underline">The Parquet Format.</span> Recognizing that bandwidth is often the browser's limiting factor, we start with a format designed for large-scale efficiency: Apache Parquet. Parquet is a columnar binary format that inherently supports key techniques for handling big data on the web:</p>
 
 
-                            <ul class="p-0 list-style-5">
+                            <ul className="p-0 list-style-5">
                                 <li><b>Better Compression:</b> It leverages advanced compression schemes (like run-length encoding) beyond simple text compression.</li>
                                 <li><b>Requiring Less Data:</b> Its columnar structure allows for efficient partitioning and filtering, meaning a reader can intelligently download and process only the relevant parts or columns of a dataset.</li>
                                 <li><b>Streaming Downloads:</b> Parquet readers can process data in chunks, allowing visualization to begin before the entire file is downloaded. The GeoParquet specification further enhances this by defining how to store vector geometries efficiently within this powerful format.</li>
@@ -102,15 +102,56 @@ const PortfolioMobileNetwork = () => {
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 <b>Keeping the UI Responsive:</b> <span className="text-decoration-underline">Parallel Processing with Web Workers.</span> Even with efficient data formats, parsing and transforming large binary files are computationally intensive tasks. To prevent the main browser thread from freezing and ensure a smooth user interface, these heavy operations – fetching, decompressing Parquet, parsing into Arrow, and preparing the final Float32Array for the GPU – are offloaded to Web Workers. Utilizing a Worker Pool allows these tasks to run in parallel across multiple CPU cores, significantly accelerating the overall data loading and processing time while isolating potential errors.</p>
 
+                            <h6 className="alt-font text-green">The Parquet Processing Web Worker.</h6>
 
-                            <h6 className="alt-font text-green">The Result - Smooth, Interactive, High-Performance Maps.</h6>
+                            <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                                The parquetWorker.js file defines a dedicated Web Worker instance designed to offload specific data handling tasks from the main browser thread, ensuring the user interface remains responsive during heavy operations. While the WebAssembly (WASM) initialization and the core parquet-wasm parsing now occur in the main thread (due to compatibility challenges in the worker environment on certain deployments), this worker manages the stages before and after that WASM step.</p>
+                            <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                                The worker operates based on messages received from the main thread and utilizes a taskId to track the progress and state of individual file processing jobs. It employs a simple in-memory store (taskDataStore) to keep track of task-specific information between communication rounds with the main thread. <br /> Its primary responsibilities are structured around two distinct message types:</p>
+
+                            <p className="text-medium text-green line-height-28 sm-line-height-26"><b>Receiving the Initial Task:</b></p>
+
+                            <ul className="p-0 list-style-5">
+                                <li>Upon receiving an INITIAL_TASK message containing a taskId and the url of a Parquet file, the worker's first action is to efficiently fetch the binary data from the specified URL using the browser's built-in Workspace API.
+                                </li>
+                                <li>After successfully downloading the data as an ArrayBuffer (and converting it to Uint8Array), the worker does not attempt to process it with WASM itself.
+                                </li>
+                                <li>Instead, it immediately sends this raw binary Uint8Array back to the main thread using a WASM_REQUEST message, identified by the same taskId. Crucially, it leverages <a className="text-decoration-underline"
+                                    href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects" target="_blank">Transferable Objects</a> ([parquetUint8Array.buffer]) to transfer ownership of the data buffer to the main thread without the performance overhead of copying. The original file URL is temporarily stored using the taskId for later reference.
+                                </li>
+                            </ul>
+
+                            <p className="text-medium text-green line-height-28 sm-line-height-26"><b>Receiving the WASM Response and Final Processing:</b></p>
+
+                            <ul className="p-0 list-style-5">
+                                <li>The main thread performs the WASM-based parsing (parquet-wasm.readParquet) using the binary data received from the worker. The result of this is typically an Arrow IPC stream.
+
+                                </li>
+                                <li>The main thread then sends this processed Arrow IPC stream data back to the worker using a WASM_RESPONSE message, again identified by the taskId and utilizing Transferable Objects ([ipcStreamData.buffer]).
+                                </li>
+                                <li>Upon receiving the WASM_RESPONSE, the worker retrieves the original URL from its taskDataStore. It then uses the apache-arrow.tableFromIPC function (which is imported and available within the worker, even though WASM initialization is in the main thread) to parse the Arrow IPC stream data into an in-memory Arrow table representation.
+                                </li>
+                                <li>The worker proceeds to extract the relevant columnar data (like longitude, latitude, and speed metrics) from the Arrow table's structure, applying metadata like stride from the schema.
+                                </li>
+                                <li>It performs a final data transformation step, iterating through the extracted data to create the <a className="text-decoration-underline"
+                                    href="https://deck.gl/docs/developer-guide/performance#use-binary-data" target="_blank">final Float32Array in the precise 6-value structure</a> required for visualization by Deck.gl.
+                                </li>
+                                <li>Finally, it sends this resulting Float32Array (and associated metadata like record count) back to the main thread using a FINAL_RESULT message, again transferred efficiently as a Transferable Object ([binaryData.buffer]). The task's state is then removed from the taskDataStore.
+
+                                </li>
+                            </ul>
+
+                            <blockquote className="border-color-green">
+                                <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                                    In essence, this worker acts as a dedicated agent for handling the I/O (fetching), coordinating the remote WASM execution (by sending/receiving data to/from the main thread), and performing the crucial post-WASM data structuring, all while keeping the main thread free to maintain a smooth and interactive user experience.
+                                </p>
+                            </blockquote>
+
+                            <h6 className="alt-font text-green">The Result - Smooth, Interactive, High-Performance Map.</h6>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 By orchestrating Parquet's binary efficiency, Arrow's in-memory format, the native speed of TypedArrays and Zero-Copy access, the parallel power of Web Workers, and Deck.gl's optimized WebGL rendering, this project delivers a high-performance web application capable of smoothly visualizing and exploring hundreds of thousands of internet speed data points. It demonstrates a practical and effective strategy for overcoming the traditional bottlenecks of large geospatial data visualization on the web, providing a responsive and interactive user experience.</p>
 
-
-
                             <h6 className="alt-font text-green">Web-App</h6>
-
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26 margin-35px-top">
                                 Open web app in a <a href="https://kirman442.github.io/mobile-network-map/" target="_blank"><strong
                                     className="text-decoration-underline">new window.</strong></a>
@@ -143,6 +184,11 @@ const PortfolioMobileNetwork = () => {
                                             className="datenquelle w-30 d-inline-block">deck.gl</label><a
                                                 className="text-decoration-underline" href="https://deck.gl/"
                                                 target="_blank">Framework for data analysis of large datasets</a>
+                                        </li>
+                                        <li className="margin-5px-bottom"><label
+                                            className="datenquelle w-30 d-inline-block">basemap</label><a
+                                                className="text-decoration-underline" href="https://carto.com/"
+                                                target="_blank">CARTO</a>
                                         </li>
                                         <li className="margin-5px-bottom"><label
                                             className="datenquelle w-30 d-inline-block">React.js</label><a
