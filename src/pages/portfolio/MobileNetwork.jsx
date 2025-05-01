@@ -153,7 +153,7 @@ const PortfolioMobileNetwork = () => {
 
                             <h6 className="alt-font text-green">Web-App</h6>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26 margin-35px-top">
-                                Open web app in a <a href="https://kirman442.github.io/mobile-network-map/" target="_blank"><strong
+                                Open web app in a <a href="https://mobile-network-map.netlify.app/" target="_blank"><strong
                                     className="text-decoration-underline">new window.</strong></a>
                             </p>
                         </div>
@@ -161,7 +161,7 @@ const PortfolioMobileNetwork = () => {
                         <div className="container">
                             <div className="row justify-content-center">
                                 <div className="col-12">
-                                    <iframe className="w-100 h-850px" src="https://kirman442.github.io/mobile-network-map/" title="Web-App"></iframe>
+                                    <iframe className="w-100 h-850px" src="https://mobile-network-map.netlify.app/" title="Web-App"></iframe>
                                 </div>
                             </div>
                         </div>
