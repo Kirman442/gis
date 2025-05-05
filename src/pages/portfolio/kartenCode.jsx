@@ -218,3 +218,22 @@ else:
 
 print('All jobs done')
 `
+
+export const js1 = `
+const layers = useMemo(() => {
+        if (allData.length === 0 || allData[0].length === 0) return [];
+        const commonProps = {
+            data: allData[0],
+            getPosition: (_, { index, data, target }) => {
+                target[0] = data.src[index * 6]; 
+                target[1] = data.src[index * 6 + 1];
+                return target;
+            },... the rest of the code
+`
+
+export const js2 = `
+getFillColor: (_, { index, data, target }) => {
+                    target[0] = data.src[index * 6 + 3];
+                    return activeColorScaleFunction(target * 5);
+                },... the rest of the code
+`
