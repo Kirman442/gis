@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Head from '../../components/Head';
+import Code from "../../components/code";
+import { js1, js2 } from "./kartenCode";
 
 const isWebpSupported = () => {
     const elem = document.createElement('canvas');
@@ -84,7 +86,7 @@ const PortfolioMobileNetwork = () => {
                             </p>
 
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
-                                <b>Starting with Efficiency:</b> <span className="text-decoration-underline">The Parquet Format.</span> Recognizing that bandwidth is often the browser's limiting factor, we start with a format designed for large-scale efficiency: Apache Parquet. Parquet is a columnar binary format that inherently supports key techniques for handling big data on the web:</p>
+                                <span className="text-medium font-weight-600 text-green">Starting with Efficiency: </span>The Parquet Format -  recognizing that bandwidth is often the browser's limiting factor, we start with a format designed for large-scale efficiency: Apache Parquet. Parquet is a columnar binary format that inherently supports key techniques for handling big data on the web:</p>
 
 
                             <ul className="p-0 list-style-5">
@@ -94,15 +96,19 @@ const PortfolioMobileNetwork = () => {
                             </ul>
 
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
-                                <b>In-Memory Speed: </b> <span className="text-decoration-underline">Apache Arrow.</span> Once the Parquet binary data is fetched, it's converted into the Apache Arrow in-memory format. Arrow provides a standardized, language-agnostic columnar memory layout that is crucial for high-performance data processing.</p>
+                                <span className="text-medium font-weight-600 text-green">In-Memory Speed: </span> Apache Arrow - once the Parquet binary data is fetched, it's converted into the Apache Arrow in-memory format. Arrow provides a standardized, language-agnostic columnar memory layout that is crucial for high-performance data processing.</p>
 
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
-                                <b>Unlock Native Performance:</b> <span className="text-decoration-underline">Zero-Copy Access with TypedArrays.</span> A core benefit of the Arrow format is its compatibility with Zero-Copy data access. The underlying binary buffers from Arrow can be directly accessed using TypedArrays (Float32Array, Uint16Array, etc.). This is a game-changer: the CPU can work directly with the binary data in memory without needing to deserialize or copy it into standard, overhead-heavy JavaScript objects (unlike parsing JSON). Accessing a value becomes a simple, fast memory offset (data[index * 6 + 3]) instead of an expensive property lookup . This maximizes CPU cache utilization (cache locality) and dramatically reduces memory footprint compared to text-based formats.</p>
+                                <span className="text-medium font-weight-600 text-green">Unlock Native Performance:</span> Zero-Copy Access with TypedArrays - a core benefit of the Arrow format is its compatibility with Zero-Copy data access. The underlying binary buffers from Arrow can be directly accessed using TypedArrays (Float32Array, Uint16Array, etc.). This is a game-changer: the CPU can work directly with the binary data in memory without needing to deserialize or copy it into standard, overhead-heavy JavaScript objects (unlike parsing JSON). Accessing a value becomes a simple, fast memory offset, an example for getting longitude and latitude from an array:
+                                <Code code={js1} language="javascript" />
+                                example to get download speed data, then apply that value to a point colour based on speed and colour ranges:
+                                <Code code={js2} language="javascript" />
+                                instead of an expensive property lookup . This maximizes CPU cache utilization (cache locality) and dramatically reduces memory footprint compared to text-based formats.</p>
 
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
-                                <b>Keeping the UI Responsive:</b> <span className="text-decoration-underline">Parallel Processing with Web Workers.</span> Even with efficient data formats, parsing and transforming large binary files are computationally intensive tasks. To prevent the main browser thread from freezing and ensure a smooth user interface, these heavy operations – fetching, decompressing Parquet, parsing into Arrow, and preparing the final Float32Array for the GPU – are offloaded to Web Workers. Utilizing a Worker Pool allows these tasks to run in parallel across multiple CPU cores, significantly accelerating the overall data loading and processing time while isolating potential errors.</p>
+                                <span className="text-medium font-weight-600 text-green">Keeping the UI Responsive:</span> Parallel Processing with Web Workers - even with efficient data formats, parsing and transforming large binary files are computationally intensive tasks. To prevent the main browser thread from freezing and ensure a smooth user interface, these heavy operations – fetching, decompressing Parquet, parsing into Arrow, and preparing the final Float32Array for the GPU – are offloaded to Web Workers. Utilizing a Worker Pool allows these tasks to run in parallel across multiple CPU cores, significantly accelerating the overall data loading and processing time while isolating potential errors.</p>
 
-                            <h6 className="alt-font text-green">The Parquet Processing Web Worker.</h6>
+                            <h6 className="alt-font text-green">The Parquet Processing Web Worker</h6>
 
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 The Worker file defines a dedicated Web Worker instance designed to offload specific data handling tasks from the main browser thread, ensuring the user interface remains responsive during heavy operations. While the WebAssembly (WASM) initialization and the core parquet-wasm parsing now occur in the main thread (due to compatibility challenges in the worker environment on certain deployments), this worker manages the stages before and after that WASM step.</p>
@@ -147,7 +153,7 @@ const PortfolioMobileNetwork = () => {
                                 </p>
                             </blockquote>
 
-                            <h6 className="alt-font text-green">The Result - Smooth, Interactive, High-Performance Map.</h6>
+                            <h6 className="alt-font text-green">The Result - Smooth, Interactive, High-Performance Map</h6>
                             <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
                                 By orchestrating Parquet's binary efficiency, Arrow's in-memory format, the native speed of TypedArrays and Zero-Copy access, the parallel power of Web Workers, and Deck.gl's optimized WebGL rendering, this project delivers a high-performance web application capable of smoothly visualizing and exploring hundreds of thousands of internet speed data points. It demonstrates a practical and effective strategy for overcoming the traditional bottlenecks of large geospatial data visualization on the web, providing a responsive and interactive user experience.</p>
 
