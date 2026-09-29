@@ -159,7 +159,7 @@ const Footer = () => {
                 <div className="border-color-medium-dark-gray border-top padding-30px-top">
                     <div className="row">
                         <div className="col-12 text-small text-center text-medium-gray">
-                            © 2025 Alle Rechte vorbehalten<br />
+                            © 2026 Alle Rechte vorbehalten<br />
                             Kirill Lisochenko
                         </div>
                     </div>

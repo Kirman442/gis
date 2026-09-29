@@ -134,8 +134,19 @@ const PortfolioAccidents = () => {
                             </div>
                         </div>
 
+
                         <div className="container">
                             <div className="row justify-content-center margin-50px-top">
+                                <h6 className="alt-font text-green">Weiterentwicklung und Optimierung</h6>
+                                <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                                    Einige Zeit nach Abschluss der ersten Version habe ich mich entschieden, zu diesem Projekt zurückzukehren. Die Anwendung funktionierte bereits gut, aber inzwischen wollte ich nicht mehr nur testen, ob sich rund 269.000 Datensätze mit React, Supabase und deck.gl performant darstellen lassen. Diesmal ging es darum, die bestehende Lösung genauer zu analysieren, Schwachstellen zu finden und sowohl die Datenbereitstellung als auch das Rendering und die Filterung weiter zu optimieren.
+                                </p>
+                                <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                                    Ein wichtiger Schritt war die Überarbeitung des Ladevorgangs. Die Daten werden weiterhin parallel aus den nach Bundesländern partitionierten Daten geladen, allerdings muss die Anwendung nun nicht mehr warten, bis alle 16 Bundesländer vollständig verfügbar sind. Sobald die Koordinaten eines Bundeslandes geladen wurden, werden sie direkt an die Karte übergeben. Während dieses progressiven Ladevorgangs werden die Unfälle zunächst als einfache Punkte mit einem `ScatterplotLayer` dargestellt. Dadurch sind bereits nach kurzer Zeit erste Daten auf der Karte sichtbar. Erst wenn die Geodaten aller Bundesländer vollständig geladen sind, wechselt die Visualisierung auf den rechenintensiveren `HexagonLayer` beziehungsweise `HeatmapLayer`. Anschließend werden die zusätzlichen Attribute separat geladen und über die Unfall-ID mit den bereits vorhandenen Geodaten zusammengeführt. Die Karte bleibt währenddessen bereits sichtbar und nutzbar.
+                                </p>
+                                <p className="text-medium text-dark-gray line-height-28 sm-line-height-26">
+                                    Auch die Filterung wurde überarbeitet und eindeutiger gestaltet. Neben Bundesland, Wochentag und Unfallkategorie können die Daten nach Fahrrad-, Pkw- und Fußgängerbeteiligung untersucht werden. Für diese Merkmale gibt es nun jeweils die drei klar definierten Zustände **„Alle“, „Mit“ und „Ohne“**. Die Filter können frei miteinander kombiniert werden und werden direkt im Browser auf den bereits geladenen Daten ausgeführt, sodass für jede neue Kombination keine zusätzliche Datenbankabfrage notwendig ist. Damit wurde aus dem ursprünglichen Performance-Experiment schrittweise eine reaktionsfähigere und benutzerfreundlichere Web-GIS-Anwendung, bei der nicht nur die reine Ladezeit, sondern auch die wahrgenommene Geschwindigkeit und eine nachvollziehbare Datenexploration im Vordergrund stehen.
+                                </p>
                                 <div className="col-12 text-center margin-10px-bottom md-margin-50px-bottom sm-margin-30px-bottom">
                                     <p className="text-extra-large font-weight-300 margin-15px-bottom">Datenquellen und Anwendungen:</p>
                                 </div>
