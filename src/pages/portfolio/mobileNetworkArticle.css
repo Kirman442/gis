@@ -1,0 +1,43 @@
+.mobile-network-article h5 { margin-top: 2.25rem; }
+.mobile-network-article code { overflow-wrap: anywhere; }
+.mobile-network-article .Code { margin: 1.25rem 0 1.75rem; max-width: 100%; }
+.mobile-network-article .Code pre { max-width: 100%; overflow-x: auto; }
+.mobile-network-table-scroll { max-width: 100%; overflow-x: auto; margin: 1.5rem 0; }
+.mobile-network-table-scroll:focus-visible,
+.mobile-network-documentation > summary:focus-visible,
+.mobile-network-history > summary:focus-visible { outline: 3px solid #186948; outline-offset: 4px; }
+.mobile-network-table { width: 100%; border-collapse: collapse; color: #333; font-size: 15px; line-height: 1.6; }
+.mobile-network-table caption { caption-side: top; padding: 0 0 .75rem; color: #555; text-align: left; }
+.mobile-network-table th, .mobile-network-table td { padding: .8rem 1rem; border: 1px solid #d9dfdc; vertical-align: top; }
+.mobile-network-table thead { background: #eef4f0; }
+.mobile-network-table tbody th { font-weight: 500; }
+.mobile-network-steps { padding-left: 1.5rem; line-height: 1.75; }
+.mobile-network-steps li { padding-left: .35rem; margin-bottom: .75rem; }
+.mobile-network-history { margin: 3rem 0; border: 1px solid #cfdad3; border-radius: 3px; }
+.mobile-network-history > summary { cursor: pointer; padding: 1.25rem 1.5rem; color: #236642; background: #f2f6f3; font-size: 20px; font-weight: 600; line-height: 1.5; }
+.mobile-network-history > summary::marker { color: #236642; }
+.mobile-network-history-content { padding: 1.75rem 1.5rem .75rem; }
+.mobile-network-history-content h5:first-of-type { margin-top: 1.5rem; }
+.mobile-network-map-frame { display: block; width: 100%; height: 850px; border: 0; margin: 1.5rem 0 2rem; }
+.mobile-network-resources { margin: 1rem 0 2.25rem; line-height: 1.75; }
+.mobile-network-resource { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .5rem 2rem; padding: .65rem 0; }
+.mobile-network-resource dt { font-weight: 500; }
+.mobile-network-resource dd { margin: 0; }
+.mobile-network-resource dt, .mobile-network-resource dd { overflow-wrap: anywhere; }
+.mobile-network-documentation { margin: 0 0 2.25rem; }
+.mobile-network-documentation > summary { cursor: pointer; font-size: 18px; font-weight: 500; line-height: 1.5; }
+.mobile-network-documentation > summary::marker { color: #236642; }
+@media (max-width: 575px) {
+    .mobile-network-resource { grid-template-columns: minmax(0, 1fr); gap: .15rem; }
+    .mobile-network-table { min-width: 460px; }
+    .mobile-network-history > summary { padding: 1rem; font-size: 18px; }
+    .mobile-network-history-content { padding: 1.25rem 1rem .5rem; }
+    .mobile-network-map-frame { height: 640px; }
+}
+
+.mobile-network-technical { margin: 1.25rem 0 1.75rem; border-left: 3px solid #d1ded6; background: #f7f9f8; }
+.mobile-network-technical > summary { cursor: pointer; padding: .9rem 1.1rem; color: #236642; font-size: 16px; font-weight: 500; line-height: 1.6; }
+.mobile-network-technical > summary::marker { color: #236642; }
+.mobile-network-technical > summary:focus-visible { outline: 3px solid #186948; outline-offset: 4px; }
+.mobile-network-technical-content { padding: .35rem 1.1rem .5rem; }
+.mobile-network-technical-content > :last-child { margin-bottom: .75rem; }
