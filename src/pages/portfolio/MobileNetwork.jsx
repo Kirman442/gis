@@ -47,7 +47,7 @@ const PortfolioMobileNetwork = () => {
                                     April 2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                                     Programming,
                                     data processing, creating web app</span>
-                                <p className="text-light-gray text-small margin-15px-top mb-0">Architecture updated: 8 October 2026</p>
+                                <p className="text-medium-gray text-small margin-15px-top mb-0">Architecture updated: 8 October 2026</p>
                             </div>
                         </div>
                     </div>
